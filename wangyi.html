@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			.head{
+				width:100%;
+				height:36px;
+				background:#000000;
+			}
+			.body{
+				width:1090px;
+				margin: auto;
+				font-size: 12px;
+				background: yellow;
+				position: relative;
+			}
+			.header-left{
+				float: left;
+				line-height: 36px;
+				color: #FFF;
+			}
+			.header-right{
+				float: right;
+				line-height: 36px;
+			}
+			.login{
+				margin-right: 20px;
+				color: #FFF;
+			}
+			.header-right .login-word{
+				margin-right: 20px;
+				color: #FFF;
+			}
+			.login-word{
+				padding-right: 10px;
+				border-right:1px solid white;
+			}
+			.main{
+				width: 1090px;
+				height: 183px;
+				/*background: yellow;*/
+				margin: auto;
+				position: relative;
+			}
+			.main-left-pic{
+				width: 180px;
+				height:60px;
+				background: url(img/header-secaaba58c8-8345a4ea93.png) no-repeat;
+				position: absolute;
+				top:50px;
+				left:434px;
+				z-index: 2;
+			}
+			.main-right{
+				position: relative;
+			}
+			.main-right-input{
+				border: 0;
+				border-bottom:1px solid #d8cebc;
+				position: absolute;
+				top:70px;
+				right: 80px;
+				width: 252px;
+				height: 23px;
+				line-height: 23px;
+			}
+			.search{
+				position: absolute;
+				top:75px;
+				right: 60px;
+				width: 20px;
+				height: 20px;
+				background: url(img/header-secaaba58c8-8345a4ea93.png) no-repeat 0 -145px;
+			}
+			.shop{
+				position: absolute;
+				top:73px;
+				right:20px;
+				width: 23px;
+				height: 23px;
+				background: url(img/cart-s60a1b1ed02-d4fba8a49b.png) no-repeat;
+			}
+			
+			li{
+				float: left;
+				margin: 0;
+				
+			}
+			.concent{
+				margin: auto;
+				width: 1090px;
+				height: 30px;
+				margin-top: -30px;
+			}
+			.tab-nav{
+				height: 30px;
+				width:1090px;
+				font-size: 14px;
+				font-weight: 700;
+			}
+			.nav-word.first{
+				padding:6px 32px 0;
+			}
+			
+			.nav-word{
+				padding: 6px 27px 0;
+				
+			}
+			.pic{
+				display:inline-block;
+				margin-top: 20px;
+			}
+			.banner{
+				width:1090px;
+				height:370px;
+				margin: auto;
+				position: relative;
+				/*background: red;*/
+				margin-top: 26px;
+			}
+			.left{
+				width:1090px;
+				height:45px;
+				margin-bottom: 5px;
+			}
+			.name{
+				float: left;
+				margin-right: 20px;
+				font-size: 28px;
+				font-weight: 700;
+			}
+			.frontname{
+				padding-top:13px ;
+				float: left;
+				font-size: 14px;
+			}
+			.right{
+				padding-top:16px ;
+				float: right;
+				font-size: 14px;
+			}
+			.foo{
+				width:1090px;
+				height:320px;
+				position: relative;
+			}
+			.foo-left{
+				position: relative;
+			}
+			.foo-left1{
+				position: absolute;
+				top:50px;
+				left:116px;
+				font-size: 24px;
+			}
+			.foo-left2{
+				position: absolute;
+            	top:90px;
+            	left:140px;
+            	border-top:1px solid black;
+            	display:inline-block;
+            	padding-top: 17px;
+			}
+			.foo-middle{
+				position: absolute;
+				top:50px;
+				left:368px;
+			}
+			.foo-top{
+				position: absolute;
+				top:50px;
+				right:0;
+				height:325px;
+				width:370px
+			}
+			.foo-right{
+				position: absolute;
+				top:0px;
+				right: 0;
+			}
+			.foo-right2{
+				position: absolute;
+				top:34px;
+				left:22px;
+				font-size: 20px;
+			}
+			.foo-right3{
+				position: absolute;
+				top:65px;
+				left:22px;
+				border-top:1px solid black ;
+				padding-top:10px ;
+			}
+			.foo-right-bottom{
+				position: absolute;
+				bottom: 1px;
+				right: 0;
+			}
+			
+			.footer{
+				width:1090px;
+				height:370px;
+				margin: auto;
+				position: relative;
+				/*background: red;*/
+				margin-top: 26px;
+			}
+			.footer-left{
+				width:1090px;
+				height:320px;
+				/*background: yellow;*/
+			}
+			.footer-left3{
+				float: left;
+				margin-right:7px;
+			}
+			.footer-bottom{
+				height:50px;
+				width:265px;
+				/*background: green;*/
+			}
+			.footer-bottom1{
+				text-align: center;
+			}
+			.price{
+				text-align: center;
+			}
+			.price1{
+			    color: red;
+			}
+			.price2{
+				color: #999999;
+			}
+			.column{
+				width:100%;
+				height:596px;
+				background:#f4f0ea;
+				margin-top: 50px;
+			}
+			.g-row{
+				width:1090px;
+				height:586px;
+				margin: auto;
+				/*background:gray;*/
+				position: relative;
+			}
+			.column-hd{
+				width:1090px;
+				height:110px;
+				/*background: pink;*/
+			}
+			.columnname{
+				float: left;
+				margin-right: 20px;
+				font-size: 28px;
+				font-weight: 700;
+				margin-top:62px ;
+			}
+			.frontname1{
+				display: inline-block;
+				margin-top: 70px;
+				margin-right: 50px;
+			}
+			.right-more{
+				float: right;
+				margin-top: 70px;
+			}
+			.column-bt{
+				width:1090px;
+				height: 476px;
+				/*background:green;*/
+			}
+			.column-bt-left{
+				width:390px;
+				height:476px;
+				background: white;
+				float: left;
+			}
+			.column-bt-left1{
+				width: 390px;
+				height: 81px;
+			}
+			.footer-down{
+				text-align: center;
+				box-sizing: border-box;
+				padding-top: 30px;
+			}
+			.column-bt-right{
+				width:222px;
+				height:233px;
+				float: left;
+				background: white;
+				margin-left: 11px;
+				margin-bottom: 5px;
+			}
+			.column-bt-right1{
+				width:222px;
+				height:63px;
+				/*background: blue;*/
+			}
+			.column-bt-right2{
+				padding-top: 15px;
+				padding-left:40px;
+			}
+			.column-price{
+				margin-left:-50px;
+				color: red;
+			}
+			.bottom{
+				width:1090px;
+				height: 480px;
+				/*background: red;*/
+				margin: auto;
+			}
+			.bottom-top{
+				width:1090px;
+				height: 100px;
+				/*background: blue;*/
+			}
+			.bottom-top-name{
+				float: left;
+				font-size: 28px;
+				font-weight: 700;
+				padding-top:60px ;
+			}
+			.bottom-down{
+				width:1090px;
+				height:380px;
+				/*background: yellow;*/
+			}
+			.bottom-down-left{
+				float: left;
+				width:224px;
+				height: 380px;
+			}
+			.bottom-down-right{
+				float: left;
+				width:866px;
+				height: 380px;
+				/*background:pink;*/
+				position: relative;
+			}
+			.bottom-down-top{
+				width:433px;
+				height:190px;
+				/*background: green;*/
+				float: left;
+			}
+			.bottom-down-topleft{
+				float: left;
+			}
+			.bottom-down-topright{
+				float: right;
+				width: 252px;
+				height: 190px;
+				/*background: yellow;*/
+				position: relative;
+			}
+			.topleft-name{
+				font-size: 20px;
+				padding-top: 15px;
+			}
+			.topleft-p{
+				padding-top:5px;
+				color:#999;
+			}
+			.topleft-num{
+				width:152px;
+				height: 10px;
+				margin-top: 15px;
+				border: 1px solid #f2cecd;
+				border-radius: 5px;
+				float: left;
+			}
+			.topleft-num1{
+				display: inline-block;
+				font-size: 14px;
+				color: #999;
+				margin-top: 12px;
+				margin-left: 10px;
+			}
+			.downright{
+				margin-top: 10px;
+			}
+			.aprice{
+				color: red;
+				font-size: 14px;
+			}
+			.yuan{
+				font-size: 24px;
+				font-weight: 700;
+				color: red;
+			}
+			.oprice{
+				font-size: 14px;
+				color: #999;
+			}
+			.downright1{
+				width: 110px;
+				height: 38px;
+				margin-top: 15px;
+				background: red;
+				line-height: 38px;
+				font-size: 20px;
+				color: white;
+				text-align: center;
+			}
+			.home{
+				margin: auto;
+				margin-top: 60px;
+				width:1090px;
+				
+				/*background: red;*/
+			}
+			.home1{
+				width: 1090px;
+				height: 775px;
+				/*background: yellow;*/
+			}
+			.home1-top{
+				width:1090px;
+				height: 28px;
+				margin-bottom: 20px;
+				/*background: green;*/
+			}
+			.home1-top-left .name{
+				float: left;
+				margin-right: 10px;
+				font-size: 28px;
+				font-weight: 700;
+			}
+			.home1-top-left .frontname{
+					float: left;
+			}
+			.home1-top-right{
+				float: right;
+			}
+			.home1-top-right .item{
+				box-sizing: border-box;
+				padding-top: 14px;
+				float: left;
+				color: #333;
+				font-size: 12px;
+			}
+			.home1-top-right .spilt{
+				box-sizing: border-box;
+				float: left;
+				margin: 0 13px;
+				padding-top: 13px;
+			}
+			.home1-top-right .getmore{
+				box-sizing: border-box;
+				display: inline-block;
+				padding-left:30px;
+				font-size: 14px;
+				color: #333;
+				margin-top: 14px;
+			}
+			.home-middle{
+				margin-bottom: 20px;
+			}
+			.home-bottom{
+				width: 1090px;
+				height: 392px;
+				/*background: blue;*/
+			}
+			.home-bottom-all{
+				float: left;
+				width: 265px;
+				height:392px;
+				/*background: gold;*/
+				margin-right: 10px;
+			}
+			.home-bottom-left{
+				background: #f4f4f4;
+				border: 1px solid transparent;
+				width:263px;
+				height: 265px;
+				margin-bottom: 10px;
+			}
+			.home-bottom1{
+				width: 265px;
+				height: 74px;
+				/*background: green;*/
+			}
+			.mingzi{
+				box-sizing: border-box;
+				font-size:100%;
+				font-weight: bold;
+				text-align: center;
+				padding-top: 20px;
+			}
+			.jiage{
+				box-sizing: border-box;
+				padding-top: 5px;
+				color: red;
+			}
+			.home-bottom-last{
+				float: right;
+			}
+			.down{
+				width: 1090px;
+				height: 432px;
+				margin: auto;
+				/*background: red;*/
+			}
+			.down-hd{
+				width: 1090px;
+				height: 32px;
+				margin-bottom: 20px;
+			}
+			.down-hd-left-name{
+				float: left;
+				margin-right: 20px;
+				font-size: 28px;
+				font-weight: 700;
+			}
+			.down-hd-left-frontname{
+				box-sizing: border-box;
+				float: left;
+				padding-top: 14px;
+				font-size: 14px;
+			}	
+			.down-footer{
+				display: block;
+			}
+			.down-footer-left{
+				width: 690px;
+				height: 380px;
+				float: left;
+			}
+			.down-footer-right{
+				float: left;
+				margin-left: 10px;
+			}	
+			.bottom-down-right1{
+				float: left;
+				margin-left: 10px;
+				margin-top: 5px;
+			}
+			.family{
+				box-sizing: border-box;
+				width: 100%;
+				height: 480px;
+				background: #f4f0ea;
+				margin-top: 60px;
+				padding: 60px 0;
+			}
+			.yeye{
+				width: 1090px;
+				height: 360px;
+				margin: auto;
+			}
+			.father{
+				width:1090px;
+				height: 32px;
+				margin-bottom: 20px;
+			}
+			.over{
+				box-sizing: border-box;
+				width: 1090px;
+				height: 502px;
+				margin: auto;
+				padding-top: 60px;
+			}
+			.over-hd{
+				width: 1090px;
+				height: 204px;
+				padding-bottom: 34px;
+			}
+			.over-hdleft{
+				width: 1090px;
+				height: 204px;
+				position: relative;
+				/*background: red;*/
+			}
+			.over-head{
+				width: 362.66px;
+				height: 204px;
+				float: left;
+				display: block;
+				text-align: center;
+			}
+			.over-header{
+				text-align: center;
+				margin-bottom: 28px;
+				font-size: 16px;
+				font-weight: 400;
+			}
+			.phone{
+				margin-top: 25px;
+				font-size: 26px;
+			}
+			.time{
+				margin-top: 15px;
+				margin-bottom: 35px;
+				font-size: 14px;
+			}
+			.freeback{
+				width: 100px;
+				height: 28px;
+				font-size: 14px;
+				line-height: 26px;
+				background: #fff;
+				border: 1px solid #666;
+				margin-right: 12px;
+			}
+			.kefu{
+				width: 100px;
+				height: 28px;
+				font-size: 14px;
+				line-height: 26px;
+				background: #fff;
+				border: 1px solid #666;
+			}
+			.over-middle{
+				width: 362.66px;
+				height: 204px;
+				float: left;
+				display: block;
+				text-align: center;
+				border-left:1px solid #e9e9e9;
+			}
+			.whatisyx{
+				padding: 0 37px;
+				text-align: center;
+			}
+			.desc{
+				text-align: left;
+				font-size: 13px;
+				line-height: 23px;
+				margin-bottom: 22px;
+			}
+			.title{
+				margin-right: 15px;
+				margin-bottom: 0;
+				font-size: 14px;
+				line-height: 32px;
+			}
+			.over-bottom{
+				box-sizing: border-box;
+				width: 1090px;
+				height: 204px;
+				padding-top: 37px;
+				background: #414141;
+			}
+			.over-bottem-all{
+				list-style: none;
+				display: block;
+				box-sizing: border-box;
+			}
+			.over-bottem-all .item{
+				float: left;
+				width: 33.3333%;
+				text-align: center;
+			}
+			.inner{
+				color: #FFFFFF;
+				font-size:18px ;
+				line-height: 51px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.siteinfo{
+				margin-top: 100px;
+				text-align: center;
+				color: #999;
+				display: block;
+				font-size: 12px;
+			}
+			.siteinfo .text{
+				color: #999;
+			}
+			.siteinfo .spilt{
+				margin: auto 10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<div class="body">
+				<p class="header-left">好的生活，没那么贵</p>
+				<div class="header-right">
+					<a class="login" href="#">登录</a>
+					<a class="login" href="#">注册</a>
+					<a class="login-word" href="#">严选态度</a>
+					<a class="login-word" href="#">企业采购</a>
+					<a class="login-word" href="#">客户服务</a>
+					<a class="login-word" href="#">下载APP</a>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-left">
+				<a class="main-left-pic" href="#"></a>
+				<div class="main-right">
+				<input class="main-right-input" type="text" name="" id="" value="Armani制造商夏季家居服99元起" />
+				<i class="search"></i>
+				<i class="shop"></i>
+				</div>
+			</div>
+		</div>
+			<div class="concent">
+			<ul class="tab-nav">
+				<li class="nav-word first">
+				<a class="toplvl">首页</a>
+				</li>
+				<li class="nav-word"><a class="toplvl" href="#">居家</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">餐厨</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">配件</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">服装</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">洗护</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">婴童</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">杂货</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">饮食</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">志趣</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">|</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">专题</a></li>
+				<li class="nav-word"><a class="toplvl" href="#">甄选家</a></li>
+			</ul>
+			</div>
+			<div class="pic">
+			<img src="img/7500729b9180ba7c472195160d920afe.jpg"/>
+			</div>
+			<div class="banner">
+				<div class="left">
+					<h3 class="name">品牌制造商</h3>
+					<small class="frontname">工厂直达消费者，剔除品牌溢价</small>
+					<span class="right">更多制造商 ></span>
+				</div>
+				<div class="foo">
+					<div class="foo-left">
+					<img src="img/988a88e824007ccd277bbadf7e8f9622(1).jpg"/>
+				 	</div>
+				 	<div class="foo-left1">
+				 		MUJI制造商
+				 	</div>
+				 	<div class="foo-left2">
+				   	12.9元起
+				   </div>
+				</div>
+				<div class="foo-middle">
+					<div class="foo-left">
+					<img src="img/988a88e824007ccd277bbadf7e8f9622(1).jpg"/>
+				 	</div>
+				 	<div class="foo-left1">
+				 		CDK制造商
+				 	</div>
+				 	<div class="foo-left2">
+				   		39元起
+				   </div>
+				</div>
+				<div class="foo-top">
+				<div class="foo-right">
+					<div class="foo-right1">
+						<img src="img/f8a241c023855ed12ffe0d51edb692f1_看图王.jpg"/>
+					</div>
+					<div class="foo-right2">
+						爱慕制造商
+					</div>
+					<div class="foo-right3">
+						35元起
+					</div>
+				</div>
+				<div class="foo-right-bottom">
+					<div class="foo-right1">
+						<img src="img/f8a241c023855ed12ffe0d51edb692f1_看图王.jpg"/>
+					</div>
+					<div class="foo-right2">
+						爱慕制造商
+					</div>
+					<div class="foo-right3">
+						35元起
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="left">
+					<h3 class="name">新品首发</h3>
+					<small class="frontname">周一周四上新，为你寻觅时间好物</small>
+					<span class="right">更多新品></span>
+				</div>
+				<div class="footer-left">
+					<div class="footer-left3">
+					<div class="footer-left1">
+						<img src="img/872b0a5df602e9b12e5ac14da518b079.png"/>
+					</div>
+					<div class="footer-bottom">
+						<h4 class="footer-bottom1">
+							男士飞织运动休闲鞋
+						</h4>
+						<p class="price">
+							<span class="price1">￥199</span> |
+							<span class="price2">CK制造商</span>
+						</p>
+					</div>
+					</div>
+					<div class="footer-left3">
+					<div class="footer-left1">
+						<img src="img/898c62600a0eb65e69d4c7cd036f7588.jpg"/>
+					</div>
+					<div class="footer-bottom">
+						<h4 class="footer-bottom1">
+							微电流滚轮身体按摩仪
+						</h4>
+						<p class="price">
+							<span class="price1">￥189</span> |
+							<span class="price2">ReFa制造商</span>
+						</p>
+					</div>
+					</div>
+					<div class="footer-left3">
+					<div class="footer-left1">
+						<img src="img/8957b56358c3f21dbbf6cb42004ae006.png"/>
+					</div>
+					<div class="footer-bottom">
+						<h4 class="footer-bottom1">
+							空蓝经典飞行员墨镜
+						</h4>
+						<p class="price">
+							<span class="price1">￥109</span> |
+							<span class="price2">Police制造商</span>
+						</p>
+					</div>
+					</div>
+					<div class="footer-left3">
+					<div class="footer-left1">
+						<img src="img/782408977c7fa730f394ad02fd03415e.jpg"/>
+					</div>
+					<div class="footer-bottom">
+						<h4 class="footer-bottom1">
+							光面羊皮蛋卷鞋
+						</h4>
+						<p class="price">
+							<span class="price1">￥199</span> |
+							<span class="price2">Tovr Burch制造商</span>
+						</p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="g-row">
+					<div class="column-hd">
+						<h3 class="columnname">人气推荐</h3>
+						<span class="frontname1">编辑推荐</span>
+						<span class="frontname1">编辑推荐</span>
+						<span class="frontname1">编辑推荐</span>
+					    <span class="right-more">更多推荐></span>
+					</div>
+					<div class="column-bt">
+						<div class="column-bt-left">
+							<img src="img/f1dbf1d9967c478ee6def81ed40734a2.png"/>
+							 <div class="column-bt-left1">
+							 	<h4 class="footer-down">
+							 		多功能人工转椅
+							 	</h4>
+							 	<p class="price">
+							 		<span class="price1">￥1399</span>
+							 	</p>
+							 </div>
+						</div>
+						<div class="column-bt-right">
+							<img src="img/ea5b0a572b35089446fba491db7fbbc3.png"/>
+							<div class="column-bt-right1">
+							 	<h4 class="column-bt-right2">
+							 		20寸全铝镁合金登机箱
+							 	</h4>
+							 	<p class="price">
+							 		<span class="column-price">￥699</span>
+							 	</p>
+							 </div>
+						</div>
+						<div class="column-bt-right">
+							<img src="img/6ad1813d123f7a80f84c2cfa5f8c7caf.png"/>
+							<div class="column-bt-right1">
+							 	<h4 class="column-bt-right2">
+							 		AB面独立弹簧床垫 
+							 	</h4>
+							 	<p class="price">
+							 		<span class="column-price">￥2599</span>
+							 	</p>
+							 </div>
+						</div>
+						<div class="column-bt-right">
+							<img src="img/566b32483a6805635bd7e76ad77bf0b0.png"/>
+							<div class="column-bt-right1">
+							 	<h4 class="column-bt-right2">
+							 		黑凤梨女士真丝睡衣
+							 	</h4>
+							 	<p class="price">
+							 		<span class="column-price">￥799</span>
+							 	</p>
+							 </div>
+						</div>
+						<div class="column-bt-right">
+							<img src="img/e5474a8f4fd5748079e2ba2ead806b51.png"/>
+							<div class="column-bt-right1">
+							 	<h4 class="column-bt-right2">
+							 		日式电动牙刷
+							 	</h4>
+							 	<p class="price">
+							 		<span class="column-price">￥129</span>
+							 	</p>
+							 </div>
+						</div>
+						<div class="column-bt-right">
+							<img src="img/94e8751c62a298bb3a663198b50d0159.png"/>
+							<div class="column-bt-right1">
+							 	<h4 class="column-bt-right2">
+							 		男士平角内裤
+							 	</h4>
+							 	<p class="price">
+							 		<span class="column-price">￥59</span>
+							 	</p>
+							 </div>
+						</div>
+						<div class="column-bt-right">
+							<img src="img/1f80c20697204cf1c367abebdc052360.png"/>
+							<div class="column-bt-right1">
+							 	<h4 class="column-bt-right2">
+							 		塑料料理机
+							 	</h4>
+							 	<p class="price">
+							 		<span class="column-price">￥199</span>
+							 	</p>
+							 </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="bottom-top">
+					<h3 class="bottom-top-name">限时购</h3>
+					<span class="right-more">更多抢购></span>
+				</div>
+				<div class="bottom-down">
+					<div class="bottom-down-left">
+						<img src="img/20170519161255.png"/>
+					</div>
+					<div class="bottom-down-right">
+						<div class="bottom-down-top">
+							<div class="bottom-down-topleft">
+							<img src="img/f99ff0c5a3d96f9ee0ac4e45f72e40c7.png"/>
+							</div>
+							<div class="bottom-down-topright">
+								<h2 class="topleft-name">男士基础V领长袖T恤</h2>
+								<p class="topleft-p">平滑到底无侧缝</p>
+								<div class="topleft-num"></div>
+								<span class="topleft-num1">还剩522件</span>
+								<div class="downright">
+									<span class="aprice">限时价</span>&nbsp
+									<span class="yuan">￥48</span> &nbsp&nbsp
+									<span class="oprice">原价￥69</span> 
+								</div>
+								<div class="downright1">立即抢购</div>
+							</div>
+						</div>
+						<div class="bottom-down-top">
+							<div class="bottom-down-topleft">
+							<img src="img/e0b928ada728c140f6965bb41f47407b.png"/>
+							</div>
+							<div class="bottom-down-topright">
+								<h2 class="topleft-name">纯棉色织缎纹四件套</h2>
+								<p class="topleft-p">色织锻造工艺，亲肤舒适</p>
+								<div class="topleft-num"></div>
+								<span class="topleft-num1">还剩366件</span>
+								<div class="downright">
+									<span class="aprice">限时价</span>&nbsp
+									<span class="yuan">￥339</span> &nbsp&nbsp
+									<span class="oprice">原价￥449</span> 
+								</div>
+								<div class="downright1">立即抢购</div>
+							</div>
+						</div>
+						<div class="bottom-down-top">
+							<div class="bottom-down-topleft">
+							<img src="img/bbdbfc9d084e0188af383ff9255a4cc1.png"/>
+							</div>
+							<div class="bottom-down-topright">
+								<h2 class="topleft-name">猪鬃气垫按摩梳</h2>
+								<p class="topleft-p">猪鬃滋养，尼龙针按摩</p>
+								<div class="topleft-num"></div>
+								<span class="topleft-num1">还剩341件</span>
+								<div class="downright">
+									<span class="aprice">限时价</span>&nbsp
+									<span class="yuan">￥59</span> &nbsp&nbsp
+									<span class="oprice">原价￥79</span> 
+								</div>
+								<div class="downright1">立即抢购</div>
+							</div>
+						</div>
+						<div class="bottom-down-top">
+							<div class="bottom-down-topleft">
+							<img src="img/601f3ea3aca3a8b588306f29dc0c2510.png"/>
+							</div>
+							<div class="bottom-down-topright">
+								<h2 class="topleft-name">清新舒适帆布鞋</h2>
+								<p class="topleft-p">keds制造商，经典百搭款</p>
+								<div class="topleft-num"></div>
+								<span class="topleft-num1">还剩799件</span>
+								<div class="downright">
+									<span class="aprice">限时价</span>&nbsp
+									<span class="yuan">￥79</span> &nbsp&nbsp
+									<span class="oprice">原价￥99</span> 
+								</div>
+								<div class="downright1">立即抢购</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">餐厨</h3>
+							<small class="frontname">爱，囤于厨房</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">锅具</a><b class="spilt">/</b>
+							<a class="item" href="#">杯壶</a><b class="spilt">/</b>
+							<a class="item" href="#">功能厨具</a><b class="spilt">/</b>
+							<a class="item" href="#">餐具</a><b class="spilt">/</b>
+							<a class="item" href="#">茶具咖啡杯</a><b class="spilt">/</b>
+							<a class="item" href="#">清洁保鲜</a><b class="spilt">/</b>
+							<a class="item" href="#">刀剪砧板</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/cc91813f583f08c1eb2a91604f51949a.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/ad953e16ad8c33b714e7af941ce8cd56.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>日式蓬软太鼓抱枕</h4>
+								<p class="jiage">￥29</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/4f483526cfe3b953f403ae02049df5b9.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>纯棉水洗色织格夏凉被</h4>
+								<p class="jiage">￥169</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/a7a524512c34d24a4b9762766dd9d0f0.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>大头风扇</h4>
+								<p class="jiage">￥119</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/255a4888161f9b4fe530cf319f14551d.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>纯色床单</h4>
+								<p class="jiage">￥99</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">居家</h3>
+							<small class="frontname">回家，放松身心</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">夏凉</a><b class="spilt">/</b>
+							<a class="item" href="#">被枕</a><b class="spilt">/</b>
+							<a class="item" href="#">床品套件</a><b class="spilt">/</b>
+							<a class="item" href="#">布艺软装</a><b class="spilt">/</b>
+							<a class="item" href="#">家具</a><b class="spilt">/</b>
+							<a class="item" href="#">灯具</a><b class="spilt">/</b>
+							<a class="item" href="#">家饰</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/081f1d41071d3338f5afa2f19a4fd6fe.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/22b832ace6eb10c7b0057eb6eae6c3c9.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>懒人抹布</h4>
+								<p class="jiage">￥13.99</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/4157106cf2f0961cdcdd0854da726b42.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>运动水杯</h4>
+								<p class="jiage">￥49</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/807cb6512926418f4b8f2d019be432a4.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>冷纹沙拉碗</h4>
+								<p class="jiage">￥39</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/acba74a016940d8c277686bba646d19a.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>不锈钢除味皂</h4>
+								<p class="jiage">￥12.9</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">配件</h3>
+							<small class="frontname">配件，亦是主角</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">行李箱</a><b class="spilt">/</b>
+							<a class="item" href="#">功能箱包</a><b class="spilt">/</b>
+							<a class="item" href="#">双肩包</a><b class="spilt">/</b>
+							<a class="item" href="#">单肩包</a><b class="spilt">/</b>
+							<a class="item" href="#">鞋</a><b class="spilt">/</b>
+							<a class="item" href="#">拖鞋</a><b class="spilt">/</b>
+							<a class="item" href="#">靴</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/159d3f1a63e5db73b1f48811093390bb.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/bcaf6bbd497b40e76ca94414347be57b.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>四季拖鞋</h4>
+								<p class="jiage">￥19.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/ad504bb389039ff35c4cd6ae912be87e.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>拉链登机箱</h4>
+								<p class="jiage">￥228</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/90d2be28d239da2f0d93262dbac6b804.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>摩登方形眼镜</h4>
+								<p class="jiage">￥129</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/a09dd2b9ff8d2f8706d12326a9477b35.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>女帆布鞋</h4>
+								<p class="jiage">￥149</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">服装</h3>
+							<small class="frontname">贴身的，要亲肤</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">卫衣</a><b class="spilt">/</b>
+							<a class="item" href="#">T恤</a><b class="spilt">/</b>
+							<a class="item" href="#">衬衫</a><b class="spilt">/</b>
+							<a class="item" href="#">内裤</a><b class="spilt">/</b>
+							<a class="item" href="#">内衣</a><b class="spilt">/</b>
+							<a class="item" href="#">家居服</a><b class="spilt">/</b>
+							<a class="item" href="#">袜子</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/63a240b1729726cab6571ef0ad96902a.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/e00d2d6e62de4eb4225ccf1e2f71b988.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>夏季男士隐形袜</h4>
+								<p class="jiage">￥39</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/492db2b02d7faa0b25051dafd4d6064a.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>纯棉口袋T恤</h4>
+								<p class="jiage">￥49</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/83433f5a7ef69abda2544a53332a0fad.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>女士纯棉免洗内裤</h4>
+								<p class="jiage">￥19.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/5fa2566bc077a82c18385ad5724a0c61.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>女士精梳棉bar背心</h4>
+								<p class="jiage">￥59</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">洗护</h3>
+							<small class="frontname">亲肤之物，严选天然</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">毛巾</a><b class="spilt">/</b>
+							<a class="item" href="#">香薰</a><b class="spilt">/</b>
+							<a class="item" href="#">美妆</a><b class="spilt">/</b>
+							<a class="item" href="#">面部护理</a><b class="spilt">/</b>
+							<a class="item" href="#">身体护理</a><b class="spilt">/</b>
+							<a class="item" href="#">美发护发</a><b class="spilt">/</b>
+							<a class="item" href="#">口腔护理</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/81c4fc2d76107772d2794a91c5c3f085.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/5c48e7eaa01eb1fc141cb7f6edaa80a1.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>电动丝柔修足机</h4>
+								<p class="jiage">￥59</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/bd34258c1c450f96584aa3ceb85aba9e.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>软抽面巾纸</h4>
+								<p class="jiage">￥16.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/a252e339dcf92409067861ead7d8fa54.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>肥皂架</h4>
+								<p class="jiage">￥19.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/a7c7eec41194e65d64931a2d08ef4f8c.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>超柔毛巾</h4>
+								<p class="jiage">￥29</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">婴童</h3>
+							<small class="frontname">爱，从心开始</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">婴幼儿服饰</a><b class="spilt">/</b>
+							<a class="item" href="#">儿童服饰</a><b class="spilt">/</b>
+							<a class="item" href="#">配搭</a><b class="spilt">/</b>
+							<a class="item" href="#">妈咪</a><b class="spilt">/</b>
+							<a class="item" href="#">寝具</a><b class="spilt">/</b>
+							<a class="item" href="#">玩具</a><b class="spilt">/</b>
+							<a class="item" href="#">婴童洗护</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/915a2ba5d79e280b35d35919922312bf.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/124e2c38f57acff92d5202829244d6aa.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>趣味儿童洞洞拖鞋</h4>
+								<p class="jiage">￥69</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/6b138286cd745f4d88a30021b2510f20.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>婴幼儿手口湿巾</h4>
+								<p class="jiage">￥9.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/ba5d98281e38a647dbe8f8b05555f5a7.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>迷彩短袖体恤</h4>
+								<p class="jiage">￥36</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/f596f2a7ececf42131e9abe1e5b2457e.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>防溢乳垫</h4>
+								<p class="jiage">￥29</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">杂货</h3>
+							<small class="frontname">解忧，每个烦恼</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">文具</a><b class="spilt">/</b>
+							<a class="item" href="#">出行用品</a><b class="spilt">/</b>
+							<a class="item" href="#">收纳</a><b class="spilt">/</b>
+							<a class="item" href="#">海外</a><b class="spilt">/</b>
+							<a class="item" href="#">户外</a><b class="spilt">/</b>
+							<a class="item" href="#">节日礼盒</a><b class="spilt">/</b>
+							<a class="item" href="#">婴童洗护</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/d266c3f19db232861e0958ebdd5070fd.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/1b9aefc90de0698f2db06cfd3828b2b7.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>可循环放水挂钩</h4>
+								<p class="jiage">￥9.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/f914d3746a226d6a46d02422d3abb69d.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>皮面笔记本</h4>
+								<p class="jiage">￥39</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/90253b0d3eb662a152f1ea712343b5c1.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>洗涤用衣架</h4>
+								<p class="jiage">￥19.9</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/6e6d0902d06b6727cb3c88d741678d41.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>充气U型垫</h4>
+								<p class="jiage">￥39</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">饮食</h3>
+							<small class="frontname">好吃，高颜值美食</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">糕点</a><b class="spilt">/</b>
+							<a class="item" href="#">小食</a><b class="spilt">/</b>
+							<a class="item" href="#">果干</a><b class="spilt">/</b>
+							<a class="item" href="#">炒货</a><b class="spilt">/</b>
+							<a class="item" href="#">冲饮</a><b class="spilt">/</b>
+							<a class="item" href="#">茗茶</a><b class="spilt">/</b>
+							<a class="item" href="#">肉制品</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/858ff2e1a3004a83257e0fd7ab2b3a5b.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/f6d5f86c024a598e83bcd4cf11bb235a.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>黑凤梨 鲜果动</h4>
+								<p class="jiage">￥14</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/a1b5cd36fe1784b6c69f1b4d63a4ad9d.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>蜂蜜柠檬片</h4>
+								<p class="jiage">￥25</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/514ca7b5d2c31d1f0c1ea6703fda01ba.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>黑凤梨 猪肉铺</h4>
+								<p class="jiage">￥29</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/66b9f1638c0517d179262f14ed1345f9.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>绿豆糕</h4>
+								<p class="jiage">￥12.9</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home">
+				<div class="home1">
+					<div class="home1-top">
+						<div class="home1-top-left">
+							<h3 class="name">志趣</h3>
+							<small class="frontname">周边精品，共享热爱</small>
+						</div>
+						<div class="home1-top-right">
+							<a class="item" href="#">黑凤梨</a><b class="spilt">/</b>
+							<a class="item" href="#">魔兽世界</a><b class="spilt">/</b>
+							<a class="item" href="#">炉石传说</a><b class="spilt">/</b>
+							<a class="item" href="#">守望先锋</a><b class="spilt">/</b>
+							<a class="item" href="#">暗黑破坏神</a><b class="spilt">/</b>
+							<a class="item" href="#">星际争霸</a><b class="spilt">/</b>
+							<a class="item" href="#">风暴英雄</a>
+							<a class="getmore" href="#">查看更多 ></a>
+						</div>
+					</div>
+					<div class="home-middle">
+						<img src="img/a58ea99f5f5807940c636b25780bcd3b.jpg"/>
+					</div>
+					<div class="home-bottom">
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/6428ba4897f481c57e74f9b9206a3c9a.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>ipone手机壳 守望先锋</h4>
+								<p class="jiage">￥29</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/c0bfd08f6ea6c7ba0bd0343f1533c1ab.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>大话2棉麻短袖体恤</h4>
+								<p class="jiage">￥119</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-all">
+							<div class="home-bottom-left">
+							<img src="img/32e8ea07134e192265ff3358616ce264.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>伊利丹 夜光体恤 魔兽世界</h4>
+								<p class="jiage">￥99</p>
+							</div>
+							</div>
+						</div>
+						<div class="home-bottom-last">
+							<div class="home-bottom-left">
+							<img src="img/6559bda966983d791fe061d3dfc8aecd.png"/>
+							</div>
+							<div class="home-bottom1">
+							<div class="mingzi">
+								<h4>梦幻短袖体恤</h4>
+								<p class="jiage">￥49</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="down">
+				<div class="down-hd">
+					<div class="down-hd-left">
+						<h3 class="down-hd-left-name">甄选家</h3>
+						<small class="down-hd-left-frontname">我们在寻找，对生活有态度的你</small>
+					</div>
+				</div>
+				<div class="down-footer">
+					<a class="down-footer-left" href="#"><img src="img/b21b20f34d5007f961c182273a5d429f.jpg"/></a>
+					<a class="down-footer-right" href="#"><img src="img/9548e1f1a0ba0436cb13d586c50284be.jpg"/></a>
+					<a class="bottom-down-right1" href="#"><img src="img/4a56bf536141eb2ad84f8f8f0e0418ab.jpg"/></a> 
+				</div>
+			</div>
+			<div class="family">
+				<div class="yeye">
+					<div class="father">
+					<div class="down-hd-left">
+						<h3 class="down-hd-left-name">大家都在说</h3>
+						<small class="down-hd-left-frontname">生活，没有统一标准</small>
+					</div>
+					</div>
+				<img src="img/081f1d41071d3338f5afa2f19a4fd6fe.jpg"/>
+				</div>
+			</div>
+			<div class="over">
+				<div class="over-hd">
+					<div class="over-hdleft">
+						<div class="over-head">
+							<h4 class="over-header">客服电话</h4>
+							<p class="phone">400-0368-163</p>
+							<p class="time">9:00-22:00</p>
+							<a class="freeback" hrer="#">用户反馈</a>
+							<a class="kefu" href="#">在线客服</a>
+						</div>
+						<div class="over-middle">
+							<div class="whatisyx">
+								<h4 class="over-header">何为严选</h4>
+								<p class="desc">
+								网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，
+								从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品</p>
+							</div>
+							<div class="followus">
+								<p class="title">关注我们&nbsp;:</p>
+							</div>
+						</div>
+						<div class="over-middle">
+							<div class="appdownload">
+								<h4 class="over-header">扫码下载APP</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="over-bottom">
+					<ul class="over-bottem-all">
+						<li class="item">
+							<div class="inner">
+								<i class="icon w-icon-normal icon-normal-ft1"></i>
+								<p class="text">30天无忧退货</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="inner">
+								<i class="icon w-icon-normal icon-normal-ft1"></i>
+								<p class="text">满88元包邮</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="inner">
+								<i class="icon w-icon-normal icon-normal-ft1"></i>
+								<p class="text">网易品质保证</p>
+							</div>
+						</li>
+					</ul>
+					<div class="siteinfo">
+						<a class="text" href="#">关于我们</a><b class="spilt">|</b>
+						<a class="text" href="#">帮助中心</a><b class="spilt">|</b>
+						<a class="text" href="#">售后服务</a><b class="spilt">|</b>
+						<a class="text" href="#">配送与验收</a><b class="spilt">|</b>
+						<a class="text" href="#">商务合作</a><b class="spilt">|</b>
+						<a class="text" href="#">企业采购</a><b class="spilt">|</b>
+						<a class="text" href="#">友情链接</a>
+						<p class="copyright">网易版权公司所有 &copy; 1997-2017 &nbsp; 食品经营许可证： JY13301080111719</p>
+					</div>
+				</div>
+			</div>
+			
+	</body>
+</html>
