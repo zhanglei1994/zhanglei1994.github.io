@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width:500px;
+				height:500px;
+				border: 1px solid red;
+				background: url(../img/115751_45221623.jpg) 500px 500px;
+				/*background: rgba(0,0,0,0);*/
+			}
+			div{
+				width:48px;
+				height:48px;
+				border:1px solid red;
+				float: left;
+				background: rgba(0,0,0,1);
+			}
+		
+			
+		</style>
+	</head>s
+	<body>
+		<div id="box">
+			<!--<img src="../img/115751_45221623.jpg"/>-->
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oBox=document.getElementById('box');
+		var oBox1=oBox.getElementsByTagName('div')
+		for(var i=0;i<100;i++){
+			oBox.innerHTML+='<div></div>';
+		}
+		for(var i=0;i<100;i++){
+			oBox1[i].num=i;
+			oBox1[i].onmouseover=function(){
+				this.style.background='rgba(0,0,0,0)';
+			}
+		}
+		
+	
+			
+	</script>
+</html>
