@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			div{
+				width:790px;
+				height: 340px;
+				position: relative;
+			}
+			img{
+				width:100%;
+				height:100%;
+				position: absolute;
+			}
+			ul{
+				position: absolute;
+				z-index: 1;
+				left:40%;
+				bottom: 20px;
+				width:166px;
+				height: 12px;
+				padding: 4px 0;
+				border-radius:12px;;
+				background:hsla(0,0%,100%,.3); ;
+			}
+			li{
+				
+				width:12px;
+				height:12px;
+				border-radius: 50%;
+				float:left;
+				background: white;
+				margin:0px 4px;
+			}
+			a{
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.1);
+				height: 80px;
+				width: 40px;
+				color: white;
+				text-align: center;
+				line-height: 80px;
+				top: 35%;
+			}
+			#right{
+				position: absolute;
+				right:0;
+			}
+			a:hover{
+				background: rgba(0, 0, 0, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<img id="pic" src="../img/592335ffN4db229ea.jpg"/>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<a id="left" href="#"><</a>
+		<a id="right" href="#">></a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oPic=document.getElementById('pic')
+		var aLi=document.getElementsByTagName('li')
+		var oLeft=document.getElementById('left')
+		var oRight=document.getElementById('right')
+		var arrImg=["../img/592335ffN4db229ea.jpg","../img/59238e8dN63e4f676.jpg","../img/5926a672Nb8379e7f.jpg","../img/592694b4N951283d0.jpg",
+		"../img/59263552N857b7a7b.jpg","../img/592511f7N95af1be7.jpg","../img/5924e10dN2fd51491.jpg","../img/5819c2cbNb07c8d0e.jpg"]
+		var num=0;
+		for(var i=0;i<arrImg.length;i++){
+//			alert(arrImg.length)
+			aLi[i].num=i;
+			aLi[i].onmouseover=function(){
+				index=this.num;
+				oPic.src=arrImg[this.num]
+				for(var i=0;i<aLi.length;i++){
+				aLi[i].style.background='white';
+				};
+				this.style.background='red';
+			}
+		}
+		var index=0;
+		oRight.onclick=function(){
+			if(index<arrImg.length-1){
+				index=index+1;
+			}else{
+				index=0;
+			}
+			oPic.src=arrImg[index];
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].style.background='white';
+				};
+			aLi[index].style.background='red';	
+		}
+		oLeft.onclick=function(){
+			if(index>0){
+				index=index-1;
+			}else{
+				index=arrImg.length-1;
+			}
+			oPic.src=arrImg[index];
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].style.background='white';
+				};
+			aLi[index].style.background='red';	
+		}
+		
+	</script>
+</html>
