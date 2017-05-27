@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 800px;
+				height: 500px;
+				position: relative;
+			}
+			ul{
+				position: absolute;
+				z-index: 1;
+				left:50%;
+				bottom: 20px;
+				padding: 4px 0;
+				border-radius:12px;
+				background:hsla(0,0%,100%,.3); ;
+			}
+			li{
+				width:12px;
+				height:12px;
+				border-radius: 50%;
+				float:left;
+				background: white;
+				margin:0px 9px;
+			}
+			a{	
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				background-color: rgba(0, 0, 0, 0.1);
+				position: absolute;
+				top:40%;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+			}
+			#right{
+				right: 0;
+			}
+			a:hover{
+				background:orange;
+			}
+			#photo{
+				width:100px;
+				height: 100px;
+				position: absolute;
+				top:350px;
+				left:280px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img id="pic" src="../img/1.jpg"/>
+			<div>
+			<img id="photo" src="../img/1.jpg"/>
+			</div>
+			<ul id="list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<a id="left" href="#"><</a>
+			<a id="right" href="#">></a>
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var aBox=document.getElementById('box');
+		var aPic=document.getElementById('pic');
+		var oLi=aBox.getElementsByTagName('li');
+		var aList=document.getElementById('list');
+		var aLeft=document.getElementById('left');
+		var aRight=document.getElementById('right');
+		var aPhoto=document.getElementById('photo');
+		var arrImg=["../img/1.jpg","../img/2.jpg","../img/3.jpg","../img/4.jpg"];
+		var Len=arrImg.length;
+		var num=0;
+		aList.style.marginLeft='-'+(Len*30)/2+'px';
+		for(var i=0;i<Len;i++){
+			oLi[i].num=i;
+			oLi[i].onclick=function(){
+				mu=this.num;
+				aPic.src=arrImg[this.num];
+				for(var i=0;i<Len;i++){
+					oLi[i].style.background='white';
+				};
+				this.style.background='red';
+			};
+			
+			oLi[i].onmouseover=function(){
+				aPhoto.style.marginLeft=+(this.num*100)/2+'px';
+				mu=this.num;
+				aPhoto.src=arrImg[this.num];
+				aPhoto.style.display='block';
+				for(var i=0;i<Len;i++){
+					oLi[i].style.background='white';
+				};
+				this.style.background='red';
+			};
+				oLi[i].onmouseout=function(){
+				aPhoto.style.display='none';
+				}
+		};
+		var mu=0;
+		aRight.onclick=function(){
+			if(mu<Len-1){
+				mu++;
+			}else{
+				mu=0;
+			};
+			aPic.src=arrImg[mu];
+			for(var i=0;i<Len;i++){
+				oLi[i].style.background='white';
+			};
+			oLi[mu].style.background='red';
+		};
+		aLeft.onclick=function(){
+			if(mu>0){
+				mu=mu-1;
+			}else{
+				mu=Len-1;
+			}
+			aPic.src=arrImg[mu];
+			for(var i=0;i<Len;i++){
+				oLi[i].style.background='white';
+			};
+			oLi[mu].style.background='red';
+		}
+	</script>
+</html>
