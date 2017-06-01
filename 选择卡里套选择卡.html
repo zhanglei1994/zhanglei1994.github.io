@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width:820px;
+				height:338px;
+				border: 1px solid black;
+			}
+			ul{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				float: left;
+				margin-top: 5px;
+			}
+			
+			li{
+				height: 80px;
+				width:90px;
+				margin-left: 5px;
+				border: 1px solid gray;
+				text-align: center;
+				line-height: 85px;
+				background: lightgray;
+				/*margin-top: 5px;*/
+			}
+			
+			li:hover{
+				background: white;
+			}
+			.right{
+				margin-top: 5px;
+				float: left;
+				/*margin-left: 0;*/
+				position: relative;
+			}
+			img{
+				height: 328px;
+				width:715px;
+			}
+			.right ul{
+				position: absolute;
+				bottom: 5px;
+				width:100%;
+				left: -5px;
+			}
+			.right ul li{
+				width: 24%;
+				height: 30px;
+				background: rgba(0,0,0,0.5);
+				color: white;
+				text-align: center;
+				line-height: 30px;
+				float: left;
+			}
+			.right ul li:hover{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="nav">
+				<li>最热团购</li>
+				<li>商城特惠</li>
+				<li>名品推荐</li>
+				<li>缤纷活动</li>
+			</ul>
+			<div class="right">
+				<img id="pic" src="../img/jd1.jpg"/>
+				<ul class="list">
+					<li class="bottom">1</li>
+					<li class="bottom">2</li>
+					<li class="bottom">3</li>
+					<li class="bottom">4</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var aBox=document.getElementById('box');
+		var aNav=document.getElementById('nav');
+		var oLii=aNav.getElementsByTagName('li');
+		var aRight=aBox.getElementsByClassName('right')[0];
+		var aList=aBox.getElementsByClassName('list')[0];
+		var aPic=document.getElementById('pic');
+		var oLi=aList.getElementsByTagName('li');
+		var arr=[
+			['a1','a2','a3'],
+			['b1','b2','b3','b4'],
+			['c1','c2','c3','c4','c5'],
+			['d1','d2']
+		]
+//		var c =[1,2,3,4]
+//		alert(c[2])
+		var arrImg=[
+			['../img/jd1.jpg','../img/jd2.jpg','../img/jd3.jpg'],
+			['../img/jd4.jpg','../img/jd5.jpg','../img/jd6.jpg','../img/jd7.jpg'],
+			['../img/jd8.jpg','../img/jd7.jpg','../img/jd6.jpg','../img/jd5.jpg','../img/jd4.jpg'],
+			['../img/jd5.jpg','../img/jd6.jpg']
+		]
+		var num=0;
+		for(var i=0;i<oLii.length;i++){
+			oLii[i].num=i;
+			oLii[i].onmouseover=function(){
+				num=this.num;
+				aList.innerHTML=' ';
+				var a = arr[this.num].length;
+				for(var j=0;j<a;j++){
+					aList.innerHTML+='<li>'+j+'</li>';
+					oLi[j].style.width=(100/a)-1+'%';
+					oLi[j].innerHTML=arr[this.num][j];
+				}
+				for(var k=0;k<a;k++){
+						oLi[k].index=k;
+						oLi[k].onmouseover=function(){
+						aPic.src=arrImg[num][this.index];
+						}
+				}
+				aPic.src=arrImg[num][0];
+			}
+		}
+					
+	</script>
+</html>
