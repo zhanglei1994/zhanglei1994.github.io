@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="ul">
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>单价：<em class="jg">12.5<em>元  小计：
+				<span class="price">0</span> 元
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>单价：<em class="jg">10.5<em>元  小计：
+				<span class="price">0</span> 元
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>单价：<em class="jg">8.5<em>元  小计：
+				<span class="price">0</span> 元
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>单价：<em class="jg">8<em>元  小计：
+				<span class="price">0</span> 元
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>单价：<em class="jg">14.5<em>元  小计：
+				<span class="price">0</span> 元
+			</li>
+			商品共计:<span class="piece">0</span>件
+			共花费了:<span class="element">0</span>元
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var aUl=document.getElementById('ul');
+		var oLi=aUl.getElementsByTagName('li');
+		var aPiece=document.getElementsByClassName('piece')[0];
+		var aElement=document.getElementsByClassName('element')[0];
+		for(var i=0;i<oLi.length;i++){
+			change(oLi[i]);
+		}
+		function change(obj){
+			var aMin=obj.getElementsByTagName('button')[0];
+			var aPlus=obj.getElementsByTagName('button')[1];
+			var aInput=obj.getElementsByClassName('input')[0];
+			var aPrice=obj.getElementsByClassName('price')[0];
+			var aJg=obj.getElementsByClassName('jg')[0];
+			var aAll=obj.getElementsByClassName('all');
+//			var aPiece=obj.getElementsByClassName('piece');
+//			var aElement=obj.getElementsByClassName('element')
+			var num=0;
+			aInput.value=num;
+			aMin.onclick=function(){
+				num--;
+				if(num<1){
+					num=0;
+				}
+				aInput.value=num;
+				aPrice.innerHTML=aInput.value*parseFloat(aJg.innerHTML);
+			}
+			aPlus.onclick=function(){
+				num++;
+				aInput.value=num;
+				aPrice.innerHTML=aInput.value*parseFloat(aJg.innerHTML);
+				cont();
+			}
+		}
+		function cont(){
+			var jiage=0;
+			var zongji=0;
+			for(var i=0;i<oLi.length;i++){
+				var aInput=oLi[i].getElementsByClassName('input')[0].value;
+				var aJg=oLi[i].getElementsByClassName('price')[0].innerHTML;
+				jiage+=parseFloat(aInput);
+				zongji+=parseFloat(aJg);
+			}
+			aPiece.innerHTML=jiage;
+			aElement.innerHTML=zongji
+		}
+	</script>
+</html>
