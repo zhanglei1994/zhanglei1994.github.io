@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				margin-top: 100px;
+				position: relative;
+				width: 730px;
+			}
+			h3{
+				border-bottom: 2px solid black;
+			}
+			.cont{
+				width: 200px;
+				height: 100px;
+				border: 1px solid red;
+				position: absolute;
+				top:-80px;
+				left:80px;
+				display: none;
+			}
+			.top{
+				height: 30px;
+				background: dodgerblue;
+				line-height: 30px;
+				text-align: left;
+				font-size: 16px;
+			}
+			.mid{
+				height: 50px;
+				text-align: left;
+				font-size: 16px;
+				background: white;
+			}
+			.bottom{
+				height: 20px;
+				background: hotpink;
+			}
+			.pic{
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				background: red;
+				position: absolute;
+				left:30px;
+				top:93px;
+				-webkit-transform: rotate(45deg);
+				background: hotpink;
+			}
+			ul{
+				width:730px;
+			}
+			img{
+				width: 100px;
+				height: 100px;
+				border-radius: 10%;
+			}
+			li{
+				width: 100px;
+				margin:10px ;
+				float: left;
+			}
+			p{
+				text-align: center;
+				font-size: 14px;
+			}
+			.new{
+				color: lightgray;
+			}
+			span{
+				display:block;
+				text-align: center;
+				color: lightgray;
+			}		
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<h3>最新上架</h3>
+			<div class="cont">
+				<p class="top">搜狐汽车图库</p>
+				<p class="mid">搜狐汽车图库介绍性文字</p>
+				<div class="bottom"></div>
+				<em class="pic"></em>
+			</div>
+			<ul class="list">
+				<li>
+					<img src="../img/1.jpg"/>
+					<p>娱乐</p>
+					<span>新闻类</span>
+				</li>
+			</ul>
+		</div>	
+		
+	</body>
+	<script type="text/javascript">
+		var oBox=document.getElementById('box');
+		var oCont=oBox.getElementsByClassName('cont')[0];
+		var oList=oBox.getElementsByClassName('list')[0];
+		var oLi=oList.getElementsByTagName('li');
+		var aLi=[
+				
+					{
+						'imgSrc':'../img/1.jpg',
+						'p':'娱乐',
+						'span':'新闻类'
+					},
+					{
+						'imgSrc':'../img/2.jpg',
+						'p':'封面人物 ',
+						'span':'人物类'
+					},
+					{
+						'imgSrc':'../img/3.jpg',
+						'p':'海岛大亨 ',
+						'span':'游戏类'
+					},
+					{
+						'imgSrc':'../img/4.jpg',
+						'p':'酷客天气',
+						'span':'天气累'
+					},
+					{
+						'imgSrc':'../img/1.jpg',
+						'p':'娱乐',
+						'span':'新闻类'
+					},
+					{
+						'imgSrc':'../img/2.jpg',
+						'p':'封面人物 ',
+						'span':'人物类'
+					},
+					{
+						'imgSrc':'../img/3.jpg',
+						'p':'海岛大亨 ',
+						'span':'游戏类'
+					},
+					{
+						'imgSrc':'../img/4.jpg',
+						'p':'酷客天气',
+						'span':'天气累'
+					},
+					{
+						'imgSrc':'../img/1.jpg',
+						'p':'娱乐',
+						'span':'新闻类'
+					},
+					{
+						'imgSrc':'../img/2.jpg',
+						'p':'封面人物 ',
+						'span':'人物类'
+					},
+					{
+						'imgSrc':'../img/3.jpg',
+						'p':'海岛大亨 ',
+						'span':'游戏类'
+					},
+					{
+						'imgSrc':'../img/4.jpg',
+						'p':'酷客天气',
+						'span':'天气累'
+					}
+				
+				
+		];
+		
+		var arrLen=aLi.length;
+//		alert(arrLen)
+		var str=''
+		for(var i=0;i<arrLen;i++){
+			str+='<li>'
+					+'<img src="'+aLi[i].imgSrc+'"/>'
+					+'<p>'+aLi[i].p+'</p>'
+					+'<span>'+aLi[i].span+'</span>'
+				+'</li>'
+		}
+		oList.innerHTML=str;
+		for(var i=0;i<arrLen;i++){
+			oLi[i].num=i;
+			oLi[i].onmouseover=function(){
+					oCont.style.display='block';
+				if (this.num<6) {
+					oCont.style.marginTop=+0+'px'
+					oCont.style.marginLeft=+(this.num*120)+'px';
+				} else{
+					oCont.style.marginTop=160+'px';
+					oCont.style.marginLeft=+((this.num-6)*120)+'px';
+				}
+			}
+			oLi[i].onmouseout=function(){
+				oCont.style.display='none';
+			}
+		}
+	</script>
+</html>
