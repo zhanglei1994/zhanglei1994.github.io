@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			li{
+				width:30px;
+				height:30px;
+				float: left;
+				background: url(../img/QQ图片20170606103041.png);
+			}
+			.bg-gray{
+				background: url(../img/QQ图片20170606103025.png);
+			}
+			.bg-yellow{
+				background: url(../img/QQ图片20170606103032.png);
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div id="text"></div>
+	</body>
+	<script type="text/javascript">
+		var aLi=document.getElementsByTagName('li');
+		var oText=document.getElementById('text');
+		var Len=aLi.length;
+		var num=-1;
+		for(var i=0;i<Len;i++){
+			aLi[i].index=i;
+			aLi[i].onmouseover=function(){
+				changeStar(this.index);
+				oText.innerHTML=changeText(this.index);
+			}
+			aLi[i].onmouseout=function(){
+				changeStar(num)
+				oText.innerHTML=changeText(num);
+			}
+			aLi[i].onclick=function(){
+				num=this.index;
+			}
+		};
+		function changeStar(n){
+			for(var i=0;i<Len;i++){
+				aLi[i].className='';
+				}
+				for(var i=0;i<Len;i++){
+					if(i==n+1){
+						break
+					}
+					n<2 ? aLi[i].className='bg-gray' : aLi[i].className='bg-yellow';
+				}
+		}
+		function changeText(n){
+			switch (n){
+				case 0:
+				 	return '很差'
+					break;
+				case 1:
+				 	return '较差'
+					break;	
+				case 2:
+				 	return '还行'
+					break;
+				case 3:
+				 	return '推荐'
+					break;
+				case 4:
+				 	return '力荐'
+					break;	
+				default:
+				return ''
+					break;
+			}
+		}
+		
+	</script>
+</html>
