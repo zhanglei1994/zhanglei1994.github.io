@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 40px;
+				height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="time"></div>
+		<img class="pic" src="../time/0.JPG"/>
+		<img class="pic" src="../time/0.JPG"/>
+			<img class="photo" src="../time/colon.JPG"/>
+		<img class="pic" src="../time/0.JPG"/>
+		<img class="pic" src="../time/0.JPG"/>
+			<img class="photo" src="../time/colon.JPG"/>
+		<img class="pic" src="../time/0.JPG"/>
+		<img class="pic" src="../time/0.JPG"/>
+	</body>
+	<script type="text/javascript" src="myQuery.js" ></script>
+	<script type="text/javascript">
+
+		var aImg=document.getElementsByClassName('pic');
+		var ap=document.getElementsByClassName('photo');
+		setInterval(function(){
+				var control=true;
+				var mDate=new Date();
+		//		var mMonth=mDate.getMonth();
+				var mHours=mDate.getHours();
+				var mMinute=mDate.getMinutes();
+				var mSecond=mDate.getSeconds();
+				var str=doubleFn(mHours)+''+doubleFn(mMinute)+''+doubleFn(mSecond);
+				$('time').innerHTML=str;
+				for(var i=0;i<aImg.length;i++){
+					aImg[i].src='../time/'+str.charAt(i)+'.JPG'
+				}
+					setInterval(function(){
+						if(control){
+							for(var i=0;i<2;i++){
+								ap[i].src='../time/colon1.JPG'
+							}
+						}else{
+							for(var i=0;i<2;i++){
+								ap[i].src='../time/colon.JPG'
+							}
+						}
+						control=!control;
+					},500)
+		},1000)
+			function doubleFn(n){
+				var m=n;
+				m<10 ? m='0'+n : m=n
+				return m
+			}
+	</script>
+</html>
