@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 210px;
+				height: 280px;
+				border: 1px solid red;
+				background-image:url(../img/115751_45221623.jpg);
+				background-size:210px 280px ;
+				position: relative;
+				display: inline-block;
+			}
+			.cont{
+				width: 210px;
+				height: 280px;
+				background: #FFF;
+				border:1px solid red ;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			/*#cont1{
+				width: 210px;
+				height: 280px;
+				background: #FFF;
+				border:1px solid red ;
+				position: absolute;
+				top:0;
+				left: 0;
+			}*/
+			
+			img{
+				width:210px
+			}
+			.buy{
+				color: darkgray;
+			}
+			.money{
+				color: red;
+			}
+			#nav{
+				width:500px;
+				height: 50px;
+				background: violet;
+				border: 1px solid red;
+				line-height: 50px;
+			}
+			#nav p{
+				display: inline-block;
+				margin-left: 50px;
+			}
+			ul{
+				width: 500px;
+				/*background: gray;*/
+			}
+			li{
+				width: 100%;
+				background: gray;
+			}
+			.shop,.piece,.pic{
+				display: inline-block;
+				width: 31%;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				border: 1px solid red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>限购时间</h1>
+		<hr>
+		<!--<img id="pic" src="../img/115751_45221623.jpg"/>-->
+		<div id="box">
+			<div class="cont">
+				<input type="text" name="" class="input1" value="Jun 13,2017 17:40:55" /><button class="btn">确定</button><br>
+				<input type="text" name="" class="input2" value="" />
+				<img class="photo" src="../img/1.jpg"/>
+				<p class="text">疯狂猫，我是一只疯狂的猫，我是一只疯狂的猫，我是一只疯狂的猫</p>
+				<span class="buy">抢购价：</span><span class="money">￥599.00</span>
+			</div>
+		</div>
+		<div id="box">
+			<div class="cont">
+				<input type="text" name="" class="input1" value="Jun 13,2017 17:17:45" /><button class="btn">确定</button><br>
+				<input type="text" name="" class="input2" value="" />
+				<img class="photo" src="../img/1.jpg"/>
+				<p class="text">疯狂猫，我是一只疯狂的猫，我是一只疯狂的猫，我是一只疯狂的猫</p>
+				<span class="buy">抢购价：</span><span class="money">￥688.00</span>
+			</div>
+		</div>
+		<div id="box">
+			<div class="cont">
+				<input type="text" name="" class="input1" value="Jun 13,2017 17:40:55" /><button class="btn">确定</button><br>
+				<input type="text" name="" class="input2" value="" />
+				<img class="photo" src="../img/1.jpg"/>
+				<p class="text">疯狂猫，我是一只疯狂的猫，我是一只疯狂的猫，我是一只疯狂的猫</p>
+				<span class="buy">抢购价：</span><span class="money">￥799.00</span>
+			</div>
+		</div>
+		<div id="box">
+			<div class="cont">
+				<input type="text" name="" class="input1" value="Jun 13,2017 17:17:45" /><button class="btn">确定</button><br>
+				<input type="text" name="" class="input2" value="" />
+				<img class="photo" src="../img/1.jpg"/>
+				<p class="text">疯狂猫，我是一只疯狂的猫，我是一只疯狂的猫，我是一只疯狂的猫</p>
+				<span class="buy">抢购价：</span><span class="money">￥899.00</span>
+			</div>
+		</div>
+		<div id="nav">
+				<p>商品名称</p>
+				<p>总价</p>
+			</div>
+				<ul id="list">
+				</ul>
+			价钱：<strong id="allpiece">00</strong>	
+	</body>
+	<script type="text/javascript" src="myQuery.js" ></script>
+	<script type="text/javascript">
+//		1,先给button加点击事件,倒计时开始.
+//		2,倒计时结束(判断t<=0)之后,box左右晃动(shake函数)
+//		3,box晃动之后(shake的回调函数),box向下移动(Go函数),并且逐渐变透明(Opacity)
+//		4,等box向下走到目标点之后,table中出现下架商品信息
+//		5,修改总价
+		var ap=document.getElementById('allpiece');
+		var cont=document.getElementsByClassName('cont');
+		for(var i=0;i<cont.length;i++){
+			change(i);
+		};
+		var str='';
+		var m=0;
+		function change(a){
+			var input1=cont[a].getElementsByClassName('input1')[0];
+			var input2=cont[a].getElementsByClassName('input2')[0];
+			var btn=cont[a].getElementsByClassName('btn')[0];
+			var otext=cont[a].getElementsByClassName('text')[0];
+			var money=cont[a].getElementsByClassName('money')[0];
+			var ph=cont[a].getElementsByClassName('photo')[0];
+			btn.onclick=function(){
+				clearInterval(btn.timer);
+				btn.timer = setInterval(function(){
+				var myDate=new Date(input1.value);
+				var nowDate=new Date();
+				var t=(myDate-nowDate)/1000;
+					if(t>0){
+						var Day=Math.floor(t/86400)+'天';
+						var Hour=Math.floor(t%86400/3600)+'时';
+						var Min=Math.floor(t%86400%3600/60)+'分';
+						var Sec=Math.floor(t%60)+'秒'
+						var str=Day+Hour+Min+Sec;
+						input2.value=str;
+					}else{
+						//		1,先给button加点击事件,倒计时开始.
+						clearInterval(btn.timer)
+						//		2,倒计时结束(判断t<=0)之后,box左右晃动(shake函数)
+						shake(cont[a],'left',function(){
+						//		3,box晃动之后(shake的回调函数),box向下移动(Go函数)
+							Go(cont[a],'top',10,280)
+						//		3,并且逐渐变透明(Opacity)
+							fn(cont[a],-0.05,function(){
+						//		4,等box向下走到目标点之后,table中出现下架商品信息
+								str='<li>'
+										+'<span class="shop">'+otext.innerHTML+'</span>'
+										+'<span class="piece">'+money.innerHTML+'</span>'
+										+'<span class="pic"><img src='+ph.src+'/></span>'
+									'</li>'
+							$('list').innerHTML+=str;
+							var li=$('list').getElementsByTagName('li');
+							var shop=$('list').getElementsByClassName('shop')[0];
+							var piece=$('list').getElementsByClassName('piece')[0];
+							var pic=$('list').getElementsByClassName('pic')[0];
+						//		5,修改总价	
+							var cc='';
+							for(var i = 1;i<piece.innerHTML.length;i++){
+								cc+=piece.innerHTML.charAt(i);
+							}
+							m +=parseFloat(cc);
+								for(var i=0;i<li.length;i++){
+									ap.innerHTML=m
+								}
+							})
+						})
+					}
+				},1000)
+			}
+		}
+		
+	</script>
+</html>
