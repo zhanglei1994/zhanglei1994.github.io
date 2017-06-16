@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#head{
+				width: 500px;
+				height: 800px;
+				border: 1px solid black;
+			}
+			#box span{
+				background: red;
+			}
+			#box{
+				width: 400px;
+				height: 300px;
+				background: gainsboro;
+				font-size:40px ;
+				float: left;
+			}
+			.button{
+				float: left;
+			}
+			.button button{
+				color: white;
+				font-size: 20px;
+				display: block;
+				width: 80px;
+				height: 80px;
+				background: gray;
+			}
+			#nav{
+				clear: left;
+				width:400px;
+				height: 200px;
+				border:10px solid red;
+			}
+			#nav span{
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				color: white;
+				background: red;
+				margin-top:10px;
+				margin-left: 20px;
+				line-height: 40px;
+				text-align: center;
+			}
+			/*#nav{
+				display: none;
+			}
+			
+			#btn1,#btn2{
+				display: none;
+			}*/
+			
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<div id="box">北方有佳人，绝世而独立。一顾倾人城，再顾倾人国。宁不知倾城与倾国？佳人难再得。</div>
+			<div class="button">
+				<button id="btn">展开</button>
+				<button id="btn1">查找</button>
+				<button id="btn2">替换</button>
+			</div>
+			<div id="nav">
+				<span id="cc">查找</span>
+				<span id="tt">替换</span>
+				<hr>
+				<div id="cz">
+				<input type="text" name="" id="input1" value="倾人" /><button id="dd">查找</button><br>
+				</div>
+				<div id="th">
+				<input type="text" name="" id="input2" value="烦人" /><button id="ff">替换</button>
+				</div>
+			</div>
+		</div>	
+	</body>
+	<script type="text/javascript" src="myQuery.js" ></script>
+	<script type="text/javascript">
+		$('btn').onclick=function(){
+			$('btn1').style.display='block';
+			$('btn2').style.display='block';
+		};
+		$('btn1').onmouseover=function(){
+			$('btn1').style.background='red';
+			$('nav').style.display='block';
+		};
+		var str=$('box').innerHTML;
+		$('dd').onclick=function(){
+			$('box').innerHTML=str.split($('input1').value).join('<span>'+$('input1').value+'</span>')
+		};
+		$('ff').onclick=function(){
+			if($('input2').value==''){
+				var cont=confirm('确定要删除吗？')
+				if(cont){
+					var newStr=str.split($('input1').value).join('');
+					$('box').innerHTML=newStr;
+					str=newStr
+				}
+			}else{
+					$('box').innerHTML=str.split($('input1').value).join('<span>'+$('input2').value+'</span>')
+			}
+		};
+	</script>
+</html>

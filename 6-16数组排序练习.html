@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				margin-top: 100px;
+				position: relative;
+				width: 730px;
+			}
+			
+			ul{
+				width:730px;
+			}
+			img{
+				width: 100px;
+				height: 100px;
+				border-radius: 10%;
+			}
+			li{
+				width: 100px;
+				margin:10px ;
+				float: left;
+			}
+			p{
+				text-align: center;
+				font-size: 14px;
+			}
+			.new{
+				color: lightgray;
+			}
+			span{
+				display:block;
+				text-align: center;
+				color: lightgray;
+			}	
+			button{
+				margin-left: 100px;
+			}	
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<button id="btn">从大到小</button>
+			<button id="btn1">打乱顺序</button>
+			<ul class="list">
+				<!--<li>
+					<img src="../img/1.jpg"/>
+					<p>娱乐</p>
+					<span>新闻类</span>
+				</li>-->
+			</ul>
+		</div>	
+		
+	</body>
+	<script type="text/javascript" src="myQuery.js" ></script>
+	<script type="text/javascript">
+		var oBox=document.getElementById('box');
+		var oCont=oBox.getElementsByClassName('cont')[0];
+		var oList=oBox.getElementsByClassName('list')[0];
+		var oLi=oList.getElementsByTagName('li');
+		var aLi=[{'imgSrc':'../img/1.jpg',
+				'p':'1-娱乐'},
+				{'imgSrc':'../img/2.jpg',
+				'p':'2-封面人物 '},
+				{'imgSrc':'../img/3.jpg',
+				'p':'3-海岛大亨 '},
+				{'imgSrc':'../img/4.jpg',
+				'p':'4-酷客天气'},
+				{'imgSrc':'../img/1.jpg',
+				'p':'5-啊啊'},
+				{'imgSrc':'../img/2.jpg',
+				'p':'6-宝宝'},
+				{'imgSrc':'../img/3.jpg',
+				'p':'7-超出 '},
+				{'imgSrc':'../img/4.jpg',
+				'p':'8-抖动'},
+				{'imgSrc':'../img/1.jpg',
+				'p':'9-方法'},
+				{'imgSrc':'../img/2.jpg',
+				'p':'10-根骨 '},
+				{'imgSrc':'../img/3.jpg',
+				'p':'11-画画 '},
+				{'imgSrc':'../img/4.jpg',
+				'p':'12-级里'}
+		];
+		var arrLen=aLi.length;
+		change();
+		control=true;
+		$('btn').onclick=function(){
+			if(control){
+				$('btn').innerHTML='从小到大';
+				aLi.sort(function(a,b){
+					return parseInt(b.p)-parseInt(a.p)     
+				})
+				change();
+				control=false;
+			}else{
+				$('btn').innerHTML='从大到小';
+				aLi.sort(function(a,b){
+					return parseInt(a.p)-parseInt(b.p)    
+				})
+				change();
+				control=true;
+			}
+		}
+		$('btn1').onclick=function(){
+				aLi.sort(function(){
+				return Math.random()-0.5;   
+			})
+				change();
+		}
+		function change(){
+				var str=''
+			for(var i=0;i<arrLen;i++){
+				str+='<li>'
+						+'<img src="'+aLi[i].imgSrc+'"/>'
+						+'<p>'+aLi[i].p+'</p>'
+						+'</li>'
+				}
+			oList.innerHTML=str;
+		}
+	</script>
+</html>
+
