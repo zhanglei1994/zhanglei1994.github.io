@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.top{
+				width: 800px;
+				height:120px;
+				/*border: 1px solid black;*/
+				text-align: center;
+			}
+			
+			.fenshu{
+				width: 60px;
+				height: 60px;
+				border: 1px solid black;
+				background: lightgoldenrodyellow;
+				float: left;
+			}
+			#box{
+				position: relative;
+				top:0;
+				left:0;
+				width: 810px;
+				height: 400px;
+				border: 1px solid black;
+			}
+			span{
+				font-size: 20px;
+				display:inline-block;
+				margin-top: 5px;
+			}
+			#cont{
+				float: left;
+				width: 740px;
+				height: 400px;
+				border: 1px solid black;
+				position: relative;
+			}
+			#pic{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: 0;
+				top:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<p class="mouse">你的鼠标有多快？</p>
+			<p class="fast">游戏说明：点击“开始游戏”，随机掉下QQ表情，点击它，千万别让它掉下去！！</p>
+			<button id="btn">开始游戏</button>
+		</div>
+		<div id="box">
+			<div class="fenshu">
+				得分:<span id="score">0</span>
+				失分:<span id="points">0</span>
+			</div>
+			<div id="cont">
+			<img id="pic" src="../img/1.jpg"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="myQuery.js" ></script>
+	<script type="text/javascript">
+		var arr=["../img/77.jpg"]
+		var n=200;
+		var mun=0;
+		var num=0;
+		$('btn').onclick=function(){
+			$('btn').innerHTML='游戏进行中···';
+			Go($('pic'),'top',10,350,endFn)
+			
+		};
+		$('pic').onmousedown=function(){
+			clearInterval($('pic').timer);
+			$('pic').src="../img/77.jpg"
+			shake($('pic'),'left',endFn)
+			num++;
+			$('score').innerHTML=num;
+		}
+
+		
+		function endFn(){
+			var top=parseInt(getStyle($('pic'),'top'))
+			if(top>=350){
+				mun++;
+				$('points').innerHTML=mun;
+				shake($('box'),'left')
+				clearInterval($('btn').timer)
+			}
+			if($('points').innerHTML==2){
+				clearInterval($('btn').timer)
+				alert('gameover')
+			}else{
+				$('pic').style.top=0;
+				var n = parseInt(Math.round(Math.random()*690))
+				$('pic').style.left=n+'px';
+				Go($('pic'),'top',10,350,endFn)
+			}
+			
+		}
+
+	</script>
+</html>
