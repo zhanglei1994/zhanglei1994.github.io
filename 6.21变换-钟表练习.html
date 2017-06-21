@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 500px;
+				height: 500px;
+				border: 15px solid black;
+				border-radius: 50%;
+				position: relative;
+				background: black;
+			}
+			#box ul{
+				position: relative;
+			}
+			 #box ul li{
+		        width: 10px;
+		        height: 10px;
+		        background: #FFF;
+		        border-radius: 50%;
+		        position: absolute;
+		        left: 50%;
+		        top: 0;
+		        margin-left: -5px;
+		        -webkit-transform-origin: center 250px;
+		        
+      		}
+      		 #box ul li:nth-child(5n+1){
+        		height: 25px;
+        		width: 15px;
+      		}
+      		#con{
+      			width:50px;
+      			height: 50px;
+      			border: 1px solid black;
+      			border-radius: 50%;
+      			position: absolute;
+      			top:50%;
+      			left: 50%;
+      			margin-left: -25px;
+      			margin-top: -25px;
+      			background: plum;
+      		}
+      		 #sec{
+		        width: 10px;
+		        height: 280px;
+		        background: plum;
+		        border-radius: 5px;
+		        margin-left:-5px ;
+		        position: absolute;
+		        left: 50%;
+		        top: 30px;
+		        -webkit-transform-origin: center 220px;
+		        /*-webkit-transform:rotate(30deg);*/
+      		}
+      		 #hour{
+		        width: 30px;
+		        height: 100px;
+		        background: white;
+		        /*border-radius: 5px;*/
+		        margin-left:-15px ;
+		        position: absolute;
+		        left: 50%;
+		        top: 150px;
+		        -webkit-transform-origin: center 100px;
+		        -webkit-transform:rotate(30deg);
+		    }
+		    #hour span{
+		    	display: inline-block;
+		    	width: 30px;
+		    	height: 30px;
+		    	background: white;
+		    	position: absolute;
+		    	top:-15px;
+		    	-webkit-transform:rotate(45deg);
+		    }
+		    #min{
+		    	width: 20px;
+		        height: 150px;
+		        background: green;
+		        border-radius: 5px;
+		        margin-left:-10px ;
+		        position: absolute;
+		        left: 50%;
+		        top: 100px;
+		        -webkit-transform-origin: center 150px;
+		        -webkit-transform:rotate(60deg);
+		    }
+		    #min span{
+		    	display: inline-block;
+		    	width: 20px;
+		    	height: 20px;
+		    	background: green;
+		    	position: absolute;
+		    	top:-10px;
+		    	-webkit-transform:rotate(45deg);
+		    }
+      	</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="list">
+			</ul>
+			<div id="hour">
+				<span></span>
+			</div>
+	      	<div id="min">
+	      		<span></span>
+	      	</div>
+	     	<div id="sec"></div>
+	     	<div id="con"></div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../js/myQuery.js" ></script>
+	<script type="text/javascript">
+	var aLi=$('list').getElementsByTagName('li')	
+		var str='';
+	 	for(var i=0;i<60;i++){
+	      str+='<li></li>';
+	}
+ 	$('list').innerHTML=str;
+ 	for(var i=0;i<aLi.length;i++){
+ 		aLi[i].style.webkitTransform='rotate('+i*6+'deg)';
+	}
+ 	function timer(){
+ 		var myDate=new Date();
+ 		var s=myDate.getSeconds();
+ 		var m=myDate.getMinutes(s/60);
+ 		var h=myDate.getHours(m/60);
+ 		$('sec').style.webkitTransform='rotate('+s*6+'deg)';
+ 		$('min').style.webkitTransform='rotate('+m*6+'deg)';
+ 		$('hour').style.webkitTransform='rotate('+h*30+'deg)';
+ 	}
+ 	setInterval(timer,1000);
+	</script>
+</html>
