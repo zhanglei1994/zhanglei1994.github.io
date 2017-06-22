@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div,img{
+				height: 100px;
+				width: 100px;
+				line-height: 100px;
+				text-align: center;
+			}
+		.box{
+				-webkit-transform-style: preserve-3d;
+				-webkit-perspective: 2000px;
+				/*border: 1px solid red;*/
+				margin: 200px;
+				position: relative;
+				transition: all 5s;
+				-webkit-transform-origin:center center 50px;
+				-webkit-animation: move 4s infinite;
+			}
+		.box img{
+			-webkit-transform-style: preserve-3d;
+			-webkit-perspective: 2000px;
+			transition: all 1s;
+			-webkit-transform-origin:center center 50px;
+			/*-webkit-animation: move 4s infinite;*/
+		}
+		.box div,img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0.8;
+		}
+		.box div{
+			background-image: url(../img/timg.jpg);
+			background-size: 100px 100px;
+		}
+		
+		.left{
+			background: deeppink;
+			-webkit-transform-origin: left;
+			-webkit-transform: rotateY(-90deg);
+		}
+		.right{
+			background: hotpink;
+			-webkit-transform-origin: right;
+			-webkit-transform: rotateY(90deg);
+		}
+		.top{
+			background: deepskyblue;
+			-webkit-transform-origin: top;
+			-webkit-transform: rotateX(90deg);
+		}
+		.down{
+			background: dodgerblue;
+			-webkit-transform-origin: bottom;
+			-webkit-transform: rotateX(-90deg);
+		}
+		.front{
+			background:mediumvioletred;
+			-webkit-transform: translateZ(100px);
+		}
+		.back{
+			background:red;
+			-webkit-transform: translateZ(0)
+		}
+		.box:hover{
+			-webkit-transform: rotateX(360deg) rotateY(45deg);
+		}
+		.box:hover img[class="front"]{
+			-webkit-transform: translateZ(200px);
+		}
+		.box:hover img[class="back"]{
+			-webkit-transform: translateZ(-100px);
+		}
+		.box:hover img[class="left"]{
+			-webkit-transform: translateX(100px) rotateY(-90deg);
+		}
+		.box:hover img[class="right"]{
+			-webkit-transform: translateX(-100px) rotateY(90deg);
+		}
+		.box:hover img[class="top"]{
+			-webkit-transform: translateY(100px) rotateX(90deg);
+		}
+		.box:hover img[class="down"]{
+			-webkit-transform: translateY(-100px) rotateX(-90deg);
+		}
+		@-webkit-keyframes move{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform: rotateX(360deg) rotateY(60deg);
+				}
+		}
+		@-webkit-keyframes change{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform:rotateY(360deg);
+				}
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="front"></div>
+			<div class="back"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="top"></div>
+			<div class="down"></div>
+			<img class="front" src="../img/77.jpg"/>
+			<img class="back" src="../img/77.jpg"/>
+			<img class="left" src="../img/1.jpg"/>
+			<img class="right" src="../img/2.jpg"/>
+			<img class="top" src="../img/3.jpg"/>
+			<img class="down" src="../img/4.jpg"/>
+	</div>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementsByClassName('box')[0];
+		box.onclick=function(){
+			box.style.webkitAnimation='change 4s infinite';
+		}
+	</script>
+</html>
