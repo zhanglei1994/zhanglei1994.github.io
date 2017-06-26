@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				padding: 40px;
+				background: red;
+			}
+			#box{
+				position: relative;
+			}
+			#outer{
+				background: blue;
+				position: relative;
+			}
+			#inner{
+				background: green;
+			}
+			body{
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="outer">
+				<div id="inner"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/myQuery.js" ></script>
+	<script type="text/javascript">
+		function getPos(obj){
+			var pos ={'top':0,'left':0}
+			while(obj){
+				pos.top+=obj.offsetTop;  //获取元素距离顶部位置；
+				pos.left+=obj.offsetLeft; //获取元素距离左边位置；
+				obj = obj.offsetParent;
+			}
+			return pos;
+		}
+//		alert(getPos($('outer')).left)
+	</script>
+</html>

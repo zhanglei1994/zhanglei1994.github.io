@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+				margin-left: 350px;
+			}
+			#input{
+				margin-left:75px;
+			}
+			#input1{
+				width: 200px;
+				height: 200px;
+				margin-left: 50px;
+			}
+			#btn{
+				width: 100px;
+				height: 30px;
+				margin-left: 100px;
+			}
+			#cont{
+				width: 1000px;
+				height: 500px;
+				border:2px solid blue;
+				position: relative;
+				/*overflow: hidden;*/
+			}
+			#cont div{
+				background: url(../img/1.png) no-repeat;
+				background-size: 100% 100%;
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top:-220px;
+				left:0;
+				opacity: 1;
+			}
+			#cont div h1{
+				line-height: 60px;
+				margin-left: 20px;
+			}
+			#cont div p{
+				font-size: 20px;
+				margin-left: 20px;
+			}
+			#cont div span{
+				font-size: 30px;
+				color: white;
+				position: absolute;
+				top:0;
+				left:130px
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="" name="input" id="input" value="111" />
+			<input type="" name="input" id="input1" value="111" />
+			<button id="btn">发送</button>
+		</div>
+		<div id="cont">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/myQuery.js" ></script>
+	<script type="text/javascript">
+		$('btn').onclick=function(){
+			var odiv=document.createElement('div')
+			var oh=document.createElement('h1');
+			var op=document.createElement('p');
+			var ospan=document.createElement('span');
+			ospan.innerHTML='X';
+			oh.innerHTML=$('input').value;
+			op.innerHTML=$('input1').value;
+			$('cont').appendChild(odiv);
+			odiv.appendChild(oh);
+			odiv.appendChild(op);
+			odiv.appendChild(ospan);
+			ospan.onclick=function(){
+				shake(odiv,'left');
+				fn(odiv,-0.05,function(){
+					$('cont').removeChild(odiv);
+				});
+			};
+			change(odiv);
+		}
+		function change(obj){
+			obj.style.top=-220+'px'
+			var n = Math.round(Math.random()*800);
+			var m = Math.round(Math.random()*250);
+			obj.style.left=n+'px';
+			Go(obj,'top',10,m)
+		}
+
+		
+	</script>
+</html>
