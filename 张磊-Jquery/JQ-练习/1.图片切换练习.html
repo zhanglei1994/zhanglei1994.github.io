@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			img{
+				height: 200px;
+			}
+			li{
+				height: 20px;
+				width: 20px;
+				background: #D8D8D8;
+				border-radius: 50%;
+				float: left;
+				margin: 0 5px;
+			}
+			li.active{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="pic" src="../img/animal1.jpeg"/>
+		<ul id="list">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript">
+		var arrImg=['../img/animal1.jpeg','../img/animal2.jpg','../img/animal3.gif','../img/animal4.jpg']
+		$('li').click(function(){
+			$('li').removeClass('active');
+			$(this).addClass('active');
+			$('#pic').attr('src',arrImg[$(this).index()])
+		})
+		
+		
+	</script>
+</html>

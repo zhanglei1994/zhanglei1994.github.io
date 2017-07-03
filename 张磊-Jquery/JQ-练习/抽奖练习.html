@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 500px;
+				height: 500px;
+				border: 1px solid blue;
+				position: relative;
+			}
+			span{
+				/*display: block;*/
+				margin: 0;
+				padding: 0;
+				float: left;
+				width: 125px;
+				height: 125px;
+				border: 1px solid black;
+				text-align: center;
+				line-height: 122px;
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			span:nth-child(2){
+				left:125px;
+			}
+			span:nth-child(3){
+				left:250px;
+			}
+			span:nth-child(4){
+				left:375px;
+			}
+			span:nth-child(5){
+				top:125px;
+				left:375px;
+			}
+			span:nth-child(6){
+				top:250px;
+				left:375px;
+			}
+			span:nth-child(7){
+				top:375px;
+				left:375px;
+			}
+			span:nth-child(8){
+				top:375px;
+				left:250px;
+			}
+			span:nth-child(9){
+				top:375px;
+				left:125px;
+			}
+			span:nth-child(10){
+				top:375px;
+				left:0px;
+			}
+			span:nth-child(11){
+				top:250px;
+			}
+			span:nth-child(12){
+				top:125px;
+			}
+			p{
+				width: 250px;
+				height: 250px;
+				text-align: center;
+				line-height: 250px;
+				position: absolute;
+				top:125px;
+				left:125px;
+			}
+			.active{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<span class="active">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>6</span>
+			<span>7</span>
+			<span>8</span>
+			<span>9</span>
+			<span>10</span>
+			<span>11</span>
+			<span>12</span>
+			<p>点击抽奖</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript">
+		$('p').click(function(){
+			var num=0;
+			var i =0;
+			var m=Math.round(Math.random()*12+12);
+			var timer = setInterval(function(){
+				$('span').removeClass('active');
+				$('span').eq(num%12).addClass('active')
+				num++;
+//				if(num<11){
+//					num++;
+//				}else{
+//					num=0;
+//				}
+				i++;
+				if(i==m){
+					clearInterval(timer);
+					alert('恭喜'+(num%12)+'号中奖')
+//					$('span').eq(m).addClass('active')
+				}
+			},50)
+		})
+	</script>
+</html>
