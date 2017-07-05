@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.from,.to{
+				width: 100px;
+				height: 300px;
+				border: 1px solid black;
+				float: left;
+			}
+			p{
+				margin: 0;
+				padding: 0;
+				font-size: 20px;
+				margin: 5px;
+			}
+			.mid{
+				width: 100px;
+				height: 300px;
+				float: left;
+			}
+			.mid button{
+				margin: 15px;
+			}
+			p.active{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="from">
+			<p class="active">这是1</p>
+			<p>这是2</p>
+			<p>这是3</p>
+			<p>这是4</p>
+			<p>这是5</p>
+		</div>
+		<div class="mid">
+			<button>全部添加</button>
+			<button>添加</button>
+			<button>删除</button>
+			<button>全部删除</button>
+		</div>
+		<div class="to">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript">
+		$('p').each(function(i,elem){
+			$(elem).attr('myIndex',i);
+		})
+		$('p').click(function(){
+			$('p').removeClass('active')
+			$(this).addClass('active')
+		})
+		$('button').eq(1).click(function(){
+			$('.from').find('.active').appendTo($('.to'))
+			fn($('.to'))
+			
+		})
+		$('button').eq(2).click(function(){
+			$('.to').find('.active').appendTo($('.from'))
+			fn($('.from'))
+		})
+		$('button').eq(0).click(function(){
+			$('.from').find('p').appendTo($('.to'))
+			fn($('.to'))
+		})
+		$('button').eq(3).click(function(){
+			$('.to').find('p').appendTo($('.from'))
+			fn($('.from'))
+		})
+		function fn(obj){
+			var arr=[];
+			obj.find('p').each(function(i,elem){
+				arr.push($(elem).attr('myIndex'))
+			})
+			arr.sort(function(a,b){
+				return a-b;
+			})
+			for(var i=0;i<arr.length;i++){
+				var num=arr[i];
+				obj.find('p').each(function(i,elem){
+					if(num==$(elem).attr('myIndex')){
+						$(elem).appendTo(obj)
+					}
+				})
+			}
+		}
+	</script>
+</html>
