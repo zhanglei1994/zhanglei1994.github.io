@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 700px;
+				height: 800px;
+				border: 1px solid black;
+				background: white;
+				position: relative;
+			}
+			video{
+				display: block;
+				margin: auto;
+			}
+			.list{
+				width: 400px;
+				height: 10px;
+				border: 1px solid black;
+				border-radius:10px ;
+				position: absolute;
+				top:470px;
+				left: 100px;
+			}
+			.yuan{
+				position: absolute;
+				top:-2px;
+				left: -5px;
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background: blue;
+			}
+			.jdt{
+				height: 10px;
+				width:0;
+				background: red;
+			}
+			.time{
+				position: absolute;
+				top:-5px;
+				left:410px;
+			}
+			.ul{
+				position: absolute;
+				top:500px;
+				left: 200px;
+			}
+			.ul li{
+				float: left;
+			}
+			.ul li:nth-child(2){
+				position: absolute;
+				top:-10px;
+				left: 50px;
+			}
+			.ul li:nth-child(3){
+				position: absolute;
+				left: 115px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<video src="img/87u888piCHUD.mp4" style="width: 600px;height: 600px;"></video>
+			<ul class="list">
+				<li class="yuan"></li>
+				<li class="jdt"></li>
+				<li class="time">
+					<span class="nt">00:00</span>/<span class="alltime">00:00</span>
+				</li>
+			</ul>
+			<ul class="ul">
+				<li><img src="img/5.png"/></li>
+				<li class="play"><img src="img/2.png"/></li>
+				<li><img src="img/3.png"/></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript">
+		var oV=$('video').get(0);
+		var allW=$('.list').width();
+		var allT=oV.duration;
+		var nowT=oV.currentTime;
+		$('.alltime').html(fn(allT));
+		$('.yuan').mousedown(function(ev){
+			var beginX=ev.clientX;
+			var beginW=$('.jdt').width();
+			var beginL=$('.yuan').position().left;
+			$(document).mousemove(function(ev){
+				var addX=ev.clientX-beginX;
+				var W=beginW+addX;
+				var T=beginL+addX
+				if(W<=0){
+					W=0;
+				}else if(W>=allW){
+					W=allW;
+				}
+				if(T<=0){
+					T=0;
+				}else if(T>=allW){
+					T=allW-10;
+				}
+				$('.jdt').width(W+'px');
+				$('.yuan').css('left',T+'px');
+				$('.nt').html(fn(W/allW*allT));
+			})
+			$(document).mouseup(function(){
+				$(this).off('mousemove');
+			})
+			return false;
+		})
+		var control=true;
+		var num=0;
+		$('.play').click(function(){
+			if(control){
+			oV.play();
+			var timer = setInterval(function(){
+					num++;
+					var innerW=parseInt((oV.currentTime/oV.duration)*allW)
+					$('.jdt').css('width',innerW+'px');
+					$('.yuan').css('left',innerW+'px');
+					$('.nt').html(fn(oV.currentTime))
+				},1000)
+				control=false;
+			}else{
+				clearInterval(timer);
+				oV.pause();
+				control=true;
+			}
+		})
+		
+		function fn(b){
+			var m=doubleFn(Math.floor(b/60));
+			var s=doubleFn(Math.floor(b%60));
+			return m+":"+s;
+		}
+		function doubleFn(n){
+				n<10 ? n='0'+n : n;
+				return n;
+		}
+	</script>
+</html>
