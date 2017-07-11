@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				background: deepskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var oC=document.getElementById('canvas');
+		var context=oC.getContext('2d');
+		
+		draw();
+		setInterval(function(){
+			context.clearRect(0,0,oC.width,oC.height)
+			draw();
+			var myDate=new Date();
+			var s=(Math.PI/30)*(myDate.getSeconds()-15);
+			var m=(Math.PI/30)*(myDate.getMinutes()-15);
+			var h=(2*Math.PI/12)*(myDate.getHours()-15);
+			time(200,s,'red',2);
+			time(180,m,'blue',4);
+			time(160,h,'yellow',6);
+		},1000)
+		
+		//秒针
+			var myDate=new Date();
+			var s=(Math.PI/30)*(myDate.getSeconds()-15);
+			var m=(Math.PI/30)*(myDate.getMinutes()-15);
+			var h=(2*Math.PI/12)*(myDate.getHours()-15);
+//			context.beginPath();
+//			context.moveTo(250,250);
+//			context.arc(250,250,200,s,s,true);
+//			context.strokeStyle='red';
+//			context.closePath();
+//			context.stroke();
+			time(200,s,'red',2);
+		
+		
+		//分针
+//		context.beginPath();
+//		context.moveTo(250,250);
+//		context.lineTo(270,430);
+//		context.lineWidth=3;
+//		context.strokeStyle='blue';
+//		context.closePath();
+//		context.stroke();
+		time(180,m,'blue',4);
+		//时针
+//		context.beginPath();
+//		context.moveTo(250,250);
+//		context.lineTo(290,410);
+//		context.lineWidth=7;
+//		context.strokeStyle='yellow';
+//		context.closePath();
+//		context.stroke();
+		time(160,h,'yellow',6);
+		function draw(){
+				for(var i=0;i<60;i++){
+				context.beginPath();
+				if(i%5==0){
+					context.lineWidth=5;
+				}else{
+					context.lineWidth=2;
+				}
+				context.strokeStyle='black'
+				context.moveTo(250,250);
+				context.arc(250,250,230,i*(Math.PI/30),i*(Math.PI/30),true);
+				context.closePath();
+				context.stroke();
+			}
+				context.beginPath();
+				context.arc(250,250,210,0,2*Math.PI,true);
+				context.fillStyle='deepskyblue';
+				context.fill();
+				context.closePath();
+				
+				context.beginPath();
+				context.arc(250,250,30,0,2*Math.PI,true);
+				context.fillStyle='deepskyblue';
+				context.fill();
+				context.stroke();
+				context.closePath();
+		}
+		function time(s,ang,color,a){
+			context.beginPath();
+			context.moveTo(250,250);
+			context.arc(250,250,s,ang,ang,true);
+			context.strokeStyle=color;
+			context.lineWidth=a;
+			context.closePath();
+			context.stroke();
+		}
+	</script>
+</html>
