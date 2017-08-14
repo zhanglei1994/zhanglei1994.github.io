@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 400px;
+				height: 400px;
+				background: gray;
+				border: 1px solid green;
+				position: relative;
+				overflow: hidden;
+			}
+			#cont{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				top: -100px;
+			}
+			.row{
+				width: 100%;
+				height: 100px;
+				/*border: 1px solid red;*/
+			}
+			.cell{
+				float: left;
+				width: 98px;
+				height: 100px;
+				border: 1px solid black;
+				background: white;
+			}
+			.cell.black{
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">开始游戏</button>
+		 我的分数<span id="span">0</span>
+		<div id="box">
+			<div id="cont">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var cont=document.getElementById('cont');
+		var btn=document.getElementById('btn');
+		var span=document.getElementById('span');
+		var state=0;
+		var timer=null;
+		var control=true;
+		var num=50;
+		//初始化 黑块
+		function init(){
+			for(var i=0;i<4;i++){
+				row();
+			}
+			cont.onclick=function(ev){
+				if(state==1){
+					alert('你已经输了');
+					return;
+				}
+				if(ev.target.className.indexOf('black')==-1){ //判断是否点击到黑块；
+					alert('游戏结束');
+					state=1;
+					clearInterval(timer);
+				}else{
+					clearInterval(timer);
+					ev.target.className='cell';
+					num-=1;
+					go(num);
+					ev.target.parentNode.pass=1;
+					span.innerHTML=parseInt(span.innerHTML)+1;
+				}
+			}
+		}
+		//创建类名为row的div来包裹类名为cell的div 再把row扔进 cont里面
+		function row(){
+			var row=div('row');
+			var classes=black();
+			for(var i=0;i<4;i++){
+				row.appendChild(div(classes[i]));
+			};
+			if(cont.firstChild==null){
+				cont.appendChild(row);
+			}else{
+				cont.insertBefore(row,cont.firstChild);
+			}
+		}
+		//创建div className是其类名
+		function div(className){
+			var div=document.createElement('div');
+			div.className=className;
+			return div;
+		}
+		//创建一个随机数组，让黑块随机出现
+		function black(){
+			var arr=['cell','cell','cell','cell'];
+			var i=Math.floor(Math.random()*4);
+			arr[i]='cell black';
+			return arr;
+		};
+		//生成DIV从上面掉落；
+		function move(){
+			var top=parseInt(getComputedStyle(cont).top);
+			top+=5;
+			cont.style.top=top+'px';
+			if(top==0){
+				row();
+				cont.style.top='-100px';
+				cont.removeChild(cont.lastChild);
+			}else if(top== -95){
+				if(cont.children.length==5 && cont.children[cont.children.length-1].pass!==1){
+					alert('游戏结束');
+					state=1;
+					clearInterval(timer);
+				}
+			}
+		}
+		//定时器自动掉落
+		function go(n){
+			timer = setInterval(move,n)
+		}
+		//开始游戏按钮
+		btn.onclick=function(){
+			if(control){
+				btn.innerHTML='暂停游戏';
+				go(50);
+				control=false;
+			}else{
+				btn.innerHTML='开始游戏';
+				control=true;
+				clearInterval(timer);
+			}
+		}
+		
+		init();
+	</script>
+</html>
