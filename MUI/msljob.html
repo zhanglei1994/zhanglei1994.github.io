@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-bar.mui-bar-nav {
+				background: #ff5000;
+			}
+			
+			a {
+				color: white;
+			}
+			
+			.mui-title {
+				color: white;
+			}
+			
+			.mui-bar-nav~.mui-content {
+				padding-top: 30px;
+			}
+			
+			.mui-ellipsis {
+				color: #d37035;
+			}
+			
+			.mui-checkbox input[type='checkbox'] {
+				position: absolute;
+				top: 50%px;
+				left: 0px;
+				margin-top: 13px;
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				margin-left: 20px;
+			}
+			
+			.mui-table-view-cell.mui-wenzi {
+				margin-left: 20px;
+			}
+			
+			button {
+				position: absolute;
+				top: 10px;
+				left: 80%;
+			}
+			
+			button,
+			.mui-btn {
+				font-size: 20px;
+			}
+			
+			.mui-table-view.mui-checkbox.pic {
+				margin-top: -30px;
+			}
+			
+			#bottom {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">购物车</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					陶然居（重庆会馆）
+					<span class="mui-pull-right">编辑</span>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-checkbox">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<input type="checkbox">
+						<img class="mui-media-object mui-pull-left" src="img/QQ截图20170515174404.png">
+						<div class="mui-media-body">
+							蛋糕2选1，约8英寸，圆形
+							<p class="mui-ellipsis">￥157元</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-checkbox">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<input type="checkbox">
+						<img class="mui-media-object mui-pull-left" src="img/QQ截图20170515174404.png">
+						<div class="mui-media-body">
+							蛋糕2选1，约8英寸，圆形
+							<p class="mui-ellipsis">￥157元</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-checkbox">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<input type="checkbox">
+						<img class="mui-media-object mui-pull-left" src="img/QQ截图20170515174404.png">
+						<div class="mui-media-body">
+							蛋糕2选1，约8英寸，圆形
+							<p class="mui-ellipsis">￥157元</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-checkbox">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<input type="checkbox">
+						<img class="mui-media-object mui-pull-left" src="img/QQ截图20170515174404.png">
+						<div class="mui-media-body">
+							蛋糕2选1，约8英寸，圆形
+							<p class="mui-ellipsis">￥157元</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-checkbox">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<input type="checkbox">
+						<img class="mui-media-object mui-pull-left" src="img/QQ截图20170515174404.png">
+						<div class="mui-media-body">
+							蛋糕2选1，约8英寸，圆形
+							<p class="mui-ellipsis">￥157元</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div id="bottom">
+				<ul class="mui-table-view mui-checkbox">
+					<input type="checkbox">
+					<li class="mui-table-view-cell mui-wenzi">
+						全选
+						<span class="mui-pull-right">共一件商品 合计:178元</span>
+					</li>
+					<li class="mui-table-view-cell mui-wenzi">
+						&nbsp;
+						<button type="button" class="mui-btn mui-btn-red">结算</button>
+					</li>
+                </ul>
+            </div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+
+</html>

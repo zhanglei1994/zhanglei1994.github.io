@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			.mui-table-view-cell{
+				background: #f47596;
+			}
+			.mui-table-view-cell{
+				color: white;
+			}
+			.iconfont{
+				font-size: 30px;
+				line-height: 50%;
+			}
+			.mui-input-row label{
+				width:25%;
+				background:#8a8083 ;
+			}
+			.mui-input-row label ~ input{
+				width: 75%;
+			}
+			.mui-input-row label + input{
+				background: #8a8083;
+			}
+			img{
+				width:30px;
+				height:30px;
+			}
+			.pic{
+				float: right;
+			}
+			.mui-table-view.mui-grid-view{
+				margin-top: 10px;
+			}
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				text-align: left;
+				color: gray;
+				
+			}
+			.mui-icon.iconfont.mui-pull-right.word{
+				font-size:15px ;
+				line-height: 15px;
+				color: deeppink;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                       <ul class="mui-table-view">
+		                               <li class="mui-table-view-cell">
+		                                                                                      选择风格
+		                               </li>
+		                        </ul>
+		                           <form class="mui-input-group">
+		                               <div class="mui-input-row">
+		                                   <label><span class="mui-icon iconfont">&#xe667;</span></label>
+		                                   <input type="text" class="mui-input-clear" placeholder="时尚达人">
+		                               </div>
+		                           </form>
+		                           <form class="mui-input-group">
+		                               <div class="mui-input-row">
+		                                   <label><span class="mui-icon iconfont">&#xe667;</span></label>
+		                                   <input type="text" class="mui-input-clear" placeholder="文艺青年">
+		                               </div>
+		                           </form>
+		                           <form class="mui-input-group">
+		                               <div class="mui-input-row">
+		                                   <label><span class="mui-icon iconfont">&#xe667;</span></label>
+		                                   <input type="text" class="mui-input-clear" placeholder="运动达人">
+		                               </div>
+		                           </form>
+		                           <form class="mui-input-group">
+		                               <div class="mui-input-row">
+		                                   <label><span class="mui-icon iconfont">&#xe667;</span></label>
+		                                   <input type="text" class="mui-input-clear" placeholder="热情咖啡">
+		                               </div>
+		                           </form>
+		                           <form class="mui-input-group">
+		                               <div class="mui-input-row">
+		                                   <label><span class="mui-icon iconfont">&#xe667;</span></label>
+		                                   <input type="text" class="mui-input-clear" placeholder="浪漫满屋">
+		                               </div>
+		                           </form>
+		                        
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav">
+		                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		                <h1 class="mui-title">
+		                	<img src="img/QQ截图20170516190211.png"/>M E I Y I T I</h1>
+		                	<span class="mui-icon iconfont pic">&#xe667;</span>
+		            </header>
+		            <nav class="mui-bar mui-bar-tab">
+		    		    <a class="mui-tab-item mui-active">
+		    		        <span class="mui-icon mui-icon-home"></span>
+		    		        <span class="mui-tab-label">首页</span>
+		    		    </a>
+		    		    <a class="mui-tab-item">
+		    		        <span class="mui-icon mui-icon-phone"></span>
+		    		        <span class="mui-tab-label">电话</span>
+		    		    </a>
+		    		    <a class="mui-tab-item">
+		    		        <span class="mui-icon mui-icon-email"></span>
+		    		        <span class="mui-tab-label">邮件</span>
+		    		    </a>
+		    		    <a class="mui-tab-item">
+		    		        <span class="mui-icon mui-icon-gear"></span>
+		    		        <span class="mui-tab-label">设置</span>
+		    		    </a>
+		    		</nav>
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		                <div class="mui-scroll">
+		                    <!-- 主界面具体展示内容 -->
+		                    <ul class="mui-table-view mui-grid-view">
+		                        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                            <a href="#">
+		                                <img class="mui-media-object" src="img/QQ截图20170515185847.png">
+		                                <div class="mui-media-body">￥288.00<span class="mui-icon iconfont mui-pull-right word">&#xe667;</span></div>
+		                            </a>
+		                        </li>
+		                        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                            <a href="#">
+		                                <img class="mui-media-object" src="img/QQ截图20170515185847.png">
+		                                <div class="mui-media-body">￥180.00<span class="mui-icon iconfont mui-pull-right word">&#xe667;</span></div>
+		                            </a>
+		                        </li>
+		                        </ul>
+		                        <ul class="mui-table-view mui-grid-view">
+		                        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                            <a href="#">
+		                                <img class="mui-media-object" src="img/QQ截图20170515185847.png">
+		                                <div class="mui-media-body">￥199.00<span class="mui-icon iconfont mui-pull-right word">&#xe667;</span></div>
+		                            </a>
+		                        </li>
+		                        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                            <a href="#">
+		                                <img class="mui-media-object" src="img/QQ截图20170515185847.png">
+		                                <div class="mui-media-body">￥128.00<span class="mui-icon iconfont mui-pull-right word">&#xe667;</span></div>
+		                            </a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                
+		            </div>
+		       	 <div class="mui-off-canvas-backdrop"></div>
+		        </div>
+		    </div>
+	</body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+
+</html>

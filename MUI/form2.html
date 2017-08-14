@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			.mui-input-row label{
+				width:15%;
+			}
+			.mui-input-row label ~ input{
+				width:85%;
+				padding-left:10px ;
+			}
+			label{
+				border-right:1px solid #e2e2e2;
+			}
+			
+			.mui-input-group .mui-input-row{
+				position: relative;
+				padding: 10px 0;
+				height:60px;
+			}
+			.mui-btn.mui-btn-red.mui-btn-outlined{
+				position: absolute;
+			    top:11px;
+			    right:0;
+				margin-top: 4px;
+				width:100px;
+				
+			}
+			.mui-btn-block{
+				background: #ab1e24;
+				width: 95%;
+				margin: auto;
+				margin-top: 40px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">标题</h1>
+		</header>
+		<div class="mui-content">
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label><span class="mui-icon iconfont">&#xe607;</span></label>
+		            <input type="text" class="mui-input-clear" placeholder=""value="浙江温州">
+		        </div>
+		    </form>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label><span class="mui-icon iconfont">&#xe607;</span></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入手机号码">
+		        </div>
+		    </form>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label><span class="mui-icon iconfont">&#xe607;</span></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入验证码">
+		            <button type="button" class="mui-btn mui-btn-red mui-btn-outlined">获取验证码</button>
+		        </div>
+		    </form>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label><span class="mui-icon iconfont">&#xe607;</span></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入6-10位字母或数字">
+		        </div>
+		    </form>
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label><span class="mui-icon iconfont">&#xe607;</span></label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入邀请码（可选填）">
+		        </div>
+		    </form>
+		    <button type="button" class="mui-btn mui-btn-red mui-btn-block">下一步</button>
+		</div>
+		
+	</body>
+
+</html>

@@ -1,0 +1,2146 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			.mui-inner-wrap .cont{
+				box-sizing: border-box;
+				height:150px;
+				background: #dc5481;
+			}
+			.mui-scroll-wrapper{
+				background: white;
+			}
+			.mui-content.mui-scroll-wrapper{
+				overflow: overlay;
+				background: rgba(0,0,0,0.1);
+			}
+			.mui-icon{
+				color: gray;
+			}
+			.mui-table-view-cell .head{
+				font-size: 50px;
+				color:#fff;
+				padding-top: 20px;
+			}
+			.mui-pull-right{
+				padding-top: 15px;
+				color: #fff;
+			}
+			.email{
+				font-size: 40px;
+			}
+			.moon{
+				font-size: 40px;
+			}
+			p{
+				color: white;
+			}
+			.vip{
+				width:50px;
+				height:15px;
+				font-size:12px ;
+				line-height: 15px;
+				background: pink;
+			}
+			.coin{
+				font-size:14px;
+				color: gainsboro;
+			}
+			.nav{
+				font-size: 25px;
+			}
+			.mui-input-row label{
+				padding: 5px 15px;
+			}
+			.lixian{
+				margin-bottom: 20px;
+			}
+			.money{
+				margin-bottom: 20px;
+			}
+			.mui-bar.mui-bar-nav{
+				background: #dc5481;
+			}
+			.mui-bar{
+				height:50px;
+			}
+			.mui-bar-nav .mui-icon.head{
+				font-size: 14px;
+				box-sizing: border-box;
+				border-radius: 50%;
+				background:white;
+				color: gray;
+				margin-left: 10px;
+				margin-top: 8px;
+			}	
+			.name{
+				color: white;
+				margin-left: 10px;
+			}
+			.mui-bar-nav .nav{
+				margin: 0 10px;
+			}	
+			.mui-scroll.nav{
+				background: #dc5481;
+				color: lightgray;
+			}	
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				border-bottom:2px solid white;
+				color: white;
+			}
+			.mui-slider-indicator .mui-indicator{
+				width:20px;
+				height: 20px;
+			}
+			.mui-table-view.mui-grid-view.mui-grid-9{
+				background: white;
+				border: 0;
+			}
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell{
+				border: 0;
+			}
+			.guanzhu{
+				color: pink;
+			}
+			.zhongxin{
+				color: deepskyblue;
+			}
+			.sousuo{
+				color:limegreen;
+			}
+			.fenlei{
+				color: mediumpurple;
+			}
+			.mid{
+				/*border:1px solid red;*/
+				box-sizing: border-box;
+				height: 1395px;
+			}
+			.tuijian{
+				box-sizing: border-box;
+				font-size:30px;
+				color:deeppink;
+				padding:5px 0px 10px 15px;
+			}
+			.mid .zhubo{
+				color: black;
+				font-size: 16px;
+			}
+			.shuzi{
+				box-sizing: border-box;
+				color: black;
+				font-size: 16px;
+				float: right;
+				padding:15px 15px 0 0;
+			}
+			.photo{
+				box-sizing: border-box;
+				width:42%;
+				margin-right: 12px;
+				margin-left:15px ;
+				/*padding:0 15px ;*/
+				float: left;
+				height: 180px;
+				background:white;
+				/*border: 1px solid red;*/
+				position: relative;
+				/*margin-top: 20px;*/
+			}
+			.photo .pic{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+			.photo .change{
+				font-size: 14px;
+				padding-left: 5px;
+				color: deeppink;
+			}
+			.photo span{
+				color: black;
+				font-size: 14px;
+				/*display: inline-block;*/
+			}
+			.photo .zb{
+				color: lightgray;
+				position: absolute;
+				bottom:-12px;
+				left: 5px;
+			}
+			.photo .gz{
+				position: absolute;
+				bottom: 0;
+				right: 5px;
+				color: lightgray;
+			}
+			.photo.list{
+				margin-top: 10px;
+			}
+			.mid img{
+				box-sizing: border-box;
+				width: 100%;
+				padding:0 15px;
+				margin-top: 10px;
+				/*border: 1px solid red;*/
+			}
+			.more{
+				box-sizing: border-box;
+				/*border:1px solid red;*/
+				height: 50px;
+			}
+			.more button{
+				margin-top: 20px;
+				margin-left: 15px;
+				width: 150px;
+			}
+			.more span{
+				color: black;
+				padding-top: 20px;
+				padding-right: 15px;
+				font-size: 14px;
+				float: right;
+				line-height: 35px;
+			}
+			.mid.change{
+				height:470px ;
+			}
+			.mid.change .fan{
+				color: lightgreen;
+				box-sizing: border-box;
+				font-size:30px;
+				padding:5px 0px 10px 15px;
+			}
+			.mui-btn.gengduo{
+				height: 15px;
+				line-height: 4px;
+				color: gray;
+				width: 345px;
+				margin-left: 15px;
+			}
+			.mui-navigate-right{
+				font-size: 18px;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				white-space: inherit;
+			}
+			.mui-table-view.mui-grid-view .mui-table-view-cell .jieshao{
+				height: 30px;
+				text-align: left;
+				text-overflow: ellipsis;
+			}
+			.zh{
+				/*display: inline-block*/
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+				text-align: left;
+				color: darkgray;
+			}
+			#item2 .sx{
+				display: block;
+				color: red;
+				font-size: 14px;
+				margin-left: 30%;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			#slider{
+				margin: 10px 0;
+			}
+			.lastImg{
+				display: block;
+				margin-top:15px ;
+				height: 250px;
+				width: 100%;
+			}
+			.timelist{
+				display: block;
+				height: 200px;
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			#item3 .mui-input-group .mui-input-row label{
+				width: 75%;
+			}
+			#item3 .mui-input-group .mui-input-row .mui-icon{
+				color: orangered;
+				font-size: 20px;
+			}
+			#item3 .mui-input-group .mui-input-row label .my{
+				color: black;
+				font-size: 16px;
+			}
+			#item3 .mui-input-group .mui-input-row input{
+				width: 25%;
+			}
+			#item4 .mui-input-group {
+				margin-top: 5px;
+				height: 45px;
+				
+			}
+			.mui-input-group .mui-input-row:after{
+				height: 0;
+			}
+			.mui-table-view:before{
+				height: 0;
+			}
+			.mui-input-group:after{
+				height: 0;
+			}
+			#item4 .mui-input-group .mui-input-row label{
+				width: 75%;
+			}
+			#item4 .mui-input-group .mui-input-row .look{
+				display: inline-block;
+				margin-top: 8px;
+				width: 70px;
+				height: 25px;
+				font-size:14px ;
+				text-align: center;
+				line-height:25px ;
+				color: white;
+				background: darkgray;
+			}
+			#item4 .mui-input-group .mui-input-row .mui-icon{
+				font-size: 25px;
+			}
+			#item4 .mui-input-group .mui-input-row label .my{
+				color: black;
+				font-size: 16px;
+			}
+			.mui-table-view-cell.mui-media.mui-col-xs-4{
+				text-align: left;
+			}
+			.mui-table-view-cell.mui-media.mui-col-xs-4 p{
+				color: darkgray;
+				text-align: left;
+			}
+			#item3 .mui-input-group .mui-input-row .china{
+				color: purple;
+				font-size:25px ;
+			}
+			.fate{
+				display: block;
+				margin: 5px 0;
+				height: 150px;
+				width: 100%;
+			}
+			.anime{
+				display: block;
+				margin: 5px 0;
+				height: 200px;
+				width: 100%;
+			}
+			.bottomImg{
+				display: block;
+				margin-top: 5px;
+				height: 250px;
+				width: 100%;
+			}
+			#item4 .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				margin-left: 3px;
+			}
+			.bl{
+				display: block;
+				height: 150px;
+				width: 100%;
+			}
+			#item4 .mui-input-group.moreAniman{
+				height: 30px;
+				background: #D8D8DC;
+				margin-bottom: 10px;
+			}
+			.mui-input-group:before{
+				height: 0;
+			}
+			.moreAnima {
+				width: 100%;
+				margin-top: 10px;
+				padding:0 10px;
+			}
+			.moreAnima .more{
+				float: left;
+				width: 120px;
+				height: 30px;
+				/*border: 1px solid black;*/
+				font-size: 14px;
+				background: white;
+				color: black;
+				text-align: center;
+				line-height: 30px;
+			}
+			.moreAnima span{
+				padding-top:5px ;
+				font-size:14px ;
+				float: right;
+				color: black;
+				display: inline-block;
+			}
+			#item5 .mui-input-group .mui-input-row .lable{
+				box-sizing: border-box;
+				width: 85%;
+				color: #000000;
+				font-size: 16px;
+				padding:12px 15px;
+			}
+			#item5 .mui-input-group .mui-input-row .input{
+				width: 15%;
+				color: #000000;
+			}
+			#item5 .mui-input-group .mui-input-row .newlable{
+				box-sizing: border-box;
+				width: 20%;
+				/*color: #000000;*/
+				font-size: 16px;
+				padding:5px 15px 0px 15px;
+			}
+			#item5 .mui-input-group .mui-input-row .newlable a{
+				display: inline-block;
+				width: 50px;
+				height: 30px;
+				/*border: 1px solid red;*/
+				border-radius: 3px;
+				background: deepskyblue;
+				color: white;
+				text-align: center;
+				line-height: 30px;
+			}
+			#item5 .mui-input-group .mui-input-row .newinput{
+				width: 80%;
+				color: #000000;
+			}
+			#item5 .mui-input-group .border{
+				border-top:1px solid lightgray;
+				padding-top: 10px;
+				height: 55px;
+			}
+			#item5 .mui-table-view .mui-media-object{
+				height: 100px;
+				max-width: 140px;
+			}
+			#item5 .ul{
+				margin-top: -10px;
+			}
+			#item5 .mui-media-body .name{
+				color: black;
+			}
+			#item5 .mui-media-body .introduce{
+				color: darkgray;
+				padding-left: 10px;
+			}
+			#item5 .mui-media-body .play{
+				color: darkgray;
+				padding-top: 43px;
+				padding-left: 10px;
+			}
+			#item6 #input{
+				margin: 15px;
+				width: 92%;
+			}
+			/*.mui-content.mui-scroll-wrapper .mui-slider.slider{
+				overflow:visible;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        <ul class="mui-table-view">
+		                               <li class="mui-table-view-cell cont">
+		                                 <span class="mui-icon iconfont head">&#xe63d;</span> 
+		                                 <span class="mui-pull-right iconfont moon">&#xe799;</span>
+		                                 <span class="mui-pull-right iconfont email">&#xe74e;</span>
+		                               	 <p>进击的康娜</p>
+		                               	 <p class="vip">正式会员</p>
+		                               	 <p class="coin">硬币：100.00&nbsp;&nbsp;&nbsp;B币：0.0</p>
+		                               </li>
+		                        </ul>
+		                    <form class="mui-input-group">
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe6ee;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="首页">
+		                            <label><span class="mui-icon iconfont nav">&#xe615;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="我的大会员">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe615;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="我的大会员">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe614;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="会员积分">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe695;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="免流量服务">
+		                        </div>
+		                        <div class="mui-input-row lixian">
+		                            <label><span class="mui-icon iconfont nav">&#xf0005;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="离线缓存">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe50a;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="稍后再看">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe635;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="我的收藏">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe64a;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="历史记录">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe63d;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="我的关注">
+		                        </div>
+		                        <div class="mui-input-row money">
+		                            <label><span class="mui-icon iconfont nav">&#xe637;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="B币钱包">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xe506;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="主题选择">
+		                        </div>
+		                        <div class="mui-input-row">
+		                            <label><span class="mui-icon iconfont nav">&#xf0012;</span></label>
+		                            <input type="text" class="mui-input-clear" placeholder="" value="设置与帮助">
+		                        </div>
+		                    </form>
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav">
+		                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		                <span class="mui-icon iconfont head">&#xe63d;</span> 
+		                <span class="name">进击的康娜</span>
+		                <span class="mui-pull-right iconfont nav">&#xe501;</span>
+		                <span class="mui-pull-right iconfont nav">&#xf0005;</span>
+		                <span class="mui-pull-right iconfont nav">&#xe67e;</span>
+		            </header>
+		           
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		                <div class="mui-scroll nav">
+		                    <!-- 主界面具体展示内容 -->
+		                  	<!--<div class="mui-slider slider">-->
+		                  	    <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		                  	        <a class="mui-control-item" href="#item1">直播</a>
+		                  	        <a class="mui-control-item" href="#item2">推荐</a>
+		                  	        <a class="mui-control-item" href="#item3">追番</a>
+		                  	        <a class="mui-control-item" href="#item4">分区</a>
+		                  	        <a class="mui-control-item" href="#item5">动态</a>
+		                  	    </div>
+		                  	    <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-2"></div>
+		                  	    <div class="mui-slider-group">
+		                  	    	<!--这是第1个页面-->
+		                  	        <div id="item1" class="mui-slider-item mui-control-content mui-active">
+		                  	        	<div id="slider" class="mui-slider" >
+		                  	        	  <div class="mui-slider-group mui-slider-loop">
+		                  	        	    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		                  	        	    <div class="mui-slider-item mui-slider-item-duplicate">
+		                  	        	      <a href="#">
+		                  	        	        <img src="img/00.jpg"/>
+		                  	        	      </a>
+		                  	        	    </div>
+		                  	        	    <!-- 第一张 -->
+		                  	        	    <div class="mui-slider-item">
+		                  	        	      <a href="#">
+		                  	        	        <img src="img/00.jpg"/>
+		                  	        	      </a>
+		                  	        	    </div>
+		                  	        	    <!-- 第二张 -->
+		                  	        	    <div class="mui-slider-item">
+		                  	        	      <a href="#">
+		                  	        	        <img src="img/1.jpg"/>
+		                  	        	      </a>
+		                  	        	    </div>
+		                  	        	    <!-- 第三张 -->
+		                  	        	   <div class="mui-slider-item">
+		                  	        	      <a href="#">
+		                  	        	        <img src="img/2.jpg"/>
+		                  	        	      </a>
+		                  	        	    </div>
+		                  	        	    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		                  	        	    <div class="mui-slider-item mui-slider-item-duplicate">
+		                  	        	      <a href="#">
+		                  	        	        <img src="img/2.jpg"/>
+		                  	        	      </a>
+		                  	        	    </div>
+		                  	        	  </div>
+		                  	        	  <div class="mui-slider-indicator">
+		                  	        	    <div class="mui-indicator mui-active"></div>
+		                  	        	    <div class="mui-indicator"></div>
+		                  	        	    <div class="mui-indicator"></div>
+		                  	        	  </div>
+		                  	        	
+		                  	        	<ul class="mui-table-view mui-grid-view mui-grid-9">
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont guanzhu">&#xe68c;</span>
+		                  	        	        <div class="mui-media-body">关注</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont zhongxin">&#xe635;</span>
+		                  	        	        <div class="mui-media-body">中心</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont sousuo">&#xe501;</span>
+		                  	        	        <div class="mui-media-body">搜索</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont fenlei">&#xe64b;</span>
+		                  	        	        <div class="mui-media-body">分类</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	</ul>
+			                  	        	<div class="mid">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe60b;</span>
+			                  	        		<span class="zhubo">推荐主播</span>
+			                  	        		<span class="shuzi">当前2475个直播 ></span>
+			                  	        	
+			                  	        	<div class="photo">
+			                  	        		<img class="pic" src="img/11.png"/>
+			                  	        		<span class="change">#电子竞技#</span><span>叶汪瑞文，修炼归来</span>
+			                  	        		<p class="zb">叶亭梦</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;7259</span>
+			                  	        	</div>
+			                  	        	<div class="photo">
+			                  	        		<img class="pic" src="img/dianzhang.jpg"/>
+			                  	        		<span class="change">#生活娱乐#</span><span>bilibili高考状元陪你解析2017高考题</span>
+			                  	        		<p class="zb">bilibili直播</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;1177</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/12.jpg"/>
+			                  	        		<span class="change">#电子竞技#</span><span>CSGO 开始反杀之旅</span>
+			                  	        		<p class="zb">TwFFFF</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;3503</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/0.jpg"/>
+			                  	        		<span class="change">#生活娱乐#</span><span>别进来!进来爱上我了怎么办</span>
+			                  	        		<p class="zb">小白-Queen</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;1559</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/01.jpg"/>
+			                  	        		<span class="change">#单机联盟#</span><span>精灵宝可梦中级红宝石</span>
+			                  	        		<p class="zb">基佬爱上熊</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;1297</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/02.jpg"/>
+			                  	        		<span class="change">#网络游戏#</span><span>守望先锋 可爱的鼠鼠能否继续被演</span>
+			                  	        		<p class="zb">叶落莫言</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;1.4万</span>
+			                  	        	</div>
+			                  	        	<!--插图-->
+			                  	        	<img src="img/03.jpg"/>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/04.jpg"/>
+			                  	        		<span class="change">#单机联盟#</span><span>亚太服前100名。各种落地成盒</span>
+			                  	        		<p class="zb">三年泡影</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;2770</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/05.jpg"/>
+			                  	        		<span class="change">#唱见舞见#</span><span>小学生作息凉的摸鱼时间</span>
+			                  	        		<p class="zb">sakamakiryotyo</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;4908</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/06.jpg"/>
+			                  	        		<span class="change">#手游直播#</span><span>新版本周瑜借东风烧赤壁</span>
+			                  	        		<p class="zb">白枫家の少主</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;6555</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/08.jpg"/>
+			                  	        		<span class="change">#手游直播#</span><span>王者荣耀 40星的小姐姐</span>
+			                  	        		<p class="zb">是个花花哟</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;4543</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/07.jpg"/>
+			                  	        		<span class="change">#御宅文化#</span><span>【这是声控福利】好吧我最爱</span>
+			                  	        		<p class="zb">cv欧瑞</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;1457</span>
+			                  	        	</div>
+			                  	        	<div class="photo list">
+			                  	        		<img class="pic" src="img/09.jpg"/>
+			                  	        		<span class="change">#网络游戏#</span><span>用心补位，拿头输出</span>
+			                  	        		<p class="zb">林叨叨叨</p>
+			                  	        		<span class="mui-icon iconfont gz">&#xe63d;3281</span>
+			                  	        	</div>
+			                  	        	<div class="more">
+			                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+			                  	        		<span>9条新动态，点击刷新</span>
+			                  	        	</div>
+			                  	        </div>
+			                  	        <div class="mid change">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe506;</span>
+			                  	        		<span class="zhubo">绘画专区</span>
+			                  	        		<span class="shuzi">当前71个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/10.png"/>
+				                  	        		<span>木偶的聊天室(练习画腿)</span>
+				                  	        		<p class="zb">木偶不想画画</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;7259</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/13.png"/>
+					                  	        		<span>大神教你3D游戏次世代建模</span>
+					                  	        		<p class="zb">啊逝去的青春</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;1876</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/14.png"/>
+					                  	        		<span>让我起个吸引人的名字</span>
+					                  	        		<p class="zb">姜桦</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;47</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/15.png"/>
+					                  	        		<span>我不做人了</span>
+					                  	        		<p class="zb">枭梦</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;34</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>5条新动态，点击刷新</span>
+					                  	        	</div>
+			                  	        </div>	
+			                  	        <div class="mid change">
+			                  	        		<span class="mui-icon iconfont fan">&#xe607;</span>
+			                  	        		<span class="zhubo">生活娱乐</span>
+			                  	        		<span class="shuzi">当前367个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/16.jpg"/>
+				                  	        		<span>日常 埃罗芒sennei傲娇</span>
+				                  	        		<p class="zb">埃罗芒sennei</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;9</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/17.jpg"/>
+					                  	        		<span>暗中观察小动物 吃饱睡没救了</span>
+					                  	        		<p class="zb">下线酱Orz</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;3596</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/18.jpg"/>
+					                  	        		<span>晴天 争夺筐位的日常</span>
+					                  	        		<p class="zb">懒懒</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;21</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/19.jpg"/>
+					                  	        		<span>猫霸水友群の日常</span>
+					                  	        		<p class="zb">行者猫霸</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;34</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>5条新动态，点击刷新</span>
+					                  	        	</div>
+			                  	        </div>
+			                  	        <div class="mid change">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe62e;</span>
+			                  	        		<span class="zhubo">唱见舞见</span>
+			                  	        		<span class="shuzi">当前50个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/21.jpg"/>
+				                  	        		<span>今天哑哑的声音，你们喜欢吗</span>
+				                  	        		<p class="zb">潮汐殿下</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;275</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/22.jpg"/>
+					                  	        		<span>【温柔磁性】下雨天，你我都挺好的</span>
+					                  	        		<p class="zb">和能干的西瓜君</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;330</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/23.jpg"/>
+					                  	        		<span>孤寡主播，需要你的关爱</span>
+					                  	        		<p class="zb">馨琦酱</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;3115</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/24.jpg"/>
+					                  	        		<span>【声控】6月17号，我等你们</span>
+					                  	        		<p class="zb">可皇陛下</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;6484</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>60条新动态，点击刷新</span>
+					                  	        	</div>
+			                  	        </div>
+			                  	        <div class="mid change">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe67e;</span>
+			                  	        		<span class="zhubo">手游直播</span>
+			                  	        		<span class="shuzi">当前399个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/25.jpg"/>
+				                  	        		<span>捡来的wuli锦年的直播间</span>
+				                  	        		<p class="zb">瞎小狸</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;50</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/26.jpg"/>
+					                  	        		<span>在线接单，王者荣耀50星</span>
+					                  	        		<p class="zb">野琦丶</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;534</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/27.jpg"/>
+					                  	        		<span>生病在家，日常poi练级中</span>
+					                  	        		<p class="zb">便太の萌萌</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;812</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/28.jpg"/>
+					                  	        		<span>声福·在钻5停了一万年的闲鱼</span>
+					                  	        		<p class="zb">安然是总攻</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;993</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>419条新动态，点击刷新</span>
+					                  	        	</div>
+			                  	        </div>
+			                  	        <div class="mid change">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe67e;</span>
+			                  	        		<span class="zhubo">单机联机</span>
+			                  	        		<span class="shuzi">当前913个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/29.jpg"/>
+				                  	        		<span>完全不会污起来</span>
+				                  	        		<p class="zb">吃书小女久依耐</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;200</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/30.jpg"/>
+					                  	        		<span>时将至，咕将行</span>
+					                  	        		<p class="zb">强行假摔空想改</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;56</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/31.jpg"/>
+					                  	        		<span>随便玩玩</span>
+					                  	        		<p class="zb">丶梦依人轻舞</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;80</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/32.jpg"/>
+					                  	        		<span>(大富翁7)破产主播</span>
+					                  	        		<p class="zb">陈哥1</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;14823</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>420条新动态，点击刷新</span>
+					                  	        	</div>
+					                  	    
+			                  	        </div>
+			                  	        <div class="mid change">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe67e;</span>
+			                  	        		<span class="zhubo">网络游戏</span>
+			                  	        		<span class="shuzi">当前708个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/33.jpg"/>
+				                  	        		<span>新手开车</span>
+				                  	        		<p class="zb">王喵污</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;22</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/34.jpg"/>
+					                  	        		<span>有人一起开黑吗？我76贼6</span>
+					                  	        		<p class="zb">华烂漫-续写</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;46</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/35.jpg"/>
+					                  	        		<span>身兼钢管舞和脱衣舞的小女孩</span>
+					                  	        		<p class="zb">暴走王者</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;1180</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/36.jpg"/>
+					                  	        		<span>休息休息</span>
+					                  	        		<p class="zb">辉夜</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;1423</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>9条新动态，点击刷新</span>
+					                  	        	</div>
+					                  	    </div> 
+					                  	    <div class="mid change">
+			                  	        		<span class="mui-icon iconfont tuijian">&#xe67e;</span>
+			                  	        		<span class="zhubo">电子竞技</span>
+			                  	        		<span class="shuzi">当前694个直播 ></span>
+				                  	        		<div class="photo">
+				                  	        		<img class="pic" src="img/37.jpg"/>
+				                  	        		<span>贱贱：以后直播改到12点</span>
+				                  	        		<p class="zb">Saber丶吾妻</p>
+				                  	        		<span class="mui-icon iconfont gz">&#xe63d;19</span>
+					                  	        	</div>
+					                  	        	<div class="photo">
+					                  	        		<img class="pic" src="img/38.jpg"/>
+					                  	        		<span>吃瓜看大佬</span>
+					                  	        		<p class="zb">猫儿爱丽丝</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;5846</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/39.jpg"/>
+					                  	        		<span>我也算个声优暖吧</span>
+					                  	        		<p class="zb">苏暖小巫婆</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;13146</span>
+					                  	        	</div>
+					                  	        	<div class="photo list">
+					                  	        		<img class="pic" src="img/40.jpg"/>
+					                  	        		<span>无尽给我，电刀给我，你去辅助吧！</span>
+					                  	        		<p class="zb">糖醋里脊包</p>
+					                  	        		<span class="mui-icon iconfont gz">&#xe63d;2282</span>
+					                  	        	</div>
+					                  	        	<div class="more">
+					                  	        		<button type="button" class="mui-btn mui-btn-white ">查看更多</button>
+					                  	        		<span>150条新动态，点击刷新</span>
+					                  	        	</div>
+					                  	        <button type="button" class="mui-btn mui-btn-white mui-btn-block gengduo">更多直播</button>
+					                  	    </div> 
+			                  	        </div>
+			                  	    </div>
+		                  	        <!--这是第1个页面-->
+		                  	        <!--这是第2个页面-->
+		                  	        <div id="item2" class="mui-slider-item mui-control-content">
+		                  	        	<ul class="mui-table-view">
+		                  	        	        <li class="mui-table-view-cell">
+		                  	        	            <a class="mui-navigate-right">
+		                  	        	                综合
+		                  	        	            </a>
+		                  	        	        </li>
+		                  	        	</ul>
+		                  	            <ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/41.jpg">
+		                  	                        <div class="mui-media-body jieshao">我的妹妹不可能那么可爱</div>
+		                  	                        	<p class="zh">综合·妹控</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/42.jpg">
+		                  	                        <div class="mui-media-body jieshao">【盗墓笔记】几首歌让你认识盗墓笔记</div>
+		                  	                        <p class="zh">国产原创相关</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/43.jpg">
+		                  	                        <div class="mui-media-body jieshao">外国影视剧里面的中国军人</div>
+		                  	                        	<p class="zh">星海·历史</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/44.jpg">
+		                  	                        <div class="mui-media-body jieshao">【电影级/高燃】这才是男人该看的CG混剪</div>
+		                  	                        <p class="zh">GMV·燃向</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/45.jpg">
+		                  	                        <div class="mui-media-body jieshao">[mep]alone again</div>
+		                  	                        	<p class="zh">MAD·AMV·京阿尼</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/46.jpg">
+		                  	                        <div class="mui-media-body jieshao">宠妻狂魔 信白cp党</div>
+		                  	                        <p class="zh">电子竞技·李白</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/47.jpg">
+		                  	                        <div class="mui-media-body jieshao">DIRO迪奥LIFE乐肤源系列</div>
+		                  	                        	<p class="zh">广告</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/48.jpg">
+		                  	                        <div class="mui-media-body jieshao">中文-10大丢脸丢到国外的国产游戏主机</div>
+		                  	                        <p class="zh">单机联机·中文字幕</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/49.jpg">
+		                  	                        <div class="mui-media-body jieshao">庞统语音迷倒万千少女</div>
+		                  	                        	<p class="zh">电子竞技·游戏视频</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/50.jpg">
+		                  	                        <div class="mui-media-body jieshao">【Ray MMD】桃源恋歌</div>
+		                  	                        <p class="zh">MMD·3D·MMD</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <a class="sx" href="#">刚刚看到这里，点击刷新</a>
+		                  	            <ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/51.jpg">
+		                  	                        <div class="mui-media-body jieshao">动漫中十大萝莉第二期</div>
+		                  	                        	<p class="zh">综合·梅比斯</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/52.jpg">
+		                  	                        <div class="mui-media-body jieshao">能力越大，越不负责（死侍个人混剪）</div>
+		                  	                        <p class="zh">电影相关·死侍</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/53.jpg">
+		                  	                        <div class="mui-media-body jieshao">人活着就是为了酒吞童子</div>
+		                  	                        	<p class="zh">手机游戏·悠木碧</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/54.jpg">
+		                  	                        <div class="mui-media-body jieshao">骑马与砍杀拿破仑：大战韩国思密达</div>
+		                  	                        <p class="zh">单机联机·骑马与战阵</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/46.jpg">
+		                  	                        <div class="mui-media-body jieshao">宠妻狂魔 信白cp党</div>
+		                  	                        <p class="zh">电子竞技·李白</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/55.jpg">
+		                  	                        <div class="mui-media-body jieshao">DNF深渊许愿池，史诗在快节奏中连闪</div>
+		                  	                        	<p class="zh">网络游戏·DNF</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/56.jpg">
+		                  	                        <div class="mui-media-body jieshao">番剧推荐第二十二期，这些好看的动漫</div>
+		                  	                        	<p class="zh">综合·催泪</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/57.jpg">
+		                  	                        <div class="mui-media-body jieshao">缘之空-Flashbulbmemory-</div>
+		                  	                        <p class="zh">音乐选集·缘之空</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/58.jpg">
+		                  	                        <div class="mui-media-body jieshao">神偷奶爸3（2017）预告合集</div>
+		                  	                        	<p class="zh">电影相关·预告片</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/59.jpg">
+		                  	                        <div class="mui-media-body jieshao">【1M】May J Lee编舞 Action</div>
+		                  	                        <p class="zh">Korea相关·JAZZ</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <div id="slider" class="mui-slider" >
+		                  	              <div class="mui-slider-group mui-slider-loop">
+		                  	                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		                  	                <div class="mui-slider-item mui-slider-item-duplicate">
+		                  	                  <a href="#">
+		                  	                    <img src="img/60.jpg">
+		                  	                  </a>
+		                  	                </div>
+		                  	                <!-- 第一张 -->
+		                  	                <div class="mui-slider-item">
+		                  	                  <a href="#">
+		                  	                    <img src="img/60.jpg">
+		                  	                  </a>
+		                  	                </div>
+		                  	                <!-- 第二张 -->
+		                  	                <div class="mui-slider-item">
+		                  	                  <a href="#">
+		                  	                    <img src="img/61.jpg">
+		                  	                  </a>
+		                  	                </div>
+		                  	                <!-- 第三张 -->
+		                  	                <div class="mui-slider-item">
+		                  	                  <a href="#">
+		                  	                    <img src="img/62.jpg">
+		                  	                  </a>
+		                  	                </div>
+		                  	                 <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		                  	                <div class="mui-slider-item mui-slider-item-duplicate">
+		                  	                  <a href="#">
+		                  	                    <img src="img/62.jpg">
+		                  	                  </a>
+		                  	                </div>
+		                  	              </div>
+		                  	              <div class="mui-slider-indicator">
+		                  	                <div class="mui-indicator mui-active"></div>
+		                  	                <div class="mui-indicator"></div>
+		                  	                <div class="mui-indicator"></div>
+		                  	              </div>
+		                  	            </div>
+		                  	            <ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/51.jpg">
+		                  	                        <div class="mui-media-body jieshao">动漫中十大萝莉第二期</div>
+		                  	                        	<p class="zh">综合·梅比斯</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/52.jpg">
+		                  	                        <div class="mui-media-body jieshao">能力越大，越不负责（死侍个人混剪）</div>
+		                  	                        <p class="zh">电影相关·死侍</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/53.jpg">
+		                  	                        <div class="mui-media-body jieshao">人活着就是为了酒吞童子</div>
+		                  	                        	<p class="zh">手机游戏·悠木碧</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/54.jpg">
+		                  	                        <div class="mui-media-body jieshao">骑马与砍杀拿破仑：大战韩国思密达</div>
+		                  	                        <p class="zh">单机联机·骑马与战阵</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/46.jpg">
+		                  	                        <div class="mui-media-body jieshao">宠妻狂魔 信白cp党</div>
+		                  	                        <p class="zh">电子竞技·李白</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/55.jpg">
+		                  	                        <div class="mui-media-body jieshao">DNF深渊许愿池，史诗在快节奏中连闪</div>
+		                  	                        	<p class="zh">网络游戏·DNF</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/56.jpg">
+		                  	                        <div class="mui-media-body jieshao">番剧推荐第二十二期，这些好看的动漫</div>
+		                  	                        	<p class="zh">综合·催泪</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/57.jpg">
+		                  	                        <div class="mui-media-body jieshao">缘之空-Flashbulbmemory-</div>
+		                  	                        <p class="zh">音乐选集·缘之空</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/58.jpg">
+		                  	                        <div class="mui-media-body jieshao">神偷奶爸3（2017）预告合集</div>
+		                  	                        	<p class="zh">电影相关·预告片</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/59.jpg">
+		                  	                        <div class="mui-media-body jieshao">【1M】May J Lee编舞 Action</div>
+		                  	                        <p class="zh">Korea相关·JAZZ</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <img class="lastImg" src="img/63.jpg"/>
+		                  	        </div>  
+		                  	        <!--这是第二个页面-->
+		                  	        <!--这是第三个页面-->
+		                  	        <div id="item3" class="mui-slider-item mui-control-content">
+		                  	        	<img class="timelist" src="img/64.jpg"/>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont">&#xe68c;</span>
+		                  	        	      	<span class="my">我的追番</span>
+		                  	        	        </label>
+		                  	        	        <input type="text" class="mui-input-clear" placeholder="查看全部>">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/65.jpg">
+		                  	        	            <div class="mui-media-body">从零开始的魔法书</div>
+		                  	        	            <p>全12话</p>
+		                  	        	            <p>看到第12话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/66.jpg">
+		                  	        	            <div class="mui-media-body">埃罗芒果老师</div>
+		                  	        	            <p>全12话</p>
+		                  	        	            <p>看到第6话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/67.jpg">
+		                  	        	            <div class="mui-media-body">Re:CREATORS</div>
+		                  	        	            <p>跟新至第13话</p>
+		                  	        	            <p>看到第4话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	</ul>
+		                  	        	<img class="fate" src="img/68.jpg"/>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont">&#xe60b;</span>
+		                  	        	      	<span class="my">番剧推荐</span>
+		                  	        	        </label>
+		                  	        	        <input type="text" class="mui-input-clear" placeholder="查看全部>">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/69.jpg">
+		                  	        	            <div class="mui-media-body">樱花任务</div>
+		                  	        	            <p>更新至第14话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/70.jpg">
+		                  	        	            <div class="mui-media-body">捏造陷阱-NTR-</div>
+		                  	        	            <p>更新至第1话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/71.jpg">
+		                  	        	            <div class="mui-media-body">博人传 火影忍者</div>
+		                  	        	            <p>跟新至第14话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	</ul>
+		                  	        	<img class="anime" src="img/72.jpg"/>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china">&#xe610;</span>
+		                  	        	      	<span class="my">国产动画推荐</span>
+		                  	        	        </label>
+		                  	        	        <input type="text" class="mui-input-clear" placeholder="查看全部>">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/73.jpg">
+		                  	        	            <div class="mui-media-body">开封奇谈</div>
+		                  	        	            <p>更新至第9话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/74.jpg">
+		                  	        	            <div class="mui-media-body">十万个冷笑话</div>
+		                  	        	            <p>更新至第37话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                  	        	        <a href="#">
+		                  	        	            <img class="mui-media-object" src="img/75.jpg">
+		                  	        	            <div class="mui-media-body">降灵记</div>
+		                  	        	            <p>跟新至第9话</p>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	</ul>
+		                  	        	<img class="bottomImg" src="img/76.jpg"/>
+		                  	        </div>
+		                  	        <!--这是第三个页面-->
+		                  	        <!--这是第四个页面-->
+		                  	        <div id="item4" class="mui-slider-item mui-control-content">
+		                  	        	<ul class="mui-table-view mui-grid-view mui-grid-9">
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color:#38d0de ;">&#xe50a;</span>
+		                  	        	        <div class="mui-media-body">直 播</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #fddf7f;">&#xe60b;</span>
+		                  	        	        <div class="mui-media-body">番 剧</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #898ee9;">&#xe6a1;</span>
+		                  	        	        <div class="mui-media-body">动 画</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #f75e73;">&#xe610;</span>
+		                  	        	        <div class="mui-media-body">国 创</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #50bee1;">&#xe62e;</span>
+		                  	        	        <div class="mui-media-body">音 乐</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #fc6078;">&#xe604;</span>
+		                  	        	        <div class="mui-media-body">舞 蹈</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #47dd96;">&#xe67e;</span>
+		                  	        	        <div class="mui-media-body">游 戏</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #3bd1ea;">&#xe6ad;</span>
+		                  	        	        <div class="mui-media-body">科 技</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #fbd87e;">&#xe670;</span>
+		                  	        	        <div class="mui-media-body">生 活</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #f76e82;">&#xe608;</span>
+		                  	        	        <div class="mui-media-body">鬼 畜</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #ffa0c5;">&#xe609;</span>
+		                  	        	        <div class="mui-media-body">时 尚</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #9192ec;">&#xe60a;</span>
+		                  	        	        <div class="mui-media-body">广 告</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #ffde96;">&#xe607;</span>
+		                  	        	        <div class="mui-media-body">娱 乐</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #37ace2;">&#xe505;</span>
+		                  	        	        <div class="mui-media-body">电 影</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #ffb05a;">&#xe60c;</span>
+		                  	        	        <div class="mui-media-body">电视剧</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+		                  	        	    <a href="#">
+		                  	        	        <span class="mui-icon iconfont" style="color: #fedf73;">&#xe606;</span>
+		                  	        	        <div class="mui-media-body">游戏中心</div>
+		                  	        	    </a>
+		                  	        	</li>
+		                  	        	    </ul>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#fddf7f ;">&#xe60b;</span>
+		                  	        	      	<span class="my">番剧区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/78.jpg">
+		                  	                        <div class="mui-media-body jieshao">樱花任务</div>
+		                  	                        <p class="zh">播放416.1万 &nbsp;&nbsp;收藏51.1万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/79.jpg">
+		                  	                        <div class="mui-media-body jieshao">捏造陷阱-NTR-</div>
+		                  	                        <p class="zh">播放40.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏29.1万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/80.jpg">
+		                  	                        <div class="mui-media-body jieshao">博人传 火影忍者新时代</div>
+		                  	                        <p class="zh">播放269.7万收藏12.7万</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/81.jpg">
+		                  	                        <div class="mui-media-body jieshao">徒然喜欢你</div>
+		                  	                        <p class="zh">播放53.7万 &nbsp;&nbsp;&nbsp;&nbsp;收藏34.5万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多番剧</a>
+		                  	            		<span>90条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#898ee9 ;">&#xe6a1;</span>
+		                  	        	      	<span class="my">动画区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<img class="bl" src="img/60.jpg"/>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/82.jpg">
+		                  	                        <div class="mui-media-body jieshao">我希望明天依旧风平浪静</div>
+		                  	                        <p class="zh">播放2.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏257</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/83.jpg">
+		                  	                        <div class="mui-media-body jieshao">新娘狂三养成实录</div>
+		                  	                        <p class="zh">播放3.3万 &nbsp;&nbsp;&nbsp;&nbsp;收藏595</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/84.jpg">
+		                  	                        <div class="mui-media-body jieshao">为了守护必须守护的事物</div>
+		                  	                        <p class="zh">播放1.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏224</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/85.jpg">
+		                  	                        <div class="mui-media-body jieshao">月色真美，我死而无憾</div>
+		                  	                        <p class="zh">播放2723 &nbsp;&nbsp;&nbsp;&nbsp;收藏42</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多动画</a>
+		                  	            		<span>669条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>	
+		                  	             <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#f75e73;">&#xe610;</span>
+		                  	        	      	<span class="my">国创区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<img class="bl" src="img/60.jpg"/>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/86.jpg">
+		                  	                        <div class="mui-media-body jieshao">镇魂街 10 温柔是罪</div>
+		                  	                        <p class="zh">播放248.5万 &nbsp;&nbsp;&nbsp;&nbsp;收藏3.0万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/87.jpg">
+		                  	                        <div class="mui-media-body jieshao">【秦时明月】雪女一舞倾城完整版</div>
+		                  	                        <p class="zh">播放1.9万 &nbsp;&nbsp;&nbsp;&nbsp;收藏326</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/88.jpg">
+		                  	                        <div class="mui-media-body jieshao">【国漫盘点】自古国漫出神曲</div>
+		                  	                        <p class="zh">播放53.7万 &nbsp;&nbsp;&nbsp;&nbsp;收藏5.9万</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/89.jpg">
+		                  	                        <div class="mui-media-body jieshao"><罗小黑战记>城中别苑</div>
+		                  	                        <p class="zh">播放100.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1.7万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多国创</a>
+		                  	            		<span>7条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>	
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#50bee1;">&#xe62e;</span>
+		                  	        	      	<span class="my">音乐区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/90.jpg">
+		                  	                        <div class="mui-media-body jieshao">【玄觞】我的一个道姑朋友</div>
+		                  	                        <p class="zh">播放4069 &nbsp;&nbsp;&nbsp;&nbsp;收藏59</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/91.jpg">
+		                  	                        <div class="mui-media-body jieshao">【本家】(狐妖小红娘北山妖帝篇)</div>
+		                  	                        <p class="zh">播放4.5万 &nbsp;&nbsp;&nbsp;&nbsp;收藏142</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/92.jpg">
+		                  	                        <div class="mui-media-body jieshao">【阴阳师】《百物语》真人MV</div>
+		                  	                        <p class="zh">播放37.7万 &nbsp;&nbsp;&nbsp;&nbsp;收藏5224</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/93.jpg">
+		                  	                        <div class="mui-media-body jieshao">【满汉】满城雪(燃情版)</div>
+		                  	                        <p class="zh">播放41.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1.2万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多音乐</a>
+		                  	            		<span>6条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>	
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#fc6078;">&#xe604;</span>
+		                  	        	      	<span class="my">舞蹈区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/94.jpg">
+		                  	                        <div class="mui-media-body jieshao">狂风吹中依然坚强撸了</div>
+		                  	                        <p class="zh">播放14.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏740</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/95.jpg">
+		                  	                        <div class="mui-media-body jieshao">hello·newwodld【首次合作】</div>
+		                  	                        <p class="zh">播放7.7万 &nbsp;&nbsp;&nbsp;&nbsp;收藏493</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/96.jpg">
+		                  	                        <div class="mui-media-body jieshao">告白予行练习，内带告白福利！</div>
+		                  	                        <p class="zh">播放16.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1062</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/97.jpg">
+		                  	                        <div class="mui-media-body jieshao">被高跟鞋吞噬的一分一秒</div>
+		                  	                        <p class="zh">播放11.7万 &nbsp;&nbsp;&nbsp;&nbsp;收藏370</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多舞蹈</a>
+		                  	            		<span>130条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>	
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#47dd96;">&#xe67e;</span>
+		                  	        	      	<span class="my">游戏区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<img class="bl" src="img/98.jpg"/>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/99.jpg">
+		                  	                        <div class="mui-media-body jieshao">娇喘让妹子们听</div>
+		                  	                        <p class="zh">播放65万 &nbsp;&nbsp;&nbsp;&nbsp;收藏4578</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/100.png">
+		                  	                        <div class="mui-media-body jieshao">笑笑西卡德云色</div>
+		                  	                        <p class="zh">播放3.1万 &nbsp;&nbsp;&nbsp;&nbsp;收藏3227</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/101.jpg">
+		                  	                        <div class="mui-media-body jieshao">2017亚洲对抗赛正式宣传片</div>
+		                  	                        <p class="zh">播放5.4万 &nbsp;&nbsp;&nbsp;&nbsp;收藏202</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/102.jpg">
+		                  	                        <div class="mui-media-body jieshao">老番茄教你成为灵魂画师</div>
+		                  	                        <p class="zh">播放40.1万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1.2万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多游戏</a>
+		                  	            		<span>7条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#f76e82;">&#xe608;</span>
+		                  	        	      	<span class="my">鬼畜区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/103.jpg">
+		                  	                        <div class="mui-media-body jieshao">【中国BOY RAP】我的故事</div>
+		                  	                        <p class="zh">播放23.1万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1040</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/104.jpg">
+		                  	                        <div class="mui-media-body jieshao">亮剑鬼畜：老子突突了你们狗日的</div>
+		                  	                        <p class="zh">播放4.3万 &nbsp;&nbsp;&nbsp;&nbsp;收藏385</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/105.jpg">
+		                  	                        <div class="mui-media-body jieshao">【全明星】有点甜</div>
+		                  	                        <p class="zh">播放46.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏5388</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/106.jpg">
+		                  	                        <div class="mui-media-body jieshao">诸葛亮也是饶舌届的一代天才</div>
+		                  	                        <p class="zh">播放4.0万 &nbsp;&nbsp;&nbsp;&nbsp;收藏873</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多鬼畜</a>
+		                  	            		<span>10条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#fdb87e;">&#xe670;</span>
+		                  	        	      	<span class="my">生活区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/107.jpg">
+		                  	                        <div class="mui-media-body jieshao">头上一片青青草原但选择原来她！</div>
+		                  	                        <p class="zh">播放6701 &nbsp;&nbsp;&nbsp;&nbsp;收藏161</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/108.jpg">
+		                  	                        <div class="mui-media-body jieshao">小黄人还有5秒到达你家冰箱！</div>
+		                  	                        <p class="zh">播放5.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏310</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/109.jpg">
+		                  	                        <div class="mui-media-body jieshao">【哀子】死或生·沙滩排球【可爱颂】</div>
+		                  	                        <p class="zh">播放9.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏393</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/110.jpg">
+		                  	                        <div class="mui-media-body jieshao">逛食记|15分钟教你做运指原味鸡</div>
+		                  	                        <p class="zh">播放1777 &nbsp;&nbsp;&nbsp;&nbsp;收藏4</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多生活</a>
+		                  	            		<span>10条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#3db1ea;">&#xe6ad;</span>
+		                  	        	      	<span class="my">科技区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<img class="bl" src="img/122.jpg"/>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/123.png">
+		                  	                        <div class="mui-media-body jieshao">【纪录片】吴哥窟揭秘</div>
+		                  	                        <p class="zh">播放310 &nbsp;&nbsp;&nbsp;&nbsp;收藏0</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/124.jpg">
+		                  	                        <div class="mui-media-body jieshao">当你把30升液氮倒入游泳池里会发生什么？</div>
+		                  	                        <p class="zh">播放3324 &nbsp;&nbsp;&nbsp;&nbsp;收藏200</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/125.jpg">
+		                  	                        <div class="mui-media-body jieshao">挑战最强酸，勺子放进去2秒便无影无踪</div>
+		                  	                        <p class="zh">播放46.3万 &nbsp;&nbsp;&nbsp;&nbsp;收藏615</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/126.jpg">
+		                  	                        <div class="mui-media-body jieshao">【我德天呐】德语科普 关于时间旅行者的5个未解之谜</div>
+		                  	                        <p class="zh">播放6.1万 &nbsp;&nbsp;&nbsp;&nbsp;收藏483</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多科技</a>
+		                  	            		<span>75条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#fedf73;">&#xe606;</span>
+		                  	        	      	<span class="my">活动中心</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/127.jpg">
+		                  	                        <div class="mui-media-body jieshao">【全职高手】叶橙真的超好嗑你们信我</div>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/128.jpg">
+		                  	                        <div class="mui-media-body jieshao">【全职高手】联盟五奇葩</div>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#ffa0c5;">&#xe609;</span>
+		                  	        	      	<span class="my">时尚区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/129.jpg">
+		                  	                        <div class="mui-media-body jieshao">【charlie&hellocatie】和我們一起卸妝【搬运】</div>
+		                  	                        <p class="zh">播放5.9万 &nbsp;&nbsp;&nbsp;&nbsp;收藏693</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/130.jpg">
+		                  	                        <div class="mui-media-body jieshao">买买买!!!! 千手观音是如何剁手的!!??</div>
+		                  	                        <p class="zh">播放11.6万 &nbsp;&nbsp;&nbsp;&nbsp;收藏3126</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/131.jpg">
+		                  	                        <div class="mui-media-body jieshao">三个淘宝9.9福袋开箱,是否脱非入欧!</div>
+		                  	                        <p class="zh">播放11.5万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1380</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/132.jpg">
+		                  	                        <div class="mui-media-body jieshao">【JuanMaoo】年中打折季服饰购物分享</div>
+		                  	                        <p class="zh">播放1.1万 &nbsp;&nbsp;&nbsp;&nbsp;收藏168</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多时尚</a>
+		                  	            		<span>105条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#9192ec;">&#xe60a;</span>
+		                  	        	      	<span class="my">广告区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/133.png">
+		                  	                        <div class="mui-media-body jieshao">日本广告-森永水果软糖</div>
+		                  	                        <p class="zh">播放1075 &nbsp;&nbsp;&nbsp;&nbsp;收藏27</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/110.jpg">
+		                  	                        <div class="mui-media-body jieshao">17概率-强化</div>
+		                  	                        <p class="zh">播放91 &nbsp;&nbsp;&nbsp;&nbsp;收藏0</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/135.jpg">
+		                  	                        <div class="mui-media-body jieshao">秒杀各路戏骨！这老太把神医演活了！</div>
+		                  	                        <p class="zh">播放4263 &nbsp;&nbsp;&nbsp;&nbsp;收藏20</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/136.jpg">
+		                  	                        <div class="mui-media-body jieshao">2016康师傅加你加年味贺岁篇！</div>
+		                  	                        <p class="zh">播放1.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1094</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多广告</a>
+		                  	            		<span>120条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#ffde96;">&#xe607;</span>
+		                  	        	      	<span class="my">娱乐区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/137.jpg">
+		                  	                        <div class="mui-media-body jieshao">2分钟PS人物烟雾效果创意合成</div>
+		                  	                        <p class="zh">播放83 &nbsp;&nbsp;&nbsp;&nbsp;收藏0</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/138.jpg">
+		                  	                        <div class="mui-media-body jieshao">2009 MC Jin欧阳靖 星期日大班</div>
+		                  	                        <p class="zh">播放2.9万 &nbsp;&nbsp;&nbsp;&nbsp;收藏426</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/139.jpg">
+		                  	                        <div class="mui-media-body jieshao">【繁星kary】繁星之互怼篇</div>
+		                  	                        <p class="zh">播放1.3万 &nbsp;&nbsp;&nbsp;&nbsp;收藏321</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/140.jpg">
+		                  	                        <div class="mui-media-body jieshao">【渡边麻友】15岁的不良你杜</div>
+		                  	                        <p class="zh">播放4868 &nbsp;&nbsp;&nbsp;&nbsp;收藏114</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多娱乐</a>
+		                  	            		<span>120条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#ffb05a;">&#xe60c;</span>
+		                  	        	      	<span class="my">电视剧区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/141.jpg">
+		                  	                        <div class="mui-media-body jieshao">[泰剧] 人生波动精校版 01[MPs字幕组]</div>
+		                  	                        <p class="zh">播放36.2万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1.0万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/142.jpg">
+		                  	                        <div class="mui-media-body jieshao">【英剧】福尔摩斯探案集</div>
+		                  	                        <p class="zh">播放215.8万 &nbsp;&nbsp;收藏11.6万</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/143.jpg">
+		                  	                        <div class="mui-media-body jieshao">【英剧/喜剧】冤家成双对</div>
+		                  	                        <p class="zh">播放5.9万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1946</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/144.png">
+		                  	                        <div class="mui-media-body jieshao">【澳剧/悬疑】城市凶杀组 </div>
+		                  	                        <p class="zh">播放1.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏590</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多电视</a>
+		                  	            		<span>120条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label><span class="mui-icon iconfont china" style="color:#37ace2;">&#xe505;</span>
+		                  	        	      	<span class="my">电影区</span>
+		                  	        	        </label>
+		                  	        	        <span class="look">进去看看</span>
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view mui-grid-view">
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/144.jpg">
+		                  	                        <div class="mui-media-body jieshao">【哈利波特】纪念教授一路走好</div>
+		                  	                        <p class="zh">播放12.6万 &nbsp;&nbsp;&nbsp;&nbsp;收藏1918</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/145.jpg">
+		                  	                        <div class="mui-media-body jieshao">千与千寻-分镜头动画</div>
+		                  	                        <p class="zh">播放14.7万 &nbsp;&nbsp;收藏335</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            	<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/146.jpg">
+		                  	                        <div class="mui-media-body jieshao">【阿斗】速看恐怖片《死亡录像3》</div>
+		                  	                        <p class="zh">播放76.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏2342</p>
+		                  	                        
+		                  	                    </a>
+		                  	                </li>
+		                  	                <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		                  	                    <a href="#">
+		                  	                        <img class="mui-media-object" src="img/147.jpg">
+		                  	                        <div class="mui-media-body jieshao">德拉科·真·帅不过三秒·马尔福</div>
+		                  	                        <p class="zh">播放4.8万 &nbsp;&nbsp;&nbsp;&nbsp;收藏573</p>
+		                  	                    </a>
+		                  	                </li>
+		                  	            </ul>
+		                  	            <form class="mui-input-group moreAniman">
+		                  	                <div class="mui-input-row moreAnima">
+		                  	                    <a class="more" href="#">更多电影</a>
+		                  	            		<span>120条新动态，点击刷新!</span>
+		                  	                </div>
+		                  	            </form>
+		                  	        </div>
+		                  	        <!--这是第四个页面-->
+		                  	        <!--这是第五个页面-->
+		                  	        <div id="item5" class="mui-slider-item mui-control-content">
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row">
+		                  	        	        <label class="lable">关注</label>
+		                  	        	        <input type="text" class="mui-input-clear input" value="全部">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row border">
+		                  	        	        <label class="newlable"><a href="#">番剧</a></label>
+		                  	        	        <input type="text" class="mui-input-clear newinput" placeholder="3天前">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view ul">
+		                  	        	    <li class="mui-table-view-cell mui-media">
+		                  	        	        <a href="javascript:;">
+		                  	        	            <img class="mui-media-object mui-pull-left" src="img/148.jpg">
+		                  	        	            <div class="mui-media-body">
+		                  	        	                <p class="name">Re:CREATORS</p>
+		                  	        	                <p class="mui-ellipsis introduce">第14话 我们去旅行的理由</p>
+		                  	        	                <p class="play">播放65.3万 收藏2.4万</p>
+		                  	        	            </div>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	</ul>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row border">
+		                  	        	        <label class="newlable"><a href="#">番剧</a></label>
+		                  	        	        <input type="text" class="mui-input-clear newinput" placeholder="15天前">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view ul">
+		                  	        	    <li class="mui-table-view-cell mui-media">
+		                  	        	        <a href="javascript:;">
+		                  	        	            <img class="mui-media-object mui-pull-left" src="img/149.jpg">
+		                  	        	            <div class="mui-media-body">
+		                  	        	                <p class="name">埃罗芒阿老师</p>
+		                  	        	                <p class="mui-ellipsis introduce">第12话 埃罗芒阿节</p>
+		                  	        	                <p class="play">播放292.3万 收藏19.8万</p>
+		                  	        	            </div>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	</ul>
+		                  	        	<form class="mui-input-group">
+		                  	        	    <div class="mui-input-row border">
+		                  	        	        <label class="newlable"><a href="#">番剧</a></label>
+		                  	        	        <input type="text" class="mui-input-clear newinput" placeholder="17天前">
+		                  	        	    </div>
+		                  	        	</form>
+		                  	        	<ul class="mui-table-view ul">
+		                  	        	    <li class="mui-table-view-cell mui-media">
+		                  	        	        <a href="javascript:;">
+		                  	        	            <img class="mui-media-object mui-pull-left" src="img/1.jpg">
+		                  	        	            <div class="mui-media-body">
+		                  	        	                <p class="name">从零开始的魔法书</p>
+		                  	        	                <p class="mui-ellipsis introduce">第12话 从零开始的魔法书</p>
+		                  	        	                <p class="play">播放107万 收藏4万</p>
+		                  	        	            </div>
+		                  	        	        </a>
+		                  	        	    </li>
+		                  	        	</ul>
+		                  	        </div>
+		                  	        <!--这是第五个页面-->
+		   <!--</div>-->
+		                  	    </div>
+		                </div>
+		            </div>
+		       	 <div class="mui-off-canvas-backdrop"></div>
+		        </div>
+		    </div>
+	</body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+
+</html>

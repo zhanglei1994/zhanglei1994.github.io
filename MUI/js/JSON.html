@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<style type="text/css">
+			.mui-input-row{
+				position: relative;
+				box-sizing: border-box;
+			}
+			.mui-input-row label{
+				width:20%;
+			}
+			.mui-input-row label ~ input{
+				width: 70%;
+			}
+			.mui-input-row .nav{
+				font-size: 20px;
+				line-height: 0px;
+			}
+			#btn{
+				position: absolute;
+				top:10px;
+				right:0;
+				float:right;
+				width: 50px;
+				height: 20px;
+				line-height:0px;
+			}
+			#box{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				border-top:1px solid lightgray;
+				border-bottom: 1px solid lightgray;
+				color: darkgray;
+				/*display: none;*/
+			}
+			.mui-content{
+				margin-top:35px ;
+			}
+			.mui-table-view .mui-media-object{
+				height: 60px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <div class="mui-input-row">
+		        <label><span class="mui-icon iconfont nav">&#xe501;</span></label>
+		        <input type="text" placeholder="黑客帝国">
+		    </div>
+		    <button type="button" id="btn">搜索</button>
+			<div id="box">共19个电影</div>
+		</header>
+		<div class="mui-content">
+		    <ul id="list" class="mui-table-view">
+		        <!--<li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="../img/117.png">
+		                <div class="mui-media-body">
+		                    黑客帝国
+		                    <p class="mui-ellipsis">导演:莉莉·沃卓斯基 / 拉娜·沃卓斯基</p>
+		                    <p class="mui-ellipsis">主演:基努·李维斯/凯瑞-安·莫斯/劳伦斯·菲什伯恩</p>
+		                </div>
+		            </a>
+		        </li>-->
+		        <!--<li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="../img/118.png">
+		                <div class="mui-media-body">
+		                    黑客帝国3:矩阵革命
+		                    <p class="mui-ellipsis">导演:莉莉·沃卓斯基 / 拉娜·沃卓斯基</p>
+		                    <p class="mui-ellipsis">主演:基努·李维斯/凯瑞-安·莫斯/劳伦斯·菲什伯恩</p>
+		                </div>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="../img/119.png">
+		                <div class="mui-media-body">
+		                    黑客帝国2:重装上阵
+		                    <p class="mui-ellipsis">导演:莉莉·沃卓斯基 / 拉娜·沃卓斯基</p>
+		                    <p class="mui-ellipsis">主演:基努·李维斯/凯瑞-安·莫斯/劳伦斯·菲什伯恩</p>
+		                </div>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="../img/120.png">
+		                <div class="mui-media-body">
+		                    黑客帝国2:重访矩阵
+		                    <p class="mui-ellipsis">导演:Josh Oreck</p>
+		                 </div>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell mui-media">
+		            <a href="javascript:;">
+		                <img class="mui-media-object mui-pull-left" src="../img/121.png">
+		                <div class="mui-media-body">
+		                    黑客帝国动画版
+		                    <p class="mui-ellipsis">导演:钟彼得 /Andy Jones/川九善昭</p>
+		                    <p class="mui-ellipsis">主演:大冢明夫/克莱顿·华生/帕梅拉·阿德龙</p>
+		                </div>
+		            </a>
+		        </li>-->
+		      
+		    </ul>
+		    <ul id="ul" class="mui-table-view mui-grid-view">
+		        <!--<li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="http://placehold.it/400x300">
+		                <div class="mui-media-body">文字说明1</div>
+		            </a>
+		        </li>-->
+		    </ul>
+		</div>
+	</body>
+		<script type="text/javascript" src="myQuery.js" ></script>
+	    <script type="text/javascript" src="json.js" ></script>
+		<script src="mui.min.js"></script>
+		<script type="text/javascript">
+			$('btn').onclick=function(){
+				var len=jsonData.result.video_rec.length;
+				var str=''
+				for(var i=0;i<len;i++){
+					str+='<li class="mui-table-view-cell mui-media">'
+				           + '<a href="'+jsonData.result.video_rec[i].detail_url+'">'
+				                +'<img class="mui-media-object mui-pull-left" src="'+jsonData.result.video_rec[i].cover+'">'
+				               + '<div class="mui-media-body">'
+				                + jsonData.result.video_rec[i].title
+				                  +  '<p class="mui-ellipsis">导演:莉莉·沃卓斯基 / 拉娜·沃卓斯基</p>'
+				                  +  '<p class="mui-ellipsis">主演:基努·李维斯/凯瑞-安·莫斯/劳伦斯·菲什伯恩</p>'
+				               + '</div>'
+				           +'</a>'
+				        +'</li>'
+				}
+				$('list').innerHTML=str;
+				var n=jsonData.result.act_s.length;
+				var m=''
+				for(var i=0;i<n;i++){
+					m+='<li class="mui-table-view-cell mui-media mui-col-xs-6">'
+		            +'<a href="'+jsonData.result.act_s[i].url+'">'
+		               +'<img class="mui-media-object" src="'+jsonData.result.act_s[i].image+'">'
+		                +'<div class="mui-media-body">'+jsonData.result.act_s[i].name+'</div>'
+		            +'</a>'
+		        +'</li>'
+				}
+				$('ul').innerHTML=m;
+			}
+		</script>
+		
+</html>

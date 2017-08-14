@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			.mui-segmented-control{
+				border: 0;
+				background:#e1741f ;
+			}
+			.mui-segmented-control .mui-control-item{
+				border: 0;
+			}
+			.mui-segmented-control .mui-control-item.mui-active{
+				background: none;
+				border-bottom: 2px solid white;
+			}
+			.iconfont{
+				font-size: 40px;
+				padding: 20px 0 0 0;
+				color: white;
+			}
+			.word{
+				font-size: 15px;
+				color: white;
+				margin-top: -20px;
+			}
+			.time{
+				font-size: 27px;
+				color: #E1741F;
+			}
+			.mui-ellipsis{
+				margin-top: 10px;
+			}
+			.rightword{
+				float: right;
+			}
+			.mui-input-row{
+				position: absolute;
+				top:0;
+				right:0;
+			}
+			.mui-switch.mui-active::before{
+				content: '';
+			}
+			.mui-switch::before{
+				content:'';
+			}
+			.mui-switch-blue.mui-active{
+				background: #e9e1cc;
+				border: none;
+			}
+			.mui-switch .mui-switch-handle{
+				position: absolute;
+				z-index: 1;
+				top:1px;
+				background:#e1741f ;
+			}
+			.mui-table-view{
+				margin-top: 30px;
+			}
+			.movement{
+				color:#cccccc ;
+			}
+			.mui-switch-handle.sun{
+				background: #cccccc;
+			}
+			.get-up{
+				margin-top: 10px;
+			}
+			#box{
+				height: 50px;
+				width: 50px;
+				background: orange;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 50px;
+				font-size: 50px;
+				color: white;
+				position: fixed;
+				bottom: 0;
+				left: 50%;
+				
+			}
+			
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-segmented-control">
+		    <a class="mui-control-item mui-active" href="#item1">
+		    	<i class="mui-icon iconfont">&#xe62e;</i>
+		    	<p class="word">alarm clock</p>
+		    </a>
+		    <a class="mui-control-item" href="#item2">
+		    	<i class="mui-icon iconfont">&#xe628;</i>
+		    	<p class="word">timer</p>
+		    </a>
+		    <a class="mui-control-item" href="#item3">
+		    	<i class="mui-icon iconfont">&#xe667;</i>
+		    	<p class="word">world time</p>
+		    </a>
+		    <a class="mui-control-item" href="#item4">
+		    	<i class="mui-icon iconfont">&#xe623;</i>
+		    	<p class="word">stopwatch</p>
+		    </a>
+		</div>
+		<div id="item1" class="mui-control-content mui-active">
+		<ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <div class="mui-media-body">
+		                <span class="time">06:15</span> <span>get up</span>
+		                <p class="mui-ellipsis">Mon Tue Wed Thu Fri<span class="rightword">5 hours 10 minutes bell</span></p>
+		            </div>
+		            <div class="mui-input-row">
+		                <div class="mui-switch mui-active mui-switch-blue">
+		                    <div class="mui-switch-handle"></div>
+		                </div>
+		            </div>
+		        </a>
+		    </li>
+		   </ul>
+		   <ul class="mui-table-view get-up">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            
+		            <div class="mui-media-body">
+		                <span class="time">06:30</span> <span>breakfast</span>
+		                <p class="mui-ellipsis">Mon Tue Wed Thu Fri<span class="rightword">5 hours 25 minutes bell</span></p>
+		            </div>
+		            <div class="mui-input-row">
+		                <div class="mui-switch mui-active mui-switch-blue">
+		                    <div class="mui-switch-handle"></div>
+		                </div>
+		            </div>
+		        </a>
+		    </li>
+		   </ul>
+		   <ul class="mui-table-view get-up">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            
+		            <div class="mui-media-body">
+		                <span class="time movement">09:30</span> <span>movement</span>
+		                <p class="mui-ellipsis">Sat Sun</p>
+		            </div>
+		            <div class="mui-input-row">
+		                <div class="mui-switch mui-active mui-switch-blue">
+		                    <div class="mui-switch-handle sun"></div>
+		                </div>
+		            </div>
+		        </a>
+		    </li>
+		   </ul>
+		   <ul class="mui-table-view get-up">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            
+		            <div class="mui-media-body">
+		                <span class="time">20:00</span> <span>dinner</span>
+		                <p class="mui-ellipsis">everyday<span class="rightword">19 hours 5 minutes bell</span></p>
+		            </div>
+		            <div class="mui-input-row">
+		                <div class="mui-switch mui-active mui-switch-blue">
+		                    <div class="mui-switch-handle"></div>
+		                </div>
+		            </div>
+		        </a>
+		    </li>
+		    
+		</ul>
+		</div>
+		<div id="box">
+			+
+		</div>
+	</body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+
+</html>
