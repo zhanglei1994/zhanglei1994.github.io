@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+				height: 200px;
+				width: 200px;
+				line-height: 200px;
+				text-align: center;
+			}
+		.box{
+				-webkit-transform-style: preserve-3d;
+				-webkit-perspective: 2000px;
+				/*border: 1px solid red;*/
+				margin: 200px;
+				position: relative;
+				transition: all 1s;
+				-webkit-transform-origin:center center 100px;
+			}
+		.box div{
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*opacity: 0.6;*/
+			}
+		.left{
+			background: deeppink;
+			-webkit-transform-origin: left;
+			-webkit-transform: rotateY(-90deg);
+		}
+		.right{
+			background: hotpink;
+			-webkit-transform-origin: right;
+			-webkit-transform: rotateY(90deg);
+		}
+		.top{
+			background: deepskyblue;
+			-webkit-transform-origin: top;
+			-webkit-transform: rotateX(90deg);
+		}
+		.down{
+			background: dodgerblue;
+			-webkit-transform-origin: bottom;
+			-webkit-transform: rotateX(-90deg);
+		}
+		.front{
+			background:mediumvioletred;
+			-webkit-transform: translateZ(200px);
+		}
+		.back{
+			background:red;
+			-webkit-transform: translateZ(0)
+		}
+		.box:hover{
+			-webkit-transform: rotateX(360deg) rotateY(45deg);
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="front">前</div>
+			<div class="back">后</div>
+			<div class="left">左</div>
+			<div class="right">右</div>
+			<div class="top">上</div>
+			<div class="down">下</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{ 
+				background: black; 
+				border-radius: 50%; 
+				height: 100px; 
+				width: 100px; 
+				background: radial-gradient(circle at 30px 30px, blue, #000); 
+				position: relative;
+				top:0;
+				left:0;
+				transition: all 1s;
+				-webkit-animation:move 10s infinite;
+			}
+			.cont{
+				margin-top: 500px;
+				width: 1000px;
+				height: 5px;
+				background: red;
+			}
+			@-webkit-keyframes move{
+				0%{
+					top: 0;
+					left:0;
+				}
+				10%{
+					top:500px;
+					left:100px;
+				}
+				20%{
+					top:100px;
+					left:200px;
+				}
+				30%{
+					top:500px;
+					left:300px;
+				}
+				40%{
+					top:200px;
+					left:400px;
+				}
+				50%{
+					top:500px;
+					left:500px;
+				}
+				60%{
+					top:300px;
+					left:600px;
+				}
+				70%{
+					top:500px;
+					left:700px;
+				}
+				80%{
+					top:400px;
+					left:800px;
+				}
+				90%{
+					top:500px;
+					left:900px;
+				}
+				100%{
+					top:500px;
+					left:900px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="cont"></div>
+	</body>
+</html>

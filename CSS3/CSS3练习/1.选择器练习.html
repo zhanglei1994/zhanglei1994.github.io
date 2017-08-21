@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			  div{
+			  	width: 100px;
+			  	height: 100px;
+			  	background: red;
+			  }
+			  /*div[myname~='tom']{
+			  	background: yellow;
+			  }*/
+			 /*div[myname^='t']{
+			  	background: green;
+			  }*/
+			  /*div[myname$='e']{
+			  	background: green;
+			  }*/
+			 /*div[myname*='z']{
+			  	background: green;
+			  }*/
+			 /*div[myname|='tom']{
+			  	background: green;
+			  }*/
+			 a[href$='f']{
+			 	display: inline-block;
+			 	width: 500px;
+			 	height: 100px;
+			 	background-image: url(../img/1.jpg);
+			 }
+		</style>
+	</head>
+	<body>
+		<div myname='zol'></div>
+		<div myname='tom'></div>
+		<div myname='tom active'></div>
+		<div myname='tom-active wawa'></div>
+		<a href="http://www.baidu.com/file.pdf">aaa</a>
+		<a href="http://www.souhu.com/file.pdf">bbb</a>
+	</body>
+</html>

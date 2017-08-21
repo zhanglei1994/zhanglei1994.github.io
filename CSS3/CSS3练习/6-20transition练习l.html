@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<style type="text/css">
+			body{
+				background: white;
+			}
+			#box{
+				width: 300px;
+				height: 640px;
+				border: 1px solid black;
+				position: relative;
+				overflow: hidden;
+			}
+			#pic{
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				display:block ;
+				margin:auto;
+				margin-top: 50px;
+				transition: height 1s,width 1s;
+			}
+			.name{
+				color: black;
+				text-align: center;
+				font-weight:bold ;
+				font-size: 20px;
+			}
+			.vip{
+				text-align: center;
+				margin-top: -10px;
+				font-size: 12px;
+			}
+			.mui-input-group{
+				margin-top: 40px;
+			}
+			.nav{
+				font-size: 30px;
+				line-height: 20px;
+			}
+			.mui-input-row label{
+				width:20%;
+			}
+			.mui-input-row label ~ input{
+				width: 80%;
+			}
+			#list{
+				position: absolute;
+				bottom:-430px;
+				left:0;
+				transition: bottom 1s;
+			}
+			#list.active{
+				bottom: 0px;
+			}
+			/*#list:hover{
+				bottom: 0;
+			}*/
+			#pic.active{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<div id="cont">
+				<img id="pic" src="../img/1.jpg"/>
+				<div id="name">
+					<p class="name">Yooye</p>
+					<p class="vip">普通会员</p>
+				</div>
+			</div>
+			<form class="mui-input-group">
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon iconfont nav">&#xe6ee;</span></label>
+			        <input type="text" class="mui-input-clear" value="行程">
+			    </div>
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon iconfont nav">&#xe6ee;</span></label>
+			        <input type="text" class="mui-input-clear" value="钱包">
+			    </div>
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon iconfont nav">&#xe6ee;</span></label>
+			        <input type="text" class="mui-input-clear" value="客服">
+			    </div>
+			    <div class="mui-input-row">
+			        <label><span class="mui-icon iconfont nav">&#xe6ee;</span></label>
+			        <input type="text" class="mui-input-clear" value="设置">
+			    </div>
+			</form>
+			<ul id="list" class="mui-table-view mui-grid-view mui-grid-9">
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-home"></span>
+			        <div class="mui-media-body">Home</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
+			        <div class="mui-media-body">Email</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-chatbubble"></span>
+			        <div class="mui-media-body">Chat</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-location"></span>
+			        <div class="mui-media-body">Location</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-search"></span>
+			        <div class="mui-media-body">Search</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-search"></span>
+			        <div class="mui-media-body">Search</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-search"></span>
+			        <div class="mui-media-body">Search</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			    </ul>
+			
+		</div>
+	</body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/myQuery.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			control=true;
+			$('list').onclick=function(){
+				if(control){
+					$('list').className='mui-table-view mui-grid-view mui-grid-9 active';
+					$('pic').className='active';
+					control=false;
+				}else{
+					$('list').className='mui-table-view mui-grid-view mui-grid-9';
+					$('pic').className='';
+					control=true;
+				}
+			};
+		</script>
+
+</html>
