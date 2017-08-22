@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#pic{
+				position: absolute;
+				top:0;
+				left:0;
+				z-index: 1;
+			}
+			#abc{
+				width: 200px;
+				position: absolute;
+				top:0;
+				left:0;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="pic" src="../img/16.jpg"/>
+		<img id="abc" src="../img/animal1.jpeg"/>
+	</body>
+	<script type="text/javascript">
+//		var img11=document.getElementsByTagName('img11')[0];
+//		img11.onmousedown=function(ev){
+//			var newEv=ev||event;
+//			var beginX=newEv.clientX-img11.offsetLeft;
+//			var beginY=newEv.clientY-img11.offsetTop;
+//			document.onmousemove=function(ev){
+//				var newEv=ev||event;
+//				var T=newEv.clientY-beginY;
+//				var X=newEv.clientX-beginX;
+//				img11.setAttribute('style','top:'+T+'px;left:'+X+'px;');
+//			}
+//			document.onmouseup=function(){
+//				this.onmousemove=null;
+//			}
+//			return false;
+//		}
+		function img11(id){
+			this.pic=document.getElementById(id);
+		};
+		img11.prototype.init=function(){
+			var _This=this;
+			this.pic.onmousedown=function(){
+				_This.change();
+				document.onmousemove=function(){
+				_This.move();	
+				}
+				document.onmouseup=function(){
+				this.onmousemove=null;	
+				}
+				return false;
+			}
+		}
+		img11.prototype.change=function(ev){
+			var newEv=ev||event;
+			this.pic.beginX=newEv.clientX-(this.pic.offsetLeft);
+			this.pic.beginY=newEv.clientY-(this.pic.offsetTop);
+		};
+		img11.prototype.move=function(ev){
+			var newEv=ev||event;
+			this.pic.T=newEv.clientY-this.pic.beginY;
+			this.pic.X=newEv.clientX-this.pic.beginX;
+			this.pic.setAttribute('style','top:'+this.pic.T+'px;left:'+this.pic.X+'px;');
+		}
+		var img112=new img11('pic');
+		img112.init();
+		var img111=new img11('abc');
+		img111.init();
+	</script>
+</html>

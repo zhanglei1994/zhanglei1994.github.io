@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			.Popularity .pop-box .pop-top {
+				width: 100%;
+				height: 50px;
+				/*border: 1px solid red ;*/
+				position: relative;
+			}
+			
+			.Popularity .pop-box .pop-top li {
+				float: left;
+				font-size: 14px;
+				line-height: 50px;
+				margin-left: 35px;
+				margin-top: -5px;
+				margin-right: 60px;
+			}
+			
+			.Popularity .pop-box .pop-top h3 {
+				float: left;
+				font-size: 29px;
+			}
+			
+			.Popularity .pop-box .pop-top .bianji {
+				color: #caa789;
+				/*border-bottom: 1px solid #caa789;*/
+			}
+			
+			.Popularity .pop-box .pop-top .right {
+				clear: left;
+				float: right;
+				position: absolute;
+				right: 5px;
+				bottom: 20px;
+				font-size: 14px;
+			}
+			
+			.Popularity .pop-box .pop-left {
+				width: 390px;
+				height: 472px;
+				background: white;
+				/*float: left;*/
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			.jiage h6 {
+				text-align: center;
+				font-size: 15px;
+			}
+			
+			.changfx {
+				width: 58px;
+				height: 20px;
+				border: 1px solid #cfaa81;
+				border-radius: 5px;
+				/*background: #cfaa81;*/
+				font-size: 13px;
+				line-height: 20px;
+				text-align: center;
+				color: #cfaa81;
+				/*margin-top: 10px;
+				margin-left: 10px;*/
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			
+			.jiage p {
+				text-align: center;
+				color: red;
+				font-size: 15px;
+				margin-top: 9px;
+			}
+			
+			.Popularity .pop-box .pop-right {
+				width: 700px;
+				height: 476px;
+				/*border: 1px solid blue;*/
+				display: inline-block;
+				margin-left: -1px;
+			}
+			
+			.Popularity .pop-box .pop-right .sm-box {
+				width: 223px;
+				height: 230px;
+				background: white;
+				/*border: 1px solid red;*/
+				float: left;
+				/*margin-right:5px ;*/
+				margin-left: 8px;
+				margin-bottom: 11px;
+				position: relative;
+			}
+			
+			.Popularity .pop-box .pop-right .sm-box img {
+				/*border: 1px solid green;*/
+				margin-left: 21px;
+			}
+			
+			.time {
+				width: 1096px;
+				height: 430px;
+				/*border: 1px solid black;*/
+				margin: auto;
+				margin-top: 30px;
+			}
+			
+			.time .time-top {
+				width: 100%;
+				height: 50px;
+				/*border: 1px solid red;*/
+			}
+			
+			.time .time-top h3 {
+				font-size: 29px;
+				display: inline-block;
+			}
+			
+			.time .time-top .right {
+				font-size: 14px;
+				float: right;
+				line-height: 50px;
+			}
+			
+			.time .time-left {
+				height: 380px;
+				width: 224px;
+				/*background: red;*/
+				/*border: 1px solid red;*/
+				float: left;
+			}
+			
+			.time .time-sbox {
+				width: 434px;
+				height: 188px;
+				border: 1px solid #f0ece4;
+				float: left;
+			}
+			
+			.time .time-sbox img {
+				margin-top: 5px;
+				display: inline-block;
+			}
+			
+			.time .time-sbox .text {
+				display: inline-block;
+				vertical-align: top;
+				margin-left: -5px;
+			}
+			
+			.time .time-sbox .text h2 {
+				font-size: 16px;
+				margin-top: 15px;
+			}
+			
+			.time .time-sbox .text p {
+				font-size: 15px;
+				color: gray;
+				margin-top: 5px;
+			}
+			
+			.time .time-sbox .text .num {
+				width: 134px;
+				height: 10px;
+				border: 1px solid #f2cecd;
+				border-radius: 10px;
+				background: #ffe5e5;
+				/*min-width: 5%;*/
+				margin-top: 18px;
+				display: inline-block;
+			}
+			
+			.time .time-sbox .text spen {
+				color: gray;
+				font-size: 14px;
+				margin-left: 5px;
+			}
+			
+			.time .time-sbox .text .jiage {
+				color: red;
+				/*display:block;*/
+			}
+			
+			.time .time-sbox .text .jiage .xianshi {
+				font-size: 14px;
+				margin-top: 10px;
+				float: left;
+			}
+			
+			.time .time-sbox .text .jiage .fuhao {
+				display: inline-block;
+				margin-top: 10px;
+				margin-right: -8px;
+			}
+			
+			.time .time-sbox .text .jiage .yuanjia {
+				font-size: 14px;
+				color: gray;
+				margin-left: 15px;
+			}
+			
+			.time .time-sbox .text .jiage .shuzi {
+				display: inline-block;
+				margin-left: -5px;
+				color: gray;
+				text-decoration: line-through;
+			}
+			
+			.time .time-sbox .text .liji {
+				height: 31px;
+				width: 117px;
+				background: #be4141;
+				text-align: center;
+				line-height: 31px;
+				color: white;
+				border-radius: 4px;
+				margin-top: 16px;
+			}
+			.home{
+				width: 1090px;
+				height: 724px;
+				/*border: 1px solid red;*/
+				margin: auto;
+				margin-top: 55px;
+			}
+			.home .home-top{
+				width: 100%;
+				height: 50px;
+				/*border: 1px solid blue;*/
+				position: relative;
+			}
+			.home .home-top h3{
+				font-size: 29px;
+				float: left;
+				/*margin-right: 10px;*/
+				position: relative;
+				padding-right:10px ;
+				/*margin-top: px;*/
+				
+			}
+			.home .home-top p{
+				font-size:16px ;
+				margin-top: 11px;
+				float: left;
+				padding-left:5px ;
+				margin-right: 224px;
+			}
+			.home .home-top ul li{
+				float: left;
+				/*margin-right:20px ;*/
+				padding-right:24px;
+				position: relative;
+				/*border: 1px solid red;*/
+				
+			}
+			.home .home-top ul{
+				/*clear: left;*/
+				margin-top: 11px;
+				padding-top:11px ;
+				
+			}
+			.home .home-top h3:after{
+				height:50% ;
+				width: 1px;
+				content: "";
+				background: black;
+				position: absolute;
+				right: 0;
+				top: 11px;
+				
+			}
+			.home .home-top ul li:after{
+				width: 2px;
+				content: "/";
+				position: absolute;
+				right: 12px;
+				
+			}
+			.home .home-top ul li:last-child:after{
+				content: "";
+			}
+			.home .home-top .home-top-ri{
+				position: absolute;
+				top: 11px;
+				right: 0;
+			}
+			.home-tupi{
+				width: 100%;
+				height: 314px;
+				/*border: 1px solid black;*/
+			}
+			.home .home-smbox{
+				width: 265px;
+				height: 357px;
+				/*background: red;*/
+				float: left;
+				margin-right: 10px;
+				margin-top: 20px;
+			}
+			.home .nmr{
+				margin-right: 0;
+			}
+			.home .home-smbox .wuping{
+				width: 265px;
+				height: 265px;
+				background: #f4f4f4;
+				position: relative;
+			}
+			.home .home-smbox .text{
+				height: 62px;
+				width: 265px;
+				/*background: yellow;*/
+				padding-top:30px ;
+				
+			}
+			.home .home-smbox .text h5{
+				text-align: center;
+				font-size: 14px;
+			}
+			.home .home-smbox .text p{
+				color: red;
+				text-align: center;
+				margin-top: 10px;
+				font-size:13px ;
+			}
+			.sise{
+				height: 20px;
+				width: 50px;
+				border: 1px solid #b3a07d;
+				background: #f4f0ea;
+				color: #b3a07d;
+				border-radius:4px ;
+				font-size:13px ;
+				line-height: 20px;
+				text-align: center;
+				position: absolute;
+				top: 10px;
+				left: 8px;
+			}
+			.pingxuan{
+				width: 1090px;
+				height: 430px;
+				/*border:1px solid red;*/
+				margin: auto;
+				margin-top: 60px;
+			}
+			 .pingxuan-top{
+				height: 50px;
+				width: 100%;
+				/*border: 1px solid black;*/
+			}
+			.pingxuan-top h3{
+				font-size: 29px;
+				float: left;
+				padding-right:15px ;
+			}
+			.pingxuan-top p{
+				margin-top: 11px;
+				padding-top: 11px;
+			}
+			.pingxuan .pingxuan-left{
+				width: 690px;
+				height: 380px;
+				/*background: red;*/
+				float: left;
+				background-image:url(img/b21b20f34d5007f961c182273a5d429f.jpg) ;
+			}
+			.pingxuan .sm-box{
+				width: 390px;
+				height: 185px;
+				/*background: green;*/
+				float: right;
+				/*vertical-align: top;*/
+				margin-bottom: 10px;
+				background-image:url(img/9548e1f1a0ba0436cb13d586c50284be.jpg) ;
+			}
+			.pingxuan .bi-box{
+				margin-bottom: 0;
+				background-image:url(img/4a56bf536141eb2ad84f8f8f0e0418ab.jpg) ;
+			}
+			.pinglun{
+				width: 100%;
+				height: 600px;
+				background: #f4f0ea;
+				margin-top: 80px;
+				padding-top: 60px;
+			}
+			.pinglun .box{
+				height: 550px;
+				width: 1090px;
+				/*border: 1px solid red;*/
+				margin:  auto;
+				/*padding-top: 60px;*/
+				
+				
+			}
+			.pinglun .hddj{
+				height: 487px;
+				width: 351px;
+				/*background: red;*/
+				background: white;
+				border: 1px solid white;
+				float: left;
+				margin-right:15px;
+				position: relative;
+			}
+			.pinglun .kkk{
+				margin-right: 0;
+			}
+			.pinglun .hddj .hd{
+				width: 351px;
+				height: 351px;
+				/*background: url(img/b2ee874c5eb5e39c73bb3eae76550d47.jpg) no-repeat ;*/
+				/*background-size:100% 100% ;*/
+				/*position: relative;*/
+				/*z-index: 1;*/
+			}
+			.pinglun .hddj .ping-text{
+				width: 330px;
+				height: 180px;
+				/*border: 1px solid black;*/
+				z-index: 3;
+				background: white;
+				margin: auto;
+				position: absolute;
+				bottom: 0;
+				left: 10px;
+			}
+			.pinglun .hddj .ping-text .bd-top spen{
+				color:grey;
+				margin-left: 12px;
+				font-size: 14px;
+				/*padding-top:10px;*/
+				display: inline-block;
+				margin-top: 15px;
+			}
+			.pinglun .hddj .ping-text .mid{
+				margin-left:12px ;
+				margin-top: 14px;
+			}
+			.pinglun .hddj .ping-text .mid .med{
+				font-size: 20px;
+				display: inline-block;
+			}
+			.pinglun .hddj .ping-text .mid .jia{
+				margin-left: 140px;
+				color: #c0b08e;
+				font-size: 12px;
+			}
+			
+			.pinglun .hddj .ping-text .cont{
+				width: 286px;
+				font-size: 12px;
+				margin-left:10px ;
+				margin-top: 20px;
+				/*margin-right: 20px;*/
+			}
+			.btt{
+				width: 100%;
+				height: 290px;
+				/*background: white;*/
+				/*border: 1px solid red;*/
+				/*margin-top: 56px;*/
+			}
+			.btt .btt-box{
+				width: 1090px;
+				height: 260px;
+				/*border: 1px solid red ;*/
+				margin: auto;
+			}
+			.btt .btt-box .btt-box-lt{
+				height: 100%;
+				width: 360px;
+				/*border: 1px solid yellow;*/
+				float: left;
+				position: relative;
+			}
+			.btt .btt-box .btt-box-lt h4{
+				text-align: center;
+				margin-top: 50px;
+				color: #333334;
+			}
+			.btt .btt-box .btt-box-lt .dianh{
+				text-align: center;
+				margin-top: 27px;
+				font-size:24px ;
+			}
+			.btt .btt-box .btt-box-lt .shiji{
+				text-align: center;
+				margin-top: 13px;	
+			}
+			.btt .btt-box .btt-box-lt .fk{
+				width: 100px;
+				height: 26px;
+				border: 1px solid black;
+				text-align: center;
+				line-height: 26px;
+				margin-left: 74px;
+				margin-top: 34px;
+				/*float: left;*/
+				display: inline-block;
+				
+			}
+				.btt .btt-box .btt-box-lt .kf{
+					width: 100px;
+				height: 26px;
+				border: 1px solid black;
+				text-align: center;
+				line-height: 26px;
+				display: inline-block;
+				margin-left: 15px;
+				}
+				.btt .btt-box .btt-box-lt p{
+					padding-left:35px ;
+					padding-right: 35px;
+					margin-top: 28px;
+					display: inline-block;
+				}
+				.btt .btt-box .btt-box-lt .ganzu i{
+					display: inline-block;
+					font-size: 40px;
+					margin-right: 5px;
+					margin-left: 0px;
+					/*vertical-align: top;*/
+					/*margin-top: 20px;*/
+					color: red;
+				}
+				.btt .btt-box .ddd img{
+					margin-left:130px;
+					margin-top: 30px;
+				}
+				.btt .btt-box .ddd .ggg{
+					/*text-align: center;*/
+					margin: auto;
+					margin-left: 100px;
+					font-size:13px ;
+					margin-top:10px;
+					color: #ecc08d;
+				}
+				.btt .btt-box .yyty:after{
+					height: 80%;
+					width: 2px;
+					content: "";
+					background: gray;
+					position: absolute;
+					right: 0;
+					top: 20px;
+				}
+				.foote{
+					height: 200px;
+					width: 100%;
+					background: #414141;
+				}
+				.foote .foote-box{
+					width: 1090px;
+					height:120px ;
+					border: 1px solid red;
+					margin: auto;
+				}
+				.foote .foote-box .tuih .iconfont{
+					font-size: 50px;
+					color: white;
+				}
+				.foote .foote-box .tuih p{
+					display: inline-block;
+					vertical-align: top;
+					/*border: 1px solid black;*/
+					/*height: 50px;*/
+					line-height: 50px;
+					color: white;
+				}
+				.foote .foote-box .tuih{
+					/*border: 1px solid red;*/
+					margin-top: 20px;
+					width: 180px;
+					height: 100px;
+					background: red;
+					
+				}
+		</style>
+	</head>
+
+	<body>
+		<div class="top">
+			<p>好的生活,没那么贵</p>
+			<ul>
+				<li>
+					<a href="#">登陆</a>
+					<a href="#">注册</a>
+				</li>
+				<li>严选态度</li>
+				<li>企业采购</li>
+				<li>客户服务</li>
+				<li>下载app</li>
+			</ul>
+		</div>
+		<div class="nav">
+			<div class="title"></div>
+			<ul>
+				<li>首页</li>
+				<li>居家</li>
+				<li>餐厨</li>
+				<li>配件</li>
+				<li>服装</li>
+				<li>洗护</li>
+				<li>婴童</li>
+				<li>杂货</li>
+				<li>饮食</li>
+				<li class="zhiqu">志趣</li>
+				<li>专题</li>
+				<li>甄选家</li>
+			</ul>
+		</div>
+		<div class="guanggao">
+			<img src="img/6671e28ad2fb78d341269a3ceb6f51d8.jpg">
+		</div>
+		<div class="brand">
+			<div class="brand-top">
+				<h1>品牌制造商</h1>
+				<p>工厂直达消费，剔除品牌溢价</p>
+				<div>
+					更多制造商>
+				</div>
+			</div>
+			<div class="brand-box">
+				<div class="name">
+					<strong>MUJI制造商</strong>
+					<span>上新</span>
+					<div class="xian"></div>
+				</div>
+				<div class="price">
+					12.9元起
+				</div>
+				<img src="img/988a88e824007ccd277bbadf7e8f9622.jpg">
+			</div>
+			<div class="brand-box">
+				<div class="name">
+					<strong>CK制造商</strong>
+					<span class="hhh">上新</span>
+					<div class="xian"></div>
+				</div>
+				<div class="price">
+					39元起
+				</div>
+				<img src="img/a3a80a6e5c2ce4018ff3c9d6e7513c10.jpg">
+			</div>
+			<div class="brand-box-sm">
+				<div class="name">
+					<strong>爱慕制造商</strong>
+					<span class="hhh">上新</span>
+					<div class="xian"></div>
+				</div>
+				<div class="price">
+					35元起
+				</div>
+				<img src="img/84fd3e4bfda4d0d753a2e1bcab02c32c.jpg">
+			</div>
+			<div class="brand-box-smv brand-box-sm">
+				<div class="name">
+					<strong>Coach制造商</strong>
+					<span class="hhh">上新</span>
+					<div class="xian"></div>
+				</div>
+				<div class="price">
+					49元起
+				</div>
+				<img src="img/05421f8763ee9140ea31086a764bcea8.jpg">
+			</div>
+		</div>
+		<div class="brand">
+			<div class="brand-top">
+				<h1>新品首发</h1>
+				<p>周一周四上新，为你寻览世界好物</p>
+				<div>
+					更多新品>
+				</div>
+			</div>
+			<div class="new">
+				<div class="new-sm-box">3色可选</div>
+				<img src="img/11c97d8046d49b2a0f3e5b2bec65a60e.png">
+				<h6>男士基础纯棉圆领T恤</h6>
+				<div class="jiage">
+					<spen>￥49元</spen>
+					<p>｜ Polo Ralph Lauren制造商</p>
+				</div>
+			</div>
+			<div class="new">
+				<div class="new-sm-box">2色可选</div>
+				<img src="img/aeabc1e019461682f3f5a41219f2b2bd.png">
+				<h6>绽放女式纯色长袖家居服</h6>
+				<div class="jiage">
+					<spen>￥249元</spen>
+					<p>｜ Armani制造商</p>
+				</div>
+			</div>
+			<div class="new new-t">
+				<!--<div class="new-sm-box">3色可选</div>-->
+				<img src="img/cf85b160ba2cc07e10ff3510554b2ed4.png">
+				<h6>南方梯田三层置物架</h6>
+				<div class="jiage">
+					<spen>￥249元</spen>
+					<!--<p>Polo Ralph Lauren制造商</p>-->
+				</div>
+			</div>
+			<div class="new">
+				<div class="new-sm-box">日本制造</div>
+				<img src="img/fd3ba50114d51278bf4eeec2fdbe3418.png">
+				<h6>6个装 日本制造 波子汽水</h6>
+				<div class="jiage">
+					<spen>￥249元</spen>
+				</div>
+			</div>
+		</div>
+		<div class="Popularity">
+			<div class="pop-box">
+				<div class="pop-top">
+					<h3>人气推荐</h3>
+					<ul>
+						<li class="bianji">编辑推荐</li>
+						<li>人气推荐</li>
+						<li>热销总榜</li>
+					</ul>
+					<div class="right">
+						更多推荐>
+					</div>
+				</div>
+				<div class="pop-left">
+					<img src="img/1f80c20697204cf1c367abebdc052360.png">
+					<div class="jiage">
+						<h6>破壁料理机</h6>
+						<p>￥199元</p>
+					</div>
+				</div>
+				<div class="pop-right">
+					<div class="sm-box">
+						<img src="img/e5474a8f4fd5748079e2ba2ead806b51.png">
+						<div class="jiage">
+							<h6>日式和风声波式电动牙刷</h6>
+							<p>￥129</p>
+						</div>
+					</div>
+					<div class="sm-box">
+						<img src="img/ab6edd7c4b43af5a7a23042724885279.png">
+						<div class="jiage">
+							<h6>网易制造苹果快充数据线</h6>
+							<p>￥38</p>
+						</div>
+					</div>
+					<div class="sm-box">
+						<div class="changfx">日本制造</div>
+						<img src="img/abbe8d0442e2f43eab9ea195b6db8b17.png">
+						<div class="jiage">
+							<h6>日本制造 南部铁器风炒锅33cm</h6>
+							<p>￥379</p>
+						</div>
+					</div>
+					<div class="sm-box">
+						<div class="changfx">4色可选</div>
+						<img src="img/65c955a7a98e84d44ca30bb88a591eac.png">
+						<div class="jiage">
+							<h6>20寸 纯PC“铝框”登机箱</h6>
+							<p>￥349</p>
+						</div>
+					</div>
+					<div class="sm-box">
+						<div class="changfx">2色可选</div>
+						<img src="img/9d7a3abdbef455b66ed321f101949719.png">
+						<div class="jiage">
+							<h6>和风穿线绣本草家居拖鞋</h6>
+							<p>￥29.9</p>
+						</div>
+					</div>
+					<div class="sm-box">
+						<img src="img/e11f3710f2ce2f49f45412c5f1acc493.png">
+						<div class="jiage">
+							<h6>月见和菓子(芒果味棉花糖麻薯)</h6>
+							<p>￥18</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="time">
+			<div class="time-top">
+				<h3>限时购</h3>
+				<div class="right">
+					更多抢购>
+				</div>
+			</div>
+			<div class="time-left">
+				<img src="img/QQ截图20170501200019.png" width="100%" height="100%">
+			</div>
+			<div class="time-sbox">
+				<img src="img/226a1d883b46d66c20d6aaaf20653ff4.png">
+				<div class="text">
+					<h2>经典轻奢抽绳水桶包</h2>
+					<p>轻简水桶包，时尚风向标</p>
+					<div class="num"></div>
+					<spen>还剩268件</spen>
+					<div class="jiage">
+						<div class="xianshi">限时价</div>
+						<div class="fuhao">￥</div>
+						<span style="font-size:25px;">367</span>
+						<span class="yuanjia">原价</span>
+						<div class="shuzi">￥469</div>
+					</div>
+					<div class="liji">立即抢购</div>
+				</div>
+			</div>
+			<div class="time-sbox">
+				<img src="img/8f742f5d4eba1db3e1d8f050c7b5f048.png">
+				<div class="text">
+					<h2>日本制造 南部铁器风煎锅 28cm</h2>
+					<p>日本百年铁器文化，还原品质生活</p>
+					<div class="num"></div>
+					<spen>还剩0件</spen>
+					<div class="jiage">
+						<div class="xianshi">限时价</div>
+						<div class="fuhao">￥</div>
+						<span style="font-size:25px;">269</span>
+						<span class="yuanjia">原价</span>
+						<div class="shuzi">￥329</div>
+					</div>
+					<div class="liji">立即抢购</div>
+				</div>
+			</div>
+			<div class="time-sbox">
+				<img src="img/fdd32fe71a36ff10c5ba580c0f4d08bc.png">
+				<div class="text">
+					<h2>竹齿气垫按摩梳</h2>
+					<p>天然竹针，气囊设计</p>
+					<div class="num"></div>
+					<spen>还剩228件</spen>
+					<div class="jiage">
+						<div class="xianshi">限时价</div>
+						<div class="fuhao">￥</div>
+						<span style="font-size:25px;">39</span>
+						<span class="yuanjia">原价</span>
+						<div class="shuzi">￥49</div>
+					</div>
+					<div class="liji">立即抢购</div>
+				</div>
+			</div>
+			<div class="time-sbox">
+				<img src="img/638c12a79843724d7b6cceb3ab4b2384.png">
+				<div class="text">
+					<h2>男士长柄花纹雨伞</h2>
+					<p>魅力品质，稳重大方</p>
+					<div class="num"></div>
+					<spen>还剩185件</spen>
+					<div class="jiage">
+						<div class="xianshi">限时价</div>
+						<div class="fuhao">￥</div>
+						<span style="font-size:25px;">78</span>
+						<span class="yuanjia">原价</span>
+						<div class="shuzi">￥99</div>
+					</div>
+					<div class="liji">立即抢购</div>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>居家</h3>
+				<p>回家，放松身心</p>
+				<ul>
+					<li>被枕</li>
+					<li>床品套件</li>
+					<li>床垫</li>
+					<li>地垫</li>
+					<li>家具</li>
+					<li>舒坐</li>
+					<li>灯具</li>
+					<li>家饰</li>
+					<li>宠物</li>
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/75e7f6e1010ad3ffdc39552bbd718b29.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/a03ea6f4509439acdafcb7ceba1debe0.png">
+				</div>
+				<div class="text">
+				<h5>安睡慢回弹记忆棉床垫</h5>
+				<p>￥599</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/ad953e16ad8c33b714e7af941ce8cd56.png">
+					<div class="sise">
+						8色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>日式蓬软太鼓抱枕</h5>
+				<p>￥29</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/255a4888161f9b4fe530cf319f14551d.png">
+					<div class="sise">
+						8色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>全棉贡缎纯色床单</h5>
+				<p>￥99</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/ffd2c91c7cf9c6e0f630595f7679b95d.png">
+				</div>
+				<div class="text">
+				<h5>圆形护颈苦荞麦枕</h5>
+				<p>￥69</p>
+				</div>
+			</div>
+		</div>
+			<div class="home">
+			<div class="home-top">
+				<h3>餐厨</h3>
+				<p>爱，源于厨房</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>配件</h3>
+				<p>配角，亦是主角</p>
+				<ul>
+					<li>功能双包</li>
+					<li>双肩包</li>
+					<li>单肩包</li>
+					<li>鞋</li>
+					<li>靴</li>
+					<li>拖鞋</li>
+					<li>围巾件套</li>
+					<li>配饰</li>
+					<li>数码</li>
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/e6dbc053e078139e7c7d2bbaa8e1c1d0.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/8cf9298c61370c620de550ac37b9929a.png">
+					<div class="sise">
+						6色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>轻简四季居家拖鞋</h5>
+				<p>￥19.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/d9e4b3e48fb0cd041f004edc79d15d66.png">
+				</div>
+				<div class="text">
+				<h5>网易制作空气感苹果手机壳</h5>
+				<p>￥38</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/425ca11ca1d22ab3003e80c3ab0e63cf.png">
+					<div class="sise">
+						2色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>蓝调真丝领带</h5>
+				<p>￥99</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/993674364f19fc7a96c60ca45d4e48e1.png">
+					<div class="sise">
+						3色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>迷彩翻帮休闲鞋</h5>
+				<p>￥269</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>服装</h3>
+				<p>贴身的，要亲肤</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>餐厨</h3>
+				<p>爱，源于厨房</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>餐厨</h3>
+				<p>爱，源于厨房</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>餐厨</h3>
+				<p>爱，源于厨房</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>餐厨</h3>
+				<p>爱，源于厨房</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div class="home-top">
+				<h3>餐厨</h3>
+				<p>爱，源于厨房</p>
+				<ul>
+					<li>锅具</li>
+					<li>杯壶</li>
+					<li>功能厨具</li>
+					<li>餐具</li>
+					<li>茶具咖啡具</li>
+					<li>清洁保鲜</li>
+					<li>刀剪砧板</li>
+					<li>厨房小电</li>
+					<!--<li>宠物</li>-->
+				</ul>
+				<div class="home-top-ri">查看更多></div>
+			</div>
+			<div class="home-tupi">
+				<img src="img/68e6d560529ff56a8aef478b3ae21db9.jpg" width="100%" height="100%">
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/0575c8145ae7edea7b931176b43e584b.png">
+				</div>
+				<div class="text">
+				<h5>纳米清洁魔力檫</h5>
+				<p>￥9.9</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/b2065eab67acc5923a8ec71167a35f6a.png">
+					<div class="sise">
+						4色可选
+					</div>
+				</div>
+				<div class="text">
+				<h5>简约陶瓷马克杯</h5>
+				<p>￥39</p>
+				</div>
+			</div>
+			<div class="home-smbox">
+				<div class="wuping">
+					<img src="img/00cf01c18bf8ec3ed26a70210494038a.png">
+				</div>
+				<div class="text">
+				<h5>健康分类菜板</h5>
+				<p>￥89</p>
+				</div>
+			</div>
+			<div class="home-smbox nmr">
+				<div class="wuping">
+					<img src="img/619e46411ccd62e5c0f16692ee1a85a0.png">
+				</div>
+				<div class="text">
+				<h5>铸铁珐琅牛排煎锅</h5>
+				<p>￥149</p>
+				</div>
+			</div>
+		</div>
+		<div class="pingxuan">
+			<div class="pingxuan-top">
+				<h3>甄选家</h3>
+				<p>我们都在寻找，对生活有态度的你</p>
+			</div>
+			<div class="pingxuan-left"></div>
+			<div class="sm-box"></div>
+			<div class="sm-box bi-box"></div>
+		</div>
+		<div class="pinglun">
+			<div class="box">
+				<div class="pingxuan-top">
+				<h3>大家都在说</h3>
+				<p>生活，没有统一标准</p>
+			</div>
+			
+			<div class="hddj">
+				<div class="hd">
+					<img src="img/b2ee874c5eb5e39c73bb3eae76550d47.jpg" width="100%" height="100%">
+				</div>
+				<div class="ping-text">
+					<div class="bd-top">
+						<spen>m****1</spen>
+						<spen>2017-05-2 10:29</spen>
+					</div>
+					<div class="mid">
+						<span class="men">雪尼尔擦手球</span>
+						<span class="jia">￥14.9</span>
+					</div>
+					<div class="cont">
+					<p origin-content="好大一个擦手球，所以即使是男士使用也不觉得小。吸水力很强，拿着擦手球大力抓两下就擦干了，再拍两下手背，也干了。这很适合家有小宝宝的我。我家孩儿经常懒得用毛巾擦手，总是往自己身上擦，或甚至直接不擦，水滴得满地都是。现在有了这个擦手球，宝宝觉得擦手成了好玩的事，所以我家地板这段时间都很干爽了，呵呵呵。">好大一个擦手球，所以即使是男士使用也不觉得小。吸水力很强，拿着擦手球大力抓两下就擦干了，再拍两下手背，也干了。这很适合家有小宝宝的我。我家孩儿经常懒得用毛巾擦手，总是往自...</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="hddj">
+				<div class="hd">
+					<img src="img/98755654270a900a29b4df4af09b8190.jpg" width="100%" height="100%">
+				</div>
+				<div class="ping-text">
+					<div class="bd-top">
+						<spen>m****1</spen>
+						<spen>2017-05-2 10:29</spen>
+					</div>
+					<div class="mid">
+						<span class="men">女士空气内裤</span>
+						<span class="jia">￥49</span>
+					</div>
+					<div class="cont">
+					<p origin-content="夏天到了，又是空气内裤专宠的季节。夏天我几乎80%的时间都穿这款。凉爽、丝滑、仿若无物，让粘腻的夏天也可以过得轻松自在（哈，这好像卫生巾广告词似的）。趁着有活动赶紧多囤两条，这是严选里我最爱的商品。">夏天到了，又是空气内裤专宠的季节。夏天我几乎80%的时间都穿这款。凉爽、丝滑、仿若无物，让粘腻的夏天也可以过得轻松自在（哈，这好像卫生巾广告词似的）。趁着有活动赶紧多囤两...</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="hddj kkk">
+				<div class="hd">
+					<img src="img/b16017065ddcc4cfe12d3e71d510ce54.jpg" width="100%" height="100%">
+				</div>
+				<div class="ping-text">
+					<div class="bd-top">
+						<spen>m****1</spen>
+						<spen>2017-05-2 10:29</spen>
+					</div>
+					<div class="mid">
+						<span class="men"> 女式连帽家居服</span>
+						<span class="jia">￥129</span>
+					</div>
+					<div class="cont">
+					<p origin-content="这件超级舒服，穿上轻松自在，面料又薄又柔软，蝙蝠袖，袖长八分衣身宽松，太舒服了，穿上就不想脱了，浅灰色上身很干净也好搭配，价格也不贵，爱上严选，买买买停不下来了！">这件超级舒服，穿上轻松自在，面料又薄又柔软，蝙蝠袖，袖长八分衣身宽松，太舒服了，穿上就不想脱了，浅灰色上身很干净也好搭配，价格也不贵，爱上严选，买买买停不下来了！</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="btt">
+			<div class="btt-box">
+				<div class="btt-box-lt yyty">
+					<h4>客服电话</h4>
+					<p class="dianh">400-0368-163</p>
+					<p class="shiji">9.00-22.00</p>
+					<div class="fk">用户反馈</div>
+					<div class="kf">在线客服</div>
+				</div>
+				
+				<div class="btt-box-lt yyty">
+					<h4>何为严选</h4>
+					<p>	
+网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品
+					</p>
+					<div class="ganzu">
+						<p class="guanzhu">
+							关注我们：
+						</p>
+						<i class="iconfont">&#xe60a;</i>
+						<i class="iconfont">&#xe606;</i>
+						<i class="iconfont">&#xe688;</i>
+					</div>
+				</div>
+				
+				<div class="btt-box-lt ddd">
+					<h4>扫码下载严选APP</h4>
+					<img src="img/QQ图片20170503182902.png">
+					<p class="ggg">首单立即减8元</p>
+				</div>
+			</div>
+		</div>
+		<div class="foote">
+			<div class="foote-box">
+				<span class="tuih">
+					<i class="iconfont">&#xe60f;</i>
+					<p>30天无忧退货</p>
+				</span>
+			</div>
+		</div>
+		
+	</body>
+
+</html>

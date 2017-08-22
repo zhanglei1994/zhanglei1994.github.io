@@ -1,0 +1,479 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*地址选择代码*/
+.mui-bar.mui-bar-nav .chooseAdress{
+	float: right;
+	position: relative;
+	border:1px solid #E16D08;
+	height: 35px;
+	width: 70px;
+	margin-top: 4px;
+	border-radius: 10px;
+	color: #FBDABD;
+	line-height: 35px;
+}
+.mui-bar.mui-bar-nav .chooseAdress .list{
+	display: none;
+	position: absolute;
+	top:34px;
+	left:4px;
+	width: 90%;
+}
+.mui-bar.mui-bar-nav .chooseAdress .list li{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #F8DCC7;
+	color: #EE7118;
+	font-weight: 700;
+	border-bottom: 1px solid #d8d8d8;
+}
+.mui-bar.mui-bar-nav .chooseAdress .list li:hover{
+	background: #F4AD78;
+}
+
+.mui-bar.mui-bar-nav .chooseAdress .list .more{
+	padding: 0;
+	text-align: center;
+	line-height: 25px;
+	font-size: 25px;
+}
+.mui-bar.mui-bar-nav .chooseAdress p{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #B7431B;
+    margin-left: 8px;
+}
+/*校花筛选代码*/
+.mui-bar.mui-bar-nav .choose{
+	float: right;
+	position: relative;
+	border:1px solid #E16D08;
+	height: 35px;
+	width: 65px;
+	margin-top: 4px;
+	border-radius: 10px;
+	color: #FBDABD;
+	line-height: 35px;
+	text-align: center;
+}
+
+.mui-bar.mui-bar-nav a{
+	color: #C04818;
+}
+.mui-content .search{
+	background: white;
+	height:60px;
+	overflow: visible;
+}
+.mui-input-row .school{
+	width: 18%;
+	color: #FC7D28;
+	margin-top: 10px;
+}
+.mui-content .mui-input-row .inputting{
+	position: relative;
+	float: left;
+	width: 60%;
+	margin-top: 10px;
+	
+}
+.mui-input-row .inputting span{
+	position: absolute;
+	top:12px;
+	left:10px;
+	display: inline-block;
+	border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid #F27B21;
+}
+.mui-input-row .inputting input{
+	border-radius:10px ;
+	padding-left: 45px;
+	color: white;
+	background: #F29956;
+}
+.mui-input-row .inputting .list{
+	position: absolute;
+	z-index: 100;
+	top:40px;
+	left:10px;
+	width: 100%;
+	display: none;
+}
+.mui-input-row .inputting .list li{
+	width: 95%;
+	height:40px;
+	line-height: 40px;
+	padding-left: 35px;
+	background: #F8DCC7;
+	color: #EE7118;
+	font-weight: 700;
+	border-bottom: 1px solid #d8d8d8;
+}
+.mui-input-row .inputting .list li:hover{
+	background: #F4AD78;
+}
+.mui-input-row .inputting .list .more{
+	padding: 0;
+	text-align: center;
+	line-height: 25px;
+	font-size: 30px;
+}
+.mui-input-row .icon-sousuo{
+	display: inline-block;
+	float: right;
+	margin-right: 12px;
+	margin-top:10px ;
+	border-radius: 10px;
+	width: 70px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-size: 30px;
+	background: #F67F15;
+}
+.mui-content .update{
+	position: relative;
+	width: 100%;
+	padding: 0 15px ;
+	height: 40px;
+}
+.mui-content .update p{
+	position: absolute;
+	line-height: 40px;
+	color: #7A7A7A;
+	font-weight: 600;
+}
+.mui-content .update img{
+	position: absolute;
+	top:0;
+	right:15px;
+	margin-top: -5px;
+	height: 40px;
+}
+.mui-content .name{
+	width: 100%;
+	padding: 20px 15px 15px 15px;
+	background: white;
+	margin-bottom: 15px;
+	position: relative;
+}
+.mui-content .name .time{
+	position: absolute;
+	font-size: 14px;
+	color: gray;
+	top:0;
+	right:15px;
+}
+.mui-content .name .data{
+	position: relative;
+	width: 100%;
+	height: 180px;
+	border: 1px solid #d8d8d8;
+	border-radius: 10px;
+}
+.mui-content .name .data img{
+	width: 50%;
+	height: 180px;
+	border-radius: 10px;
+}
+.mui-content .name .data .right-data{
+	margin-top: 20px;
+	position: absolute;
+	top:0;
+	left: 55%;
+}
+.mui-content .name .data .right-data p{
+	margin-bottom: 5px;
+}
+.mui-content .name .data .right-data .votes{
+	position: absolute;
+	top:-15px;
+	left:70px;
+	color: white;
+	text-align: center;
+}
+.mui-content .name .data .right-data .votes img{
+	width: 90px;
+	height: 50px;
+}
+.mui-content .name .data .right-data .votes span{
+	position: absolute;
+	top:30%;
+	left:25%;
+}
+.mui-content .name .data a{
+	position: absolute;
+	bottom: 20px;
+	right:20px;
+	color:#F69B5B;
+}
+/*/校花校草代码*/
+.mui-content .join{
+	width: 100%;
+	height: 150px;
+	background: url(../img/016.jpg) no-repeat -100px -100px;
+	/*background-size: 100% 100%;*/
+	text-align: center;
+}
+.mui-content .join p{
+	color: white;
+	font-size: 17px;
+	font-weight: 500;
+	padding-top: 15px;
+}
+.mui-content .join .camera{
+	margin: auto;
+	width: 200px;
+	height: 40px;
+	margin-top:15px;
+	border: 2px solid white;
+	border-radius:10px ;
+}
+.mui-content .join .camera img{
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+}
+.mui-content .peopleData{
+	margin-top: 15px;
+	width: 100%;
+	height: 335px;
+	padding: 15px;
+	background: white;
+	/*border: 1px solid black;*/
+}
+.mui-content .peopleData .mui-table-view.mui-grid-view{
+	padding: 0;
+	margin: 0;
+	background: white;
+	height: 200px;
+}
+.mui-content .peopleData .mui-table-view.mui-grid-view .mui-table-view-cell{
+	padding: 0;
+	float: left;
+	margin-right: 1px;
+	border: 1px solid gray;
+	border-right:0 ;
+	width:182px;
+	height: 200px;
+	border-radius: 10px;
+	position: relative;
+}
+ .mui-content .peopleData .mui-table-view.mui-grid-view .mui-table-view-cell.mui-media.man{
+	border-right:1px solid gray;
+}
+.mui-content .peopleData .mui-table-view.mui-grid-view .mui-table-view-cell img{
+	height: 150px;
+}
+.mui-content .peopleData .mui-table-view:after{
+	height: 0;
+}
+.mui-content .peopleData .mui-table-view.mui-grid-view .mui-table-view-cell .one{
+	position: absolute;
+	top:0px;
+	left:5px;
+}
+.mui-content .peopleData .mui-table-view.mui-grid-view .mui-table-view-cell .one span{
+	position:absolute ;
+	top:15px;
+	
+	left:155px;
+}
+.mui-content .peopleData .mui-table-view.mui-grid-view .mui-table-view-cell .one img{
+	width: 50px;
+	height: 50px;
+}
+.mui-content .peopleData .schoolData span{
+	display: inline-block;
+	float: right;
+	margin-top: -22px;
+	font-size: 14px;
+	color: #8f8f94;
+}
+.mui-content .peopleData .mui-btn{
+	/*margin: 0;*/
+	float: left;
+	/*padding: 0;*/
+	margin-top: 10px;
+	width: 49%;
+	height: 40px;
+	border-radius: 8px;
+	overflow: hidden;
+
+}
+.mui-content .peopleData .mui-btn.girl{
+	background: #FC6D03;
+	color: white;
+}
+.mui-content .advertising{
+	width: 100%;
+	height: 150px;
+	padding:15px ;
+	background: white;
+	margin-top: 15px;
+}
+.mui-content .advertising img{
+	width: 100%;
+	height: 100%;
+}
+/*校花校草完*/
+/*校花校草信息*/
+.mui-content .join .head{
+	width: 50%;
+	height: 100%;
+	padding: 15px 0;
+}
+.mui-content .dataMessage p{
+	margin-top: 20px;
+	color: #6B6B6B;
+	margin-left: 50px;
+}
+/*校花校草信息*/
+/*校花校草信息审核*/
+.mui-content .ppData{
+	background: #EFEFF4;
+	margin: 25px;
+	/*height: 250px;*/
+	border: 1px solid #8f8f94;
+	border-bottom: 0;
+}
+.mui-content .ppData .mui-input-row{
+	border-bottom: 1px solid #8f8f94;
+	font-size: 14px;
+	background: #EFEFF4;
+}
+.mui-content .ppData .mui-input-row label{
+	width: 30%;
+	/*background: red;*/
+}
+.mui-content .ppData .mui-input-row input{
+	width: 20%;
+	float: left;
+	height: 25px;
+	border: 1px solid #8f8f94;
+	background: white;
+	margin-left: -15px;
+	margin-top: 5px;
+	font-size: 14px;
+}
+.mui-content .ppData .mui-input-row .boy{
+	margin-left: -100px;
+	line-height: 35px;
+}
+.mui-content .ppData .mui-input-row .girl{
+	margin-left: 35px;
+	line-height: 35px;
+}
+.mui-content .ppData .mui-input-row .school{
+	width: 50%;
+}
+.mui-content .ppData .mui-input-row .sex{
+	width: 15px;
+	height: 15px;
+	margin-top: 11px;
+	margin-right: 50px;
+}
+.mui-content .submit{
+	display: block;
+	width: 50%;
+	margin: auto;
+	height: 50px;
+	background: #FC6D03;
+	color: white;
+	font-weight: 600;
+	border-radius:5px ;
+}
+.mui-content .footer{
+	margin-top: 15px;
+}
+.mui-content .footer p{
+	font-size: 12px;
+}
+/*校花校草信息审核完*/
+
+/*心愿墙*/
+.mui-content .xinyuan p{
+	padding-top: 30px;
+}
+.mui-content .fengexian{
+	margin-top: 15px;
+}
+/*重庆科技学院*/
+.mui-content .btn{
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+	background: white;
+}
+.mui-content .btn .btn-link{
+	width: 60%;
+	height: 30px;
+	margin: auto;
+	border:1px solid #F29956;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 10px;
+}
+.mui-content .btn .btn-link a{
+	width: 50%;
+	height: 30px;
+	float: left;
+	background: #F29956;
+	color: #FAEEE8;
+	line-height: 30px;
+}
+.mui-content .btn .btn-link a:nth-child(1){
+	border-right: 1px solid #FB7009;
+	border-bottom-left-radius: 5px;
+}
+.mui-content .btn .btn-link a:nth-child(2){
+	border-bottom-right-radius: 5px;
+}
+.mui-content .btn .btn-link .active{
+	border-bottom: 2px solid #FB7009;
+}
+.mui-content .btn img{
+	width: 55px;
+	height: 30px;
+	float: right;
+	margin-top: -30px;
+	margin-right: 15px;
+}
+/*微代言*/
+.mui-content .more{
+	display: block;
+	margin: auto;
+	opacity: 0.6;
+	height: 95px;
+}
+/*加载失败*/
+.mui-content .fail{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left: -50px;
+	margin-top: -50px;
+}
+.mui-content .fail p{
+	/*display: block;*/
+	/*margin: auto;*/
+	font-size: 20px;
+	color: #838383;
+	font-weight: 500;
+}
+.mui-content .fail .zhong{
+	margin-left:7px ;
+}
+.mui-content .fail .jizai{
+	opacity: 0.6;
+	height: 80px;
+}

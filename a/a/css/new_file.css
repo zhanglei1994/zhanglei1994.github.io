@@ -1,0 +1,284 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 1900px;
+	height: 11356px;
+}
+
+ul li {
+	list-style: none;
+}
+
+.top {
+	width: 100%;
+	height: 35px;
+	background: #333333;
+	color: white;
+}
+
+.top p {
+	margin-left: 400px;
+	line-height: 35px;
+	display: inline-block;
+}
+
+.top ul li {
+	height: 35px;
+	width: 80px;
+	/*border: 1px solid red;*/
+	float: left;
+	line-height: 35px;
+	/*text-align: center;*/
+}
+
+.top ul {
+	float: right;
+	margin-right: 400px;
+	right: 0;
+}
+
+.top ul li:after {
+	content: "|";
+}
+
+.top ul li:last-child:after {
+	content: "";
+}
+
+.nav {
+	width: 100%;
+	height: 204px;
+	border: 1px solid gainsboro;
+	position: relative;
+}
+
+.nav .title {
+	width: 180px;
+	height: 62px;
+	/*border: 1px solid red ;*/
+	position: absolute;
+	left: 840px;
+	top: 46px;
+	background-image: url(../img/雪碧er-secaaba58c8-8345a4ea93.png);
+}
+
+.nav ul li {
+	float: left;
+	/*margin-left:50px ;*/
+	/*border: 1px solid red ;*/
+	width: 86px;
+	height: 20px;
+	text-align: center;
+	position: relative;
+}
+
+.nav ul {
+	position: absolute;
+	left: 440px;
+	bottom: 24px;
+}
+
+.nav ul .zhiqu:after {
+	content: "|";
+	position: absolute;
+	right: 0;
+}
+.guanggao{
+	height: 420px;
+	width: 100%;
+}
+.brand{
+	width: 1096px;
+	height: 372px;
+	/*border: 1px solid blue;*/
+	margin: 25px auto;
+}
+.brand .brand-top{
+	width: 100%;
+	height: 48px;
+	/*border: 1px solid red;*/
+}
+.brand .brand-top h1{
+	font-size: 29px;
+	display: inline-block;
+}
+.brand .brand-top p{
+	font-size:15px ;
+	display: inline-block;
+	margin-left: 20px;
+	}
+.brand .brand-top div{
+	float: right;
+	margin-top:15px;
+	
+}
+.brand .brand-box{
+	width: 358px;
+	height:324px ;
+	/*background: red;*/
+	/*border: 1px solid green;*/
+	float: left;
+	margin-right:10px ;
+	position: relative;
+}
+.brand .brand-box-sm{
+	width:358px;
+	height: 157px;
+	/*background: red;*/
+	float: right;
+	position: relative;
+}
+.brand .brand-box-smv{
+	width:358px;
+	height: 157px;
+	/*background: yellow;*/
+	float: right;
+	margin-top: 10px;
+}
+.brand .brand-box strong{
+	font-size:24px ;
+	position: absolute;
+	left: 110px;
+	top: 44px;
+	
+}
+.brand .brand-box span{
+	font-size:11px ;
+	margin-left: 2px;
+	color: white;
+	width: 32px;
+	height: 21px;
+	/*border: 1px solid red ;*/
+	position: absolute;
+	top: 40px;
+	left: 244px;
+	background: url(../img/18ccda99a6f55ef573b3fb098b4d01b8.png);
+}
+.brand .brand-box .xian{
+	border-bottom: 1px solid black;
+	width: 60px;
+	position: absolute;
+	top: 88px;
+	left: 148px;
+	z-index: 3;
+}
+.brand .brand-box .price{
+	z-index: 3;
+	position: absolute;
+	left: 150px;
+	top:110px;
+}
+.brand .brand-box img{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	
+}
+.brand .brand-box .name{
+	z-index: 3;
+	position: relative;
+}
+.brand .brand-box .name .hhh{
+	position: absolute;
+	left:220px;
+	
+}
+.brand .brand-box-sm .name strong{
+	font-size:24px ;
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	z-index: 3;
+}
+.brand .brand-box-sm .name span{
+	font-size:11px ;
+	margin-left: 2px;
+	color: white;
+	width: 32px;
+	height: 21px;
+	background: url(../img/18ccda99a6f55ef573b3fb098b4d01b8.png);
+	position: absolute;
+	left: 142px;
+	top: 26px;
+	z-index: 3;
+}
+.brand .brand-box-sm .name .xian{
+	border-bottom: 1px solid black;
+	width: 60px;
+	position: absolute;
+	left: 20px;
+	height: 65px;
+	z-index: 3;
+}
+.brand .brand-box-sm .price{
+	z-index: 3;
+	position: absolute;
+	left: 20px;
+	top: 76px;
+}
+.brand .brand-box-smv  .name .hhh{
+	position: absolute;
+	left:156px;
+}
+}
+.xingping{
+	width: 274px;
+	height: 322px;
+	border: 1px solid blue;
+	/*background: red;*/
+	text-align: center;
+	
+}
+.brand .new .new-sm-box{
+	width: 50px;
+	height: 20px;
+	border: 1px solid #a7936e;
+	font-size: 12px;
+	color: #a7936e;
+	border-radius:5px ;
+	line-height: 20px;
+	margin-top: 20px;
+	margin-left:10px ;
+}
+.brand .new img{
+	margin-top:-40px;
+}
+.brand .new h6{
+	font-size:15px;
+	
+}
+.brand .new spen{
+	color: red;
+	font-size: 12px;
+}
+.brand .new p{
+	display: inline-block;
+	color: gray;
+	font-size:14px ;
+}
+.brand .new{
+	float: left;
+	width: 272px;
+	text-align: center;
+	}
+.brand .new-t{
+	margin-top:41px ;}
+/*.brand .new-t{*/
+	/*margin-top:41px;*/
+/*}*/
+.Popularity{
+	width: 100%;
+	height: 556px;
+	background: #f4f0ea;
+	margin-top: 25px;
+	padding-top: 40px;
+}
+.Popularity .pop-box{
+	width: 1096px;
+	height: 528px;
+	/*border: 1px solid red;*/
+	margin: auto;
+}

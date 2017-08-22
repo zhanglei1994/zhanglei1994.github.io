@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100px;
+				height: 100px;
+			}
+			#box{
+				background: palegoldenrod;
+			}
+			#box1{
+				background: deeppink;
+				left:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="box1"></div>
+	</body>
+	<script type="text/javascript">
+		function drog(id){
+			this.obj=document.getElementById(id);
+			this.beginX=0;
+			this.beginY=0;
+		};
+		drog.prototype.init=function(){
+			var _this=this;
+			this.obj.onmousedown=function(){
+				_this.down();
+			};
+		}
+		drog.prototype.down=function(ev){
+			var newEv=ev || event;
+			var _this=this;
+			this.beginX=newEv.clientX-this.obj.offsetLeft;
+			this.beginY=newEv.clientY-this.obj.offsetTop;
+			document.onmousemove=function(){
+				_this.move();
+			}
+			document.onmouseup=this.up;
+			return false;
+		}
+		drog.prototype.move=function(ev){
+			var newEv=ev || event;
+			this.obj.style.left=newEv.clientX-this.beginX+'px';
+			this.obj.style.top=newEv.clientY-this.beginY+'px';
+		}
+		drog.prototype.up=function(){
+			document.onmousemove=null;
+		}
+		var b1=new drog('box');
+		b1.init();
+		function newdrog(id){
+			drog.call(this,id);
+		};
+		for(attr in drog.prototype){
+			newdrog.prototype[attr]=drog.prototype[attr];
+		};
+		newdrog.prototype.move=function(ev){
+			var newEv=ev || event;
+			var T=newEv.clientY-this.beginY;
+			var L=newEv.clientX-this.beginX;
+			if(L<0){
+				L=0
+			};
+			if(L>document.documentElement.clientWidth-this.obj.offsetWidth){
+				L=document.documentElement.clientWidth-this.obj.offsetWidth;
+			};
+			if(T<0){
+				T=0;
+			};
+			if(T>document.documentElement.clientHeight-this.obj.offsetHeight){
+				T=document.documentElement.clientHeight-this.obj.offsetHeight
+			}
+			this.obj.style.left=L+'px';
+			this.obj.style.top=T+'px';
+		}
+		var b2=new newdrog('box1');
+		b2.init();
+	</script>
+</html>

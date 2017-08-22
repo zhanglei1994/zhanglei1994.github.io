@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				background: pink;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#box1{
+				background: cadetblue;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="box1"></div>
+	</body>
+	<script type="text/javascript">
+		function Drag(id){
+			this.obj=document.getElementById(id);
+			this.beginX=0;
+			this.beginY=0;
+		}
+		Drag.prototype.init=function(){
+			var _this=this;
+			this.obj.onmousedown=function(){
+				_this.fnDown();
+			};
+		}
+		Drag.prototype.fnDown=function(ev){
+			var newEv=ev||event;
+			var _this=this;
+			this.beginX=newEv.clientX-this.obj.offsetLeft;
+			this.beginY=newEv.clientY-this.obj.offsetTop;
+			document.onmousemove=function(){
+				_this.fnMove();
+			};
+			document.onmouseup=this.fnUp;
+			return false;
+		}
+		Drag.prototype.fnMove=function(ev){
+			var newEv=ev||event;
+			this.obj.style.left=newEv.clientX-this.beginX+'px';
+			this.obj.style.top=newEv.clientY-this.beginY+'px';
+		}
+		Drag.prototype.fnUp=function(){
+			document.onmousemove=null;
+		}
+		
+		var d1=new Drag('box');
+		d1.init();
+		
+		function newDrag(id){
+			Drag.call(this,id);
+		}
+		for(attr in Drag.prototype){
+			newDrag.prototype[attr]=Drag.prototype[attr];
+		}
+		newDrag.prototype.fnMove=function(ev){
+			var newEv=ev||event;
+			var L=newEv.clientX-this.beginX;
+			var T=newEv.clientY-this.beginY;
+			if(L<0){
+				L=0;
+			}
+			if(L>document.documentElement.clientWidth-this.obj.offsetWidth){
+				L=document.documentElement.clientWidth-this.obj.offsetWidth;
+			}
+			if(T<0){
+				T=0;
+			}
+			if(T>document.documentElement.clientHeight-this.obj.offsetHeight){
+				T=document.documentElement.clientHeight-this.obj.offsetHeight;
+			}
+			this.obj.style.left=L+'px';
+			this.obj.style.top=T+'px';
+		}
+		var newD=new newDrag('box1');
+		newD.init();
+		
+//		熟悉面向对象编程，熟悉OOP编程
+	</script>
+</html>

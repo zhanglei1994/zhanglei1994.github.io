@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			ul{
+				overflow: hidden;
+			}
+			li{
+				float: left;
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background: #d8d8d8;
+			}
+			li.active{
+				background: red;
+				color: white;
+			}
+			.cont{
+				width: 298px;
+				height: 300px;
+				border: 1px solid red;
+				display: none;
+			}
+			.cont.active{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tab">
+			<ul>
+				<li class="active">选项1</li>
+				<li>选项2</li>
+				<li>选项3</li>
+			</ul>
+			<div class="cont active">内容1</div>
+			<div class="cont">内容2</div>
+			<div class="cont">内容3</div>
+		</div>
+		<div id="tab1">
+			<ul>
+				<li class="active">选项1</li>
+				<li>选项2</li>
+				<li>选项3</li>
+			</ul>
+			<div class="cont active">内容1</div>
+			<div class="cont">内容2</div>
+			<div class="cont">内容3</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		var tab=document.getElementById('tab');
+//		var li=tab.getElementsByTagName('li');
+//		var div=tab.getElementsByTagName('div');
+//		for(var i=0;i<li.length;i++){
+//			li[i].index=i;
+//			li[i].onclick=function(){
+//				for(var i=0;i<li.length;i++){
+//					li[i].className='';
+//					div[i].className='';
+//				}
+//					this.className='active';
+//					div[this.index].className='active';
+//			}
+//		}
+//		面向对象
+		function Tab(id){
+			this.tab=document.getElementById(id);
+			this.li=this.tab.getElementsByTagName('li');
+			this.div=this.tab.getElementsByTagName('div');
+		};
+		Tab.prototype.init=function(){
+			var _This=this; //this指向Tab对象;
+			for(var i=0;i<this.li.length;i++){
+			this.li[i].index=i;		//this指向Tab对象;
+			this.li[i].onclick=function(){
+				_This.change(this); //this指向被点击的li;
+				};
+			};
+		};
+		Tab.prototype.change=function(t){
+			for(var i=0;i<this.li.length;i++){
+				this.li[i].className=''; //this指向Tab对象;
+				this.div[i].className='cont'; //this指向Tab对象;
+			};
+				t.className='active';
+				this.div[t.index].className='cont active';
+		};
+		var tab1=new Tab('tab');
+		tab1.init();
+		var tab2=new Tab('tab1');
+		tab2.init();
+	</script>
+</html>
